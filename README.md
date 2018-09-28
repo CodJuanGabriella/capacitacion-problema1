@@ -42,4 +42,9 @@ Para ejecutar el terminal.
  ¿Cuál es la diferencia entre docker ps y docker ps -a?
  ps se ven los contenedores levantados y el otro te lista todos los contenedores.
 
+# Comandos para listar
+ RUN ls /app
+ RUN cat preguntas.md
+
+
  
