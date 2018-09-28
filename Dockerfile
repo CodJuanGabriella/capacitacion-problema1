@@ -1,7 +1,9 @@
 
 FROM node:10.10.0-slim
-WORKDIR /usr/src/app
+RUN mkdir /usr/src/app
+WORKDIR /app
 LABEL maintainer="josue.quispe@orbis.com.pe"
 RUN npm install
+COPY preguntas.md /app
 EXPOSE 8080
 CMD [ "npm", "start" ]
