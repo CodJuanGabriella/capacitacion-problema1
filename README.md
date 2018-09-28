@@ -47,4 +47,33 @@ Para ejecutar el terminal.
  RUN cat preguntas.md
 
 
- 
+ Preguntas:
+
+1. ¿Cuál es la diferencia entre una imagen y un contenedor?
+De una imagen se construye un contenedor
+2. ¿Cómo listo las imágenes que hay en mi computadora?
+docker images
+3. ¿Cómo salgo de un contenedor de docker?
+exit
+4. ¿Se elimina el contenedor al salir de ella?
+no
+5. ¿Cómo elimino un contenedor?
+docker rm
+6. ¿Para qué es necesario el flag `-i`, `-t`, `--rm`?
+Para ingresar al contenerdor , para añadir un tag , para remover un contenedor
+7. ¿Cómo verifico que el archivo creado se encuentra en la imagen?
+bash
+8. ¿Cómo se comenta una linea de código en Dockerfile?
+ con el simbilo '#'
+
+
+ ## Preguntas
+1. ¿Qué es NGINX?
+    NGINX es un servidor HTTP de alto rendimiento, libre y de código abierto, así como un servidor proxy IMAP / POP3. NGINX es conocido por su alto rendimiento, estabilidad, amplio conjunto de funciones, configuración simple y bajo consumo de recursos.
+2. ¿Cómo expongo puertos en docker?
+    EXPOSE en el dockerfile
+3. ¿Cómo especifico los puertos al levantar un contenedor (docker run)?
+    -p 1080:80
+4. ¿Cómo hago 'forward' al levantar un contenedor (docker run)?
+    -p
+
