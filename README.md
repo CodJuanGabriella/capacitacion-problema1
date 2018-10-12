@@ -79,4 +79,69 @@ bash
 
 ## Taller 3 - Docker Makefile
 
+##### Volumear e install dependencias package.json nodejs
 docker run -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 npm install
+
+##### Levantar el node en localhost:3030
+docker run -p 3030:1042 -p 35729:35729 -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 npm start
+
+##### Crear y compilar archivos HTML y JS
+docker run -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 npm run release
+
+ ## Preguntas
+1. ¿Es necesario especificar el `workdir` en docker?, ¿Porqué?
+    Si, porque le dicimos que es nuestro directorio de trabajo dentro del container.
+
+2. ¿Que hacen los siguientes comandos? 
+ -`docker ps`
+ Lista todos los contenedores corriendo
+ -`docker pull`
+ Descarga una imagenen de manera local o en la nube
+ -`docker push` 
+Pushea tu imagen en un repositorio
+ -`docker rm`
+ remueve el contenedor 
+ -`docker rmi`
+ remueve la imagen
+ -`docker run`
+ ejecuta comando en un contenedor
+ -`docker tag`
+ etiqueta de un imagen
+ -`docker search`
+ Busca una imagen 
+ -`docker login`
+ registra tu cuenta de manera local
+ -`docker exec`
+Ejecutar un comando en un contenedor en ejecución
+ -`docker build`
+ Genera una imagen
+ -`docker inspect`
+ retorna informacion de bajo nivel de un objeto docker
+ -`docker network`
+ es para manejar las redes
+
+### ejecutar bash
+docker run --entrypoint=/bin/bash -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 resources/example.sh
+
+#### con parametro nombre
+---
+#!/bin/bash
+NOMBRE=$1
+saludo () {
+    echo "hola mundo, tu nombre es $NOMBRE"
+}
+
+saludo
+---
+docker run --entrypoint=/bin/bash -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 resources/example.sh josue
+
+#### parte 8 pto 9
+docker run -v $PWD:/app -w /app --entrypoint echo josu3e/orbis-training-docker:2.0.0 "Ejecutando contenedor...."
+
+1. ¿Qué es bash? ¿Qué significa?
+Es un intérprete de comandos que ejecuta, una por una, las instrucciones introducidas por el usuario o contenidas en un script y devuelve los resultados.
+2. ¿Cómo ejecuto un archivo bash?
+3. ¿Qué pasa si no especifico en un `.sh`, la linea `#!/bin/bash`?
+el script debe incluir un “bang line”. Se trata de la primera línea de un script, que debe comenzar con los caracteres #! y que debe especificar la ruta en la que se encuentra el intérprete.
+4. ¿Se puede cambiar el modo bash (`/bin/bash`) a otro tipo de ejecución?
+5. ¿Cómo se envía variables de entorno por Docker CLI y docker-compose?
