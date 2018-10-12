@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  web:
+    build: .
+    command: npm run start
+    volumes:
+      - .:/app
+    ports:
+      - "3030:1042"
+      - "35729:35729"
