@@ -3,4 +3,8 @@ Capacitación: Git, bash y docker
 Integrantes:
 Juan Quispe
 Josue Quispe
-Juanito
+---
+## title
+Primer parrafo ...
+---
+Segundo parrafo ...

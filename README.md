@@ -38,11 +38,11 @@ Para mantener abierto el contenedor de forma iterativa. Se cierre
 ¿Para qué sirve ejecutar el comando bash al eejcutar una imagen?
 Para ejecutar el terminal.
 
-# ps and ps -a
+## ps and ps -a
  ¿Cuál es la diferencia entre docker ps y docker ps -a?
  ps se ven los contenedores levantados y el otro te lista todos los contenedores.
 
-# Comandos para listar
+## Comandos para listar
  RUN ls /app
  RUN cat preguntas.md
 
@@ -77,3 +77,6 @@ bash
 4. ¿Cómo hago 'forward' al levantar un contenedor (docker run)?
     -p
 
+## Taller 3 - Docker Makefile
+
+docker run -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 npm install
