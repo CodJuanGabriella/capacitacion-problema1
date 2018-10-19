@@ -1,0 +1,7812 @@
+    1  mkdir Orbis
+    2  cd Orbis
+    3  ls
+    4  ll
+    5  sudo apt-get update
+    6  sudo apt-get install \\n    apt-transport-https \\n    ca-certificates \\n    curl \\n    software-properties-common
+    7  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    8  sudo apt-key fingerprint 0EBFCD88
+    9  sudo add-apt-repository \\n   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \\n   $(lsb_release -cs) \\n   stable"
+   10  sudo apt-get update
+   11  sudo apt-get install docker-ce
+   12  sudo usermod -aG docker $USER
+   13  sudo su
+   14  sudo apt-get install vim
+   15  sudo vim /etc/NetworkManager/NetworkManager.conf
+   16  sudo vim /lib/systemd/system/docker.service
+   17  sudo systemctl daemon-reload && sudo service docker restart
+   18  curl http://docker.orbis.pe/v2/_catalog
+   19  export UID=$(id -u)
+   20  export GID=$(id -g)
+   21  exec $SHELL
+   22  docker ps
+   23  sudo usermod -aG docker $USER
+   24  docker ps
+   25  id
+   26  docker ps
+   27  sudo usermod -a -G docker $USER
+   28  docker run hello-world
+   29  dokce rps
+   30  dokcer ps
+   31  docker ps
+   32  sudo docker ps
+   33  sudo vim /etc/hosts
+   34  id
+   35  sudo vim /etc/hosts
+   36  sudo docker ps
+   37  docker ps
+   38  sudo groupadd docker
+   39  sudo usermod -aG docker $USER
+   40  docker run hello-world
+   41  sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+   42  sudo chmod g+rwx "/home/$USER/.docker" -R
+   43  ls -la
+   44  rm -Rf .docker
+   45  id
+   46  docker run hello-world
+   47  sudo systemctl enable docker
+   48  docker ps
+   49  sudo docker ps
+   50  sudo systemctl docker restart
+   51  sudo systemctl restart docker
+   52  docker ps
+   53  ifconfig
+   54  sudo vim /etc/hosts
+   55  cd Orbis
+   56  git clone git@bitbucket.org:orbisunt/urbania-docker.git
+   57  \ncd urbania-docker
+   58  git fetch origin origin:services
+   59  gb
+   60  gfo services:services
+   61  gco services
+   62  make add_local_registry_host IP=172.18.60.68
+   63  vim /etc/hosts
+   64  sudo vim /lib/systemd/system/docker.service
+   65  sudo systemctl daemon-reload
+   66  sudo service docker restart
+   67  make pull
+   68  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+   69  ..
+   70  git clone git@bitbucket.org:orbisunt/unt-micro-service-configserver.git
+   71  git clone git@bitbucket.org:orbisunt/unt-config-lab.git
+   72  git clone git@bitbucket.org:orbisunt/urbania-project-microservice.git
+   73  git clone git@bitbucket.org:orbisunt/urbania-web.git
+   74  git clone git@bitbucket.org:orbisunt/urbania-solr.git
+   75  git clone git@bitbucket.org:orbisunt/urbania-micro-service-search.git
+   76  ls
+   77  ls -la
+   78  cd /home/josue/Downloads
+   79  tar xzf pycharm-professional-2018.1.1.tar.gz
+   80  cd pycharm-2018.1.1/bin
+   81  ./pycharm.sh
+   82  LS
+   83  ls
+   84  cd urbania-project-microservice
+   85  make pull
+   86  cd urbania-web
+   87  gfo prod:prod
+   88  gco prod
+   89  make pull
+   90  cd unt-micro-service-configserver
+   91  gb
+   92  gfo prod:prod
+   93  gco prod
+   94  make pull
+   95  gb
+   96  gfo dev3c:de3c
+   97  gfo dev3c:dev3c
+   98  gco dev3c
+   99  mske pull
+  100  make pull
+  101  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+  102  make pull
+  103  make up
+  104  cd urbania-docker
+  105  make pull
+  106  make up
+  107  make up_lb
+  108  ggpull
+  109  make pull
+  110  make build
+  111  make pull
+  112  cd ..
+  113  ls
+  114  cd urbania-micro-service-search
+  115  make pull
+  116  cd ../urbania-solr
+  117  make pull
+  118  gfo prod:prod; fco prod
+  119  gco prod
+  120  gb
+  121  gfo prod:prod; gco prod
+  122  gb
+  123  make up
+  124  make mysql
+  125  docker ps
+  126  make up
+  127  cd ../unt-config-lab
+  128  gfo prod:prod
+  129  sudo vim /etc/hosts
+  130  make migrate
+  131  make down_lb
+  132  make up_
+  133  make up_lb
+  134  gfo query_string:query_string
+  135  gco query_string
+  136  make log
+  137  make build
+  138  sudo apt-get install gitk
+  139  gitk
+  140  make build-jar
+  141  sudo apt-get install openjdk-9-jdk
+  142  sudo apt-get install openjdk-9-jre
+  143  sudo apt-get install openjdk-9-jdk
+  144  cd /usr/lib/jvm
+  145  ls
+  146  ..
+  147  cd ~
+  148  sudo apt-get update
+  149  sudo apt-get install openjdk-8-jdk
+  150  sudo apt-get install openjdk-8-jre
+  151  javac -version
+  152  sudo vim /etc/environment
+  153  cd /usr/lib/
+  154  ls
+  155  cd jvm
+  156  ls
+  157  pwd
+  158  echo $JAVA_HOME
+  159  export JAVA_HOME=/usr/lib/jvm/java-9-openjdk-amd64
+  160  echo JAVA_HOME
+  161  echo $JAVA_HOME
+  162  cd /home/josue/Orbis/unt-micro-service-configserver
+  163  make build-jar
+  164  echo $JAVA_HOME
+  165  java -v
+  166  javac -v
+  167  javac -version
+  168  cd /usr/lib/jvm/java-8-openjdk-amd64
+  169  ls
+  170  cd bin
+  171  ls
+  172  readlink -f $(which java)
+  173  export JAVA_HOME=/usr/lib/jvm/java-9-openjdk-amd64
+  174  echo $JAVA_HOME
+  175  javac -v
+  176  javac -version
+  177  cd /home/josue/Orbis/unt-micro-service-configserver
+  178  make build-jar
+  179  cd /home/josue/Orbis/unt-micro-service-configserver
+  180  make build-jar
+  181  export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+  182  make build-jar
+  183  sudo apt-get install openjdk-9-jre
+  184  sudo apt-get install openjdk-9-jdk
+  185  sudo apt-get -o Dpkg::Options::="--force-overwrite" install openjdk-9-jdk
+  186  export JAVA_HOME=/usr/lib/jvm/java-9-openjdk-amd64
+  187  make build-jar
+  188  cd /usr/lib/jvm
+  189  ls
+  190  ls -la
+  191  ls -sf /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java /usr/lib/jvm/default-java
+  192  sudo ls -sf /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java /usr/lib/jvm/default-java
+  193  ls
+  194  export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd6/
+  195  export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+  196  cd /home/josue/Orbis/unt-micro-service-configserver
+  197  make build-jar
+  198  echo $JAVA_HOME
+  199  export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+  200  echo $JAVA_HOME
+  201  make build-jar
+  202  cat /etc/environment
+  203  cat ~/.bashrc
+  204  cat /etc/hosts
+  205  readlink -f $(which java)
+  206  JAVA_HOME=$(dirname $( readlink -f $(which java) ))
+  207  JAVA_HOME=$(realpath "$JAVA_HOME"/../)
+  208  export JAVA_HOME
+  209  echo $JAVA_HOME
+  210  sudo update-alternatives --config java
+  211  readlink -f $(which java)
+  212  JAVA_HOME=$(dirname $( readlink -f $(which java) ))
+  213  JAVA_HOME=$(realpath "$JAVA_HOME"/../)
+  214  export JAVA_HOME
+  215  echo $JAVA_HOME
+  216  make build-jar
+  217  JAVA_HOME=$(realpath "$JAVA_HOME"/../)
+  218  echo $JAVA_HOME
+  219  make build-jar
+  220  make pulll
+  221  make pull
+  222  docker image
+  223  docker images
+  224  docker rmi unt-dev-config:cli
+  225  docker rmi unt-dev-config:latest
+  226  docker rmi unt-dev-config
+  227  docker images
+  228  docker rmi -f unt-dev-config:latest
+  229  docker images
+  230  make pull
+  231  make build-jar
+  232  make up
+  233  cd ../urbania-project-microservice
+  234  make up
+  235  docker ps
+  236  cd ../urbania-docker
+  237  make up
+  238  make mysql
+  239  make up_lb
+  240  docker ps
+  241  make down_lb
+  242  make up_lb
+  243  docker ps
+  244  dokce rps
+  245  docker ps
+  246  make down
+  247  make up
+  248  make down
+  249  make pull
+  250  make build
+  251  make up
+  252  make migrate
+  253  make log
+  254  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+  255  gb
+  256  gfo dev:dev
+  257  git add .
+  258  git commit -am "feat(query_string): Se agrega la funcionalidad para poder enviar filters y fields como query params"
+  259  git config --global user.email "josue.quispe@orbis.com.pe"
+  260  git config --global user.name "Josue Quispe"
+  261  gst
+  262  git commit -am "feat(query_string): Se agrega la funcionalidad para poder enviar filters y fields como query params"
+  263  gst
+  264  git rebase -i dev
+  265  git rebase --continue
+  266  git mergetool
+  267  sudo apt-get install meld
+  268  git mergetool
+  269  git rebase --continue
+  270  git mergetool
+  271  git rebase --continue
+  272  gitk
+  273  ggpush
+  274  ggpull
+  275  gst
+  276  git add .
+  277  git stash
+  278  gst
+  279  ggpull
+  280  gb
+  281  gitk
+  282  git add .
+  283  git stash
+  284  gb
+  285  gco -b query_string_local
+  286  gb -D query_string
+  287  gfo query_string:query_string
+  288  gco query_string
+  289  gitk
+  290  ggpull
+  291  gco query_string_local
+  292  gco query_string
+  293  git merge query_string_local
+  294  git mergetool
+  295  git rebase --abort
+  296  gst
+  297  git add .
+  298  git stash
+  299  gb
+  300  goc dev
+  301  gb
+  302  gst
+  303  gb
+  304  gb -D dev
+  305  gfo dev:dev
+  306  gco  dev
+  307  gco -b dev_query_string
+  308  gb
+  309  git giff query_string_local
+  310  git diff query_string_local
+  311  git diff query_string_local --name-only
+  312  git diff query_string_local app/project/application/framework/handlres/base.py
+  313  git checkout -- app/project/application/framework/handlres/base.py
+  314  gst
+  315  git checkout --app/project/application/framework/handlres/base.py
+  316  git checkout query_string_local app/project/application/framework/handlres/base.py
+  317  gst
+  318  git checkout query_string_local app/project/infrastructure/common/__init__.py
+  319  gst
+  320  gco query_string_local app/project/infrastructure/common/url.py
+  321  git diff query_string_local --name-only
+  322  git diff query_string_local app/project/application/services/property_type.py
+  323  gco query_string_local app/project/application/services/property_type.py
+  324  git diff query_string_local app/project/domain/repository/property_type.py
+  325  gco query_string_local app/project/domain/repository/property_type.py
+  326  git diff query_string_local app/project/domain/repository/service.py
+  327  git diff query_string_local --name-only
+  328  git diff query_string_local app/project/domain/services/property_type.py
+  329  gco query_string_local app/project/domain/services/property_type.py
+  330  git diff query_string_local app/project/domain/services/service.py
+  331  git diff query_string_local app/project/infrastructure/adapter/sql/sqlalchemy.py
+  332  git merge query_string_local app/project/infrastructure/adapter/sql/sqlalchemy.py
+  333  gst
+  334  gitk app/project/infrastructure/adapter/sql/sqlalchemy.py
+  335  git diff query_string_local app/project/infrastructure/adapter/sql/sqlalchemy.py
+  336  git diff app/project/infrastructure/repository/sqlalchemy/property_type.py
+  337  git diff query_string_local --name-only
+  338  git diff query_string_local app/project/infrastructure/repository/sqlalchemy/property_type.py
+  339  gco query_string_local app/project/infrastructure/repository/sqlalchemy/property_type.py
+  340  gst
+  341  gitk
+  342  git add .
+  343  git commit -am "feat(query_string): Se agrega la funcionalidad para poder enviar filters y fields como query params"
+  344  gitk
+  345  git rebase -i dev
+  346  ggpush
+  347  gb
+  348  gb -D query_string
+  349  gco dev
+  350  gst
+  351  gco -b dev_sort_by
+  352  gb
+  353  gco query_string_local
+  354  gb -D dev_sort_by
+  355  gst
+  356  gb
+  357  gco dev
+  358  gitk app/project/application/framework/handlres/base.py 
+  359  gb
+  360  gco dev_query_string
+  361  git add .
+  362  git commit -am "refact(query_string): Se retiran comentarios"
+  363  git rebase -i dev
+  364  ggpush -f
+  365  gb
+  366  gst
+  367  gitk
+  368  git stash clear
+  369  make log
+  370  gb
+  371  gco dev
+  372  gst
+  373  git add .
+  374  git stash
+  375  gb
+  376  gco dev
+  377  ggpull
+  378  gitk
+  379  gst
+  380  gco -b dev_refactor
+  381  gitk
+  382  git add .
+  383  git commit -am "refact(handlers): Se corrige el error en el nombre 'handlres'"
+  384  git rebase -i dev
+  385  ggpush
+  386  gst
+  387  gb
+  388  gco dev
+  389  ggpyll
+  390  ggpull
+  391  gco dev_refactor
+  392  gst
+  393  git stash pop
+  394  gst
+  395  git add .
+  396  git stash
+  397  gst
+  398  gitk
+  399  ls
+  400  ls app/project/application
+  401  ls app/project/application/framework
+  402  sudo rm -rf app/project/application/framework/handlres
+  403  gst
+  404  gitk
+  405  git add .
+  406  gst
+  407  gitk
+  408  gst
+  409  git add .
+  410  git commit -am "fix(params): Se actualizan los otros recursos para que funcionen con query params"
+  411  git rebase -i dev
+  412  ggpush -f
+  413  gitk
+  414  cd Orbis/urbania-docker
+  415  make up
+  416  make up_lb
+  417  cd ../urbania-project-microservice
+  418  make up
+  419  cd ../unt-micro-service-configserver
+  420  make up
+  421  docker ps
+  422  make down
+  423  docker ps
+  424  make up
+  425  gst
+  426  gitk
+  427  git stash
+  428  git stash pop
+  429  gitk
+  430  cd ../urbania-project-microservice
+  431  make log
+  432  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+  433  gst
+  434  gb
+  435  git add .
+  436  gitk
+  437  gst
+  438  gitk
+  439  git add .
+  440  gitk
+  441  git commit -am "feat(query_string): Se agrega la funcionalidad para poder enviar pagination y ordenado"
+  442  gst
+  443  gb
+  444  gco dev
+  445  ggpull
+  446  gitk
+  447  gco dev_refactor
+  448  gco dev
+  449  gco dev_refactor
+  450  git merge dev
+  451  gitk
+  452  git rebase -i dev
+  453  git rebase --continue
+  454  git rebase --abort
+  455  gst
+  456  gb
+  457  gco dev
+  458  gst
+  459  gco -b dev_pagination
+  460  git diff dev_refactor --name-only
+  461  git diff dev_refactor app/project/domain/services/bank.py
+  462  git checkout dev_refactor app/project/domain/services/bank.py
+  463  git diff dev_refactor app/project/infrastructure/adapter/sql/sqlalchemy.py
+  464  git checkout dev_refactor app/project/infrastructure/adapter/sql/sqlalchemy.py
+  465  git diff dev_refactor app/project/infrastructure/common/url.py
+  466  git checkout dev_refactor app/project/infrastructure/common/url.py
+  467  gst
+  468  gitk
+  469  git add .
+  470  git commit -am "feat(query_string): Se agrega la funcionalidad para poder enviar pagination y ordenado"
+  471  git rebase -i dev
+  472  ggpush
+  473  gst
+  474  make log
+  475  make test_project
+  476  sudo vim /etc/hosts
+  477  make test_project
+  478  make log
+  479  make test_project
+  480  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+  481  make test_project
+  482  gst
+  483  gitk
+  484  git add .
+  485  git commit -am "fix(test): Se corrigen errores en los testing y se actualiza con la nueva estructura"
+  486  gb
+  487  gb -D dev
+  488  gfo dev:dev
+  489  gst
+  490  git rebase -i dev
+  491  git mergetool
+  492  git rebase --continue
+  493  gst
+  494  gitk
+  495  rm app/project/application/framework/handlers/base.py.orig
+  496  rm app/project/application/services/injector.py.orig
+  497  rm app/tests/suite_test.py.orig
+  498  gst
+  499  gitk
+  500  ggpush
+  501  make test_project
+  502  make tests
+  503  make tests_poject
+  504  make tests
+  505  gitk
+  506  cd ../unt-micro-service-configserver
+  507  gb
+  508  ggpull
+  509  cd ../unt-config-lab
+  510  gst
+  511  ggpull
+  512  gitk
+  513  make down
+  514  make up
+  515  gst
+  516  gb
+  517  gco dev
+  518  ggpull
+  519  make log
+  520  make down
+  521  make up
+  522  gst
+  523  ggpull
+  524  gitk
+  525  make tests
+  526  make build-latest
+  527  make tests
+  528  gco dev_refactor
+  529  gst
+  530  gitk
+  531  gb
+  532  gco dev_pagination
+  533  gitk
+  534  make tests
+  535  gitk
+  536  make tests
+  537  gst
+  538  git add .
+  539  git commit -am "feat(test): Se comenta el test de home. Pendiende de cambio"
+  540  ggpush -f
+  541  cat Makefile
+  542  gb
+  543  gst
+  544  gb
+  545  gb -D dev
+  546  gfo dev:dev
+  547  gitk
+  548  cd /home/josue/Downloads
+  549  ls
+  550  cd /opt
+  551  ls
+  552  cd /home/josue/Downloads
+  553  sudo tar -xzf Postman-linux-x64-6.0.10.tar.gz /opt/postman
+  554  sudo tar -xzf Postman-linux-x64-6.0.10.tar.gz -C /opt
+  555  cd /opt
+  556  ls
+  557  sudo ln -s /opt/Postman/Postman /usr/bin/postman
+  558  cat > ~/.local/share/applications/postman.desktop <<EOL\n[Desktop Entry]\nEncoding=UTF-8\nName=Postman\nExec=postman\nIcon=/opt/Postman/resources/app/assets/icon.png\nTerminal=false\nType=Application\nCategories=Development;\nEOL
+  559  cd Orbis/urbania-project-microservice
+  560  cd Orbis/urbania-docker
+  561  make up
+  562  make up_lb
+  563  cd ../unt-micro-service-configserver
+  564  make up
+  565  cd ../urbania-project-microservice
+  566  make up
+  567  ..
+  568  ls
+  569  cd urbania-project-microservice
+  570  gst
+  571  gb
+  572  gco dev
+  573  ggpull
+  574  gst
+  575  gitk
+  576  gst
+  577  docker ps
+  578  make down
+  579  make up
+  580  docker ps
+  581  make mysql
+  582  gb
+  583  gco dev_pagination
+  584  make down
+  585  make up
+  586  git diff dev
+  587  git diff dev --name-only
+  588  make log
+  589  sudo apt-get update
+  590  sudo apt-get install flashplugin-installer 
+  591  cd /usr/lib
+  592  ls /la
+  593  ls -la
+  594  ls
+  595  cd /home/josue/Downloads
+  596  ls
+  597  pwd
+  598  cd firefox
+  599  l
+  600  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+  601  pwd
+  602  ls
+  603  sudo cp flash_player_ppapi_linux.x86_64 /usr/lib/adobe-flashplugin/ ls
+  604  ls
+  605  cd flash_player_ppapi_linux.x86_64
+  606  ls
+  607  sudo cp libpepflashplayer.so /usr/lib/firefox
+  608  ..
+  609  ls
+  610  which google-chrome
+  611  cd /usr/bin/
+  612  ls
+  613  cd /home/josue/Orbis/unt-config-lab
+  614  cd /home/josue/Orbis/urbania-project-microservice
+  615  make downgrade
+  616  make migrate
+  617  gb
+  618  gco dev
+  619  ggpull
+  620  gitk
+  621  gst
+  622  ggpull
+  623  gitk
+  624  make build-resource name=Stage
+  625  docke rps
+  626  docker ps
+  627  make down
+  628  make up
+  629  docker ps
+  630  make ssh
+  631  make down
+  632  cd ../urbania-docker
+  633  make down_lb
+  634  make up
+  635  docker ps
+  636  make up_lb
+  637  docker ps
+  638  cd ../urbania-docker
+  639  make down_lb
+  640  dokcer ps
+  641  docker ps
+  642  make log
+  643  make down_lb
+  644  make pull
+  645  make up
+  646  docker ps
+  647  make up_lb
+  648  dokcer ps
+  649  docker ps
+  650  make build-resource name=Stage
+  651  docker ps
+  652  make log
+  653  make tests
+  654  cd Orbis/urbania-docker
+  655  make up
+  656  cd ../urbania-project-microservice
+  657  make up
+  658  cd ../
+  659  cd unt-micro-service-configserver
+  660  make up
+  661  make up_lb
+  662  docker ps
+  663  make tests
+  664  gst
+  665  gb
+  666  gco -b dev_stage
+  667  git add .
+  668  git commit -am "feat(stage): new module added called stage, also some fixes on unit test added too."
+  669  gst
+  670  gb
+  671  gst
+  672  gb
+  673  gco dev
+  674  ggpull
+  675  gco dev_stage
+  676  git rebase -i dev
+  677  ggpush
+  678  gst
+  679  git add .
+  680  git commit -am "refact(stage): refact"
+  681  git rebase -i dev
+  682  ggpush -f
+  683  make tests
+  684  which google-chrome
+  685  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+  686  make tests
+  687  make log
+  688  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+  689  make log
+  690  make down
+  691  cd ../urbania-docker
+  692  make down_lb
+  693  make up
+  694  make up_lb
+  695  make down_lb
+  696  make up_lb
+  697  docker ps
+  698  make log
+  699  make down
+  700  make build
+  701  make up
+  702  make down_lb
+  703  make up_lb
+  704  docker ps
+  705  make dow
+  706  make down
+  707  make down_lb
+  708  make up
+  709  docker ps
+  710  make up_lb
+  711  docker ps
+  712  make log
+  713  make down
+  714  make down_lb
+  715  make pull
+  716  make up
+  717  make log
+  718  make down
+  719  make build
+  720  make up
+  721  make log
+  722  make up_lb
+  723  docker ps
+  724  make down_lb
+  725  make up_lb
+  726  make down
+  727  docker ps -a
+  728  docker rmi urbaniadevprojects
+  729  docker rmi urbaniadevprojects:20181004.000006
+  730  docker rmi urbaniadevprojects:dev
+  731  make pull
+  732  make up
+  733  make lo
+  734  make log
+  735  docker ps
+  736  make down
+  737  docker ps
+  738  docker rmi urbaniadevprojects
+  739  docker rmi urbaniadevprojects:20181004.000006
+  740  docker rmi urbaniadevprojects:dev 
+  741  docker ps -a
+  742  docker rm flamboyant_haibt
+  743  docker rm pycharm_helpers_PY-181.4445.76
+  744  docker ps -a
+  745  docker -a
+  746  make pull
+  747  make up
+  748  make log
+  749  make up_lb
+  750  make ssh
+  751  docker ps
+  752  make ssh
+  753  docker ps
+  754  make log
+  755  make down
+  756  make up
+  757  make ssh
+  758  make log
+  759  docker ps
+  760  cd ../urbania-project-microservice
+  761  gst
+  762  gco app/project/application/services/stage.py
+  763  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+  764  make log
+  765  gst
+  766  gco app/project/application/services/stage.py
+  767  gco app/project/infrastructure/repository/mockup/stage.py
+  768  make tests
+  769  make build-resource name=Multimedia
+  770  make remove-resource name=Multimedia
+  771  make build-resource name=Multimedia
+  772  make tests
+  773  gitk
+  774  gst
+  775  git add .
+  776  gitk
+  777  make tests
+  778  make remove-resource name=Multimedia
+  779  make build-resource name=Multimedia
+  780  make tests
+  781  make log
+  782  make tests
+  783  make build-resource name=Unity
+  784  make tests
+  785  make remove-resource name=Unity
+  786  gst
+  787  make tests
+  788  gst
+  789  git add .
+  790  gitk
+  791  git add .
+  792  gitk
+  793  make tests
+  794  git add .
+  795  git commit -am "feat(modules): Multimedia and Stage modules added"
+  796  gb
+  797  gb -D dev
+  798  gfo dev:dev
+  799  git rebase -i dev
+  800  git mergetool
+  801  git rebase --continue
+  802  git mergetool
+  803  git rebase --continue
+  804  gst
+  805  rm app/project/application/services/injector.py.orig
+  806  gst
+  807  gitk
+  808  gst
+  809  git add .
+  810  git commit -am "refact(modules): Comments unnecessary deleted"
+  811  git rebase -i dev
+  812  gitk
+  813  ggpush
+  814  ggpush -f
+  815  make log
+  816  gitk
+  817  make down
+  818  make up
+  819  docker ps
+  820  git add .
+  821  git commit -am "refact(modules): Comments unnecessary deleted"
+  822  git rebase -i dev
+  823  ggpush -f
+  824  cd Orbis/urbania-project-microservice
+  825  make up
+  826  ..
+  827  cd unt-micro-service-configserver
+  828  make up
+  829  cd ..
+  830  cd urbania-docker
+  831  make up
+  832  make up_lb
+  833  docker ps
+  834  cd ../urbania-project-microservice
+  835  gb
+  836  gst
+  837  gco dev
+  838  ggpull
+  839  gst
+  840  gitk
+  841  make tests
+  842  make log
+  843  make down
+  844  make up
+  845  make log
+  846  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+  847  make lo
+  848  make log
+  849  gst
+  850  git add .
+  851  gst
+  852  git stash
+  853  gst
+  854  ggpull
+  855  gst
+  856  gitk
+  857  git stash pop
+  858  gst
+  859  gitk
+  860  make tests
+  861  make log
+  862  make downgrade
+  863  make down
+  864  make up
+  865  make migrate
+  866  docker ps
+  867  make log
+  868  docker ps
+  869  make log
+  870  cd Orbis/urbania-project-microservice
+  871  make up
+  872  cd ../unt-micro-service-configserver
+  873  make up
+  874  cd ../urbania-docker
+  875  make up
+  876  make up_lb
+  877  make tests
+  878  make log
+  879  cd ../urbania-project-microservice
+  880  make tests
+  881  gst
+  882  git add .
+  883  gb
+  884  gb -D dev_refactor
+  885  gco -b dev_refactor
+  886  git add .
+  887  git commit -am "refact(response): Se modifica el reponse y se agrega decorators para el manejo de errores"
+  888  gco dev
+  889  ggpull
+  890  gst
+  891  gb
+  892  gco dev_refactor
+  893  git rebase -i dev
+  894  ggpush
+  895  gb
+  896  gst
+  897  gco dev
+  898  ggpull
+  899  gitk
+  900  gco dev_refactor
+  901  git rebase -i dev
+  902  git mergetool
+  903  git rebase --continue
+  904  gst
+  905  gitk
+  906  rm app/project/application/services/contact.py.orig
+  907  rm app/project/domain/entities/contact.py.orig
+  908  rm app/project/domain/factories/entities/contact.py.orig
+  909  rm app/project/domain/services/contact.py.orig
+  910  rm app/project/infrastructure/repository/sqlalchemy/contact.py.orig
+  911  rm app/tests/contact.py.orig
+  912  gst
+  913  gitk
+  914  make tests
+  915  gst
+  916  git add .
+  917  git commit -am "refact(modules): Comments unnecessary deleted"
+  918  git rebase -i dev
+  919  ggpush -f
+  920  gb
+  921  gco dev
+  922  gb
+  923  gco dev_refactor
+  924  gst
+  925  gitk
+  926  git add .
+  927  git commit -am "refact(modules): Comments unnecessary deleted"
+  928  git rebase -i dev
+  929  ggpush -f
+  930  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+  931  gco dev
+  932  ggpull
+  933  gitk
+  934  cd /home/josue/Downloads
+  935  ls
+  936  cd PhpStorm-181.4668.78
+  937  ls
+  938  cd bin
+  939  ls
+  940  ./phpstorm.sh
+  941  cd /home/josue/Orbis/
+  942  ls
+  943  git clone git@bitbucket.org:orbisunt/urbania3-api.git
+  944  git clone git@bitbucket.org:orbisunt/urbania-web.git
+  945  cd urbania-web
+  946  gst
+  947  git
+  948  gitk
+  949  make up
+  950  cat /etc/hosts
+  951  make log
+  952  make composer
+  953  ..
+  954  git clone git@bitbucket.org:orbisunt/urbania-db-migrations.git
+  955  cd urbania-db-migrations
+  956  gst
+  957  gfo prod:prod; gco prod
+  958  make migrate
+  959  make pull
+  960  make migrate
+  961  make composer
+  962  make migrate
+  963  make ssh
+  964  cd ../urbania-docker
+  965  make init_mysql
+  966  make migrate
+  967  gfo sprint_proyecto_3:sprint_proyecto_3
+  968  gco sprint_proyecto_3
+  969  gitk
+  970  cd ../urbania-project-microservice
+  971  make tests
+  972  gst
+  973  git add .
+  974  git stash
+  975  git stash clear
+  976  ggpull
+  977  make tests
+  978  cat Makefile
+  979  cd Orbis/urbania-project-microservice
+  980  make up
+  981  cd ../unt-micro-service-configserver
+  982  make up
+  983  cd ../urbania-docker
+  984  cd ..
+  985  ls
+  986  make up
+  987  make up_lb
+  988  gst
+  989  docker ps
+  990  make down
+  991  make up
+  992  docker ps
+  993  make log
+  994  gst
+  995  gitk
+  996  ggpull
+  997  gitk
+  998  make down
+  999  make pull
+ 1000  make up
+ 1001  docker ps
+ 1002  make log
+ 1003  docker ps
+ 1004  cd /home/josue/Downloads/FileZilla3
+ 1005  ./configure
+ 1006  make
+ 1007  ls
+ 1008  ..
+ 1009  ls
+ 1010  rm -Rf FileZilla3
+ 1011  tar -jxvf FileZilla_3.33.0_x86_64-linux-gnu.tar.bz2
+ 1012  ls
+ 1013  cd FileZilla3
+ 1014  ls
+ 1015  ./configure
+ 1016  sudo rm -rf /opt/filezilla*
+ 1017  sudo mv **FileZilla3** /opt/**filezilla3**
+ 1018  ..
+ 1019  l
+ 1020  sudo mv **FileZilla3** /opt/**filezilla3**
+ 1021  sudo apt-get update
+ 1022  sudo apt-get install filezilla
+ 1023  cat ~/.ssh/id_rsa.pub
+ 1024  ssh development@http://bolivarinternational.com
+ 1025  ssh development@bolivarinternational.com
+ 1026  cat ~/.ssh/id_rsa.pub
+ 1027  ssh development@bolivarinternational.com
+ 1028  ping bolivarintational.com
+ 1029  ping www.bolivarintational.com
+ 1030  ping google.com
+ 1031  cd ~/.ssh
+ 1032  ls
+ 1033  pwd
+ 1034  ls -la
+ 1035  chmod 600 id_rsa.pub
+ 1036  chmod 600 id_rsa
+ 1037  ls -la
+ 1038  ssh josue@bolivarintational.com
+ 1039  cd ~/
+ 1040  ssh josue@bolivarinternational.com
+ 1041  ssh id_rsa_bolivar@bolivarinternational.com
+ 1042  docker ps
+ 1043  make tests
+ 1044  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 1045  gst
+ 1046  gitk
+ 1047  git stash
+ 1048  ggpull
+ 1049  gitk
+ 1050  gst
+ 1051  docker ps
+ 1052  gst
+ 1053  gb
+ 1054  gfo ut2-1129_feat: ut2-1129_feat
+ 1055  gfo ut2-1129_feat:ut2-1129_feat
+ 1056  gco  ut2-1129_feat
+ 1057  make downgrade
+ 1058  ggpull
+ 1059  make down
+ 1060  make pull
+ 1061  make up
+ 1062  make downgrade
+ 1063  ggpull
+ 1064  make migrate
+ 1065  make migrate local=true
+ 1066  cd Orbis/urbania-project-microservice
+ 1067  cd ../unt-micro-service-configserver
+ 1068  make up
+ 1069  cd ../urbania-docker
+ 1070  make up
+ 1071  docker ps
+ 1072  make up
+ 1073  make up_lb
+ 1074  ls
+ 1075  rm -Rf alembic
+ 1076  sudo rm -Rf alembic
+ 1077  ls
+ 1078  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 1079  top
+ 1080  kill 25252
+ 1081  docker ps
+ 1082  make doen
+ 1083  make down
+ 1084  cd Orbis/urbania-project-microservice
+ 1085  make down
+ 1086  cd ../unt-micro-service-configserver
+ 1087  make up
+ 1088  cd ../urbania-docker
+ 1089  make up
+ 1090  cd ../
+ 1091  ls
+ 1092  make up_lb
+ 1093  make tests
+ 1094  docker -v
+ 1095  gst
+ 1096  gb
+ 1097  gco dev
+ 1098  ggpull
+ 1099  make tests
+ 1100  gst
+ 1101  gb
+ 1102  gst
+ 1103  gfo fix_cli:fix_cli
+ 1104  gco fix_cli
+ 1105  make build-resource name=Unity
+ 1106  make pull
+ 1107  make build-latest
+ 1108  make build-resource name=Unity
+ 1109  make
+ 1110  make build-resource name=Unity
+ 1111  make down
+ 1112  make up
+ 1113  make build-resource name=Unity
+ 1114  make tests
+ 1115  make down_lb
+ 1116  make up_lb
+ 1117  docker ps
+ 1118  make log
+ 1119  make down
+ 1120  make up
+ 1121  cd Orbis/urbania-project-microservice
+ 1122  gst
+ 1123  git add .
+ 1124  git stash
+ 1125  gst
+ 1126  ggpull
+ 1127  gco dev
+ 1128  ggpuyll
+ 1129  ggpull
+ 1130  gitk
+ 1131  gst
+ 1132  make up
+ 1133  cd ../unt-micro-service-configserver
+ 1134  make up
+ 1135  cd ../urbania-docker
+ 1136  make up
+ 1137  make up_lb
+ 1138  gst
+ 1139  gfo UT2-1139_feat:UT2-1139_feat
+ 1140  make tests
+ 1141  gitk
+ 1142  gco UT2-1139_feat
+ 1143  make tests
+ 1144  gitk
+ 1145  gb
+ 1146  gco dev
+ 1147  make tests
+ 1148  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 1149  cd Orbis/unt-micro-service-configserver
+ 1150  make up
+ 1151  cd ../urbania-project-microservice
+ 1152  make up
+ 1153  cd ../urbania-docker
+ 1154  make up
+ 1155  make up_lb
+ 1156  cd ../urbania-project-microservice
+ 1157  make downgrade
+ 1158  make migrate
+ 1159  make migrate local=true
+ 1160  GB
+ 1161  gst
+ 1162  gb
+ 1163  gb -D dev3c
+ 1164  gfo dev3c:dev3c
+ 1165  gst
+ 1166  gco dev3c
+ 1167  cd ../unt-micro-service-configserver
+ 1168  gst
+ 1169  gb
+ 1170  gfo dev3c:dev3c
+ 1171  gco dev3c
+ 1172  gst
+ 1173  gfo UT3-833_feat:UT3-833_feat; gco UT3-833_feat
+ 1174  make tests
+ 1175  gst
+ 1176  gco 
+ 1177  gst
+ 1178  git reset HEAD --hard
+ 1179  ggpull
+ 1180  gitk
+ 1181  make tests
+ 1182  ggpull
+ 1183  make tests
+ 1184  ggpull
+ 1185  make tests
+ 1186  gst
+ 1187  ggpull
+ 1188  gst
+ 1189  gb
+ 1190  git add .
+ 1191  git stash
+ 1192  gco dev
+ 1193  gb -D UT3-833_feat
+ 1194  gfo UT3-833_feat:UT3-833_feat; gco UT3-833_feat
+ 1195  make tests
+ 1196  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 1197  gb
+ 1198  gst
+ 1199  gco dev
+ 1200  ggpull
+ 1201  gst
+ 1202  gitk
+ 1203  gst
+ 1204  gb
+ 1205  ggpull
+ 1206  make migrate
+ 1207  make migrate local=true
+ 1208  make downgrade
+ 1209  make migrate local=true
+ 1210  make downgrade
+ 1211  make migrate local=true
+ 1212  make downgrade
+ 1213  make migrate local=true
+ 1214  cd Orbis/urbania-project-microservice
+ 1215  gst
+ 1216  gb
+ 1217  gco dev_migrations
+ 1218  gco -b dev_migrations
+ 1219  gst
+ 1220  git add .
+ 1221  git commit -am "fix(migrations): Bug on dateUpdate field fixed"
+ 1222  gst
+ 1223  gco dev
+ 1224  ggpull
+ 1225  gco dev_migrations
+ 1226  git rebase -i dev
+ 1227  ggpush
+ 1228  make tests
+ 1229  cd ../
+ 1230  ls
+ 1231  git clone git@bitbucket.org:orbisunt/urbania-micro-service-announcement.git
+ 1232  gitk
+ 1233  cd  urbania-micro-service-announcement
+ 1234  gb
+ 1235  gfo prod:prod; gco prod
+ 1236  gitk
+ 1237  gst
+ 1238  make tests
+ 1239  gst
+ 1240  git add .
+ 1241  git commit -am "fix(logo): Removing logo field from project table"
+ 1242  git rebase -i dev
+ 1243  ggpush -f
+ 1244  gst
+ 1245  git add .
+ 1246  git commit -am "feat(multimedia): Field 'order' added to multimedia table"
+ 1247  gst
+ 1248  git rebase -i dev
+ 1249  ggpush -f
+ 1250  make tests
+ 1251  gst
+ 1252  gb
+ 1253  gco dev
+ 1254  ggpull
+ 1255  gitk
+ 1256  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 1257  make downgrade
+ 1258  make downgrade local=true
+ 1259  pwd
+ 1260  ..
+ 1261  ls
+ 1262  cd unt-micro-service-configserver
+ 1263  make up
+ 1264  cd ../urbania-project-microservice
+ 1265  make up
+ 1266  cd ../urbania-docker
+ 1267  make up
+ 1268  cd ..
+ 1269  cd Gurami
+ 1270  ls
+ 1271  cd bolivar
+ 1272  gst
+ 1273  git --version
+ 1274  git init
+ 1275  gst
+ 1276  gitk
+ 1277  git add .
+ 1278  git commit -am "feat(start): First commit"
+ 1279  gst
+ 1280  gitk
+ 1281  gst
+ 1282  gitk
+ 1283  ls -la
+ 1284  gst
+ 1285  git add .gitignore
+ 1286  gst
+ 1287  ..
+ 1288  gst
+ 1289  ls
+ 1290  git clone https://github.com/mzsea/docker-compose-wordpress-nginx.git
+ 1291  docker ps
+ 1292  make downgrade 
+ 1293  make downgrade local=true
+ 1294  docker ps
+ 1295  make log
+ 1296  make down
+ 1297  gst
+ 1298  dokcer ps
+ 1299  docker ps
+ 1300  make up
+ 1301  docker ps
+ 1302  make log
+ 1303  gitk
+ 1304  make down_lb
+ 1305  make down
+ 1306  gst
+ 1307  ggpull
+ 1308  docker ps
+ 1309  make pu
+ 1310  make up
+ 1311  make up_lb
+ 1312  docker ps
+ 1313  make log
+ 1314  cd ../unt-micro-service-configserver
+ 1315  make down
+ 1316  docker ps
+ 1317  make up
+ 1318  docker ps
+ 1319  cd ../urbania-docker
+ 1320  make down_lb
+ 1321  make up_lb
+ 1322  docker ps
+ 1323  docker rm -f urbaniadevprojects_backend
+ 1324  docker ps
+ 1325  make down
+ 1326  make up
+ 1327  docker ps
+ 1328  make downgrade
+ 1329  make log
+ 1330  make migrate
+ 1331  make migrate local=true
+ 1332  git clone git@github.com:appleboy/codeigniter-docker.git
+ 1333  ls
+ 1334  rm -Rf docker-compose-wordpress-nginx
+ 1335  ls
+ 1336  git clone https://github.com/appleboy/codeigniter-docker.git
+ 1337  ls
+ 1338  cd codeigniter-docker
+ 1339  ls
+ 1340  make build
+ 1341  cd Orbis/unt-micro-service-configserver
+ 1342  make up
+ 1343  cd ../urbania-docker
+ 1344  cd ../urbania-project-microservice
+ 1345  make up
+ 1346  make up_lb
+ 1347  docker ps
+ 1348  cd ../urbania-project-microservice
+ 1349  make log
+ 1350  docker ps
+ 1351  make down
+ 1352  make up
+ 1353  docker ps
+ 1354  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 1355  gst
+ 1356  docker ps
+ 1357  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 1358  gst
+ 1359  gb
+ 1360  gco dev3c
+ 1361  ggpull
+ 1362  gitk
+ 1363  gst
+ 1364  gco dev
+ 1365  gitk
+ 1366  gb -S dev3c
+ 1367  gb -D dev3c
+ 1368  gfo dev3c:dev3c
+ 1369  gitk
+ 1370  ggpull
+ 1371  gitk
+ 1372  gco dev3c
+ 1373  docke rps
+ 1374  docker ps
+ 1375  gst
+ 1376  ggpull
+ 1377  gb
+ 1378  gco dev
+ 1379  gitk
+ 1380  gpull
+ 1381  ggpul
+ 1382  ggpull
+ 1383  gst
+ 1384  git reset HEAD --hard
+ 1385  gst
+ 1386  gco dev3c
+ 1387  ggpul
+ 1388  ggpull
+ 1389  gitk
+ 1390  ggpull
+ 1391  gitk
+ 1392  gst
+ 1393  ggpull
+ 1394  make downgrade
+ 1395  make migrate local=true
+ 1396  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 1397  gfo container:container
+ 1398  gco container
+ 1399  ggpull
+ 1400  make tests
+ 1401  gitk
+ 1402  gb
+ 1403  gb -D dev
+ 1404  gfo dev:dev
+ 1405  gco dev
+ 1406  gitk
+ 1407  git add .
+ 1408  git stash
+ 1409  gst
+ 1410  make tests
+ 1411  gitk
+ 1412  git stash pop
+ 1413  gst
+ 1414  git add .
+ 1415  git stash
+ 1416  gfo ut2-1227_feat:ut2-1227_feat
+ 1417  gco ut2-1227_feat
+ 1418  make test
+ 1419  make tests
+ 1420  gco dev
+ 1421  ggpull
+ 1422  git stash pop
+ 1423  cd /home/josue/Orbis/unt-micro-service-configserver
+ 1424  make up
+ 1425  cd ../urbania-docker
+ 1426  make up
+ 1427  cd ../urbania-project-microservice
+ 1428  make up
+ 1429  make up_lb
+ 1430  docker ps
+ 1431  cd ../urbania-project-microservice
+ 1432  gst
+ 1433  git add .
+ 1434  git stash
+ 1435  gst
+ 1436  docker ps
+ 1437  make down
+ 1438  docker ps
+ 1439  make up
+ 1440  cd ../urbania-docker
+ 1441  docker ps
+ 1442  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 1443  docker ps
+ 1444  dokcer ps
+ 1445  docker ps
+ 1446  make tests
+ 1447  gst
+ 1448  make tests
+ 1449  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 1450  cd Orbis/urbania-project-microservice
+ 1451  make up
+ 1452  cd ../unt-micro-service-configserver/make up
+ 1453  cd ../urbania-docker
+ 1454  make up
+ 1455  make tests
+ 1456  make log
+ 1457  make tests
+ 1458  docker ps
+ 1459  cd ../urbania-docker
+ 1460  make up_lb
+ 1461  docker ps
+ 1462  make doen
+ 1463  make down
+ 1464  make up
+ 1465  make down_lb
+ 1466  docker ps
+ 1467  make log
+ 1468  make up_lb
+ 1469  make log
+ 1470  docker ps
+ 1471  make down
+ 1472  docker ps
+ 1473  make up
+ 1474  docker ps
+ 1475  make log
+ 1476  docker ps
+ 1477  make down
+ 1478  make up
+ 1479  docker ps
+ 1480  make down
+ 1481  make up
+ 1482  docker ps
+ 1483  gst
+ 1484  git add .
+ 1485  git stash clear
+ 1486  git stash
+ 1487  make down
+ 1488  make up
+ 1489  docker ps
+ 1490  cd ../unt-micro-service-configserver
+ 1491  make down
+ 1492  make up
+ 1493  docker ps
+ 1494  make down
+ 1495  cd ../urbania-docker
+ 1496  make down_lb
+ 1497  make up_lb
+ 1498  docker ps
+ 1499  make up
+ 1500  docker ps
+ 1501  git stash pop
+ 1502  make log
+ 1503  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 1504  python3 app/project/domain/valueObjects/testing.py
+ 1505  python3 app/project/domain/valueObjects/testing2.py
+ 1506  python3 app/project/domain/valueObjects/testing.py
+ 1507  python3 app/project/domain/valueObjects/testing4.py
+ 1508  python3 app/project/domain/valueObjects/testing.py
+ 1509  python3 app/project/domain/valueObjects/testing5.py
+ 1510  python3 app/project/domain/valueObjects/testing6.py
+ 1511  python3 app/project/domain/valueObjects/testing7.py
+ 1512  python3 app/project/domain/valueObjects/testing6.py
+ 1513  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 1514  python3 app/project/domain/valueObjects/testing7.py
+ 1515  python3 app/project/domain/valueObjects/testing6.py
+ 1516  python3 app/project/domain/valueObjects/testing7.py
+ 1517  python3 app/project/domain/valueObjects/testing6.py
+ 1518  python3 app/project/domain/valueObjects/testing7.py
+ 1519  python3 app/project/domain/valueObjects/testing6.py
+ 1520  python3 app/project/domain/valueObjects/testing7.py
+ 1521  python3 app/project/domain/valueObjects/testing6.py
+ 1522  python3 app/project/domain/valueObjects/testing8.py
+ 1523  docker ps
+ 1524  gst
+ 1525  gb
+ 1526  git add .
+ 1527  git stash clear
+ 1528  gco -b testing
+ 1529  git commit -am "tesing"
+ 1530  gco dev
+ 1531  gst
+ 1532  docker ps
+ 1533  make down
+ 1534  make up
+ 1535  docker ps
+ 1536  cd ..
+ 1537  ls
+ 1538  ls -la
+ 1539  cd urbania-micro-service-announcement
+ 1540  make up
+ 1541  make build
+ 1542  make pull
+ 1543  pint 172.18.60.68:5000
+ 1544  ping 172.18.60.68:5000
+ 1545  ping 172.18.60.68
+ 1546  make up
+ 1547  docker ps
+ 1548  make composer
+ 1549  gitk
+ 1550  cd .
+ 1551  .
+ 1552  ..
+ 1553  ls
+ 1554  git clone git@bitbucket.org:orbisunt/urbania-microservice-publisher.git
+ 1555  cd urbania-microservice-publisher
+ 1556  gfo prod:prod
+ 1557  gco pros
+ 1558  gco prod
+ 1559  make pull
+ 1560  make composer
+ 1561  cd ../urbania-micro-service-announcement
+ 1562  cd app/vendor/
+ 1563  ls
+ 1564  sudo chown josue:josue -Rf orbisunt
+ 1565  cd orbisunt
+ 1566  ls
+ 1567  cd urbania-core
+ 1568  gfo api_prod:api_prod; gco api_prod
+ 1569  gfo api:api; gco api
+ 1570  gitk
+ 1571  gst
+ 1572  gitk
+ 1573  git add .
+ 1574  gfo api_pre:api_pre
+ 1575  gst
+ 1576  git stash
+ 1577  gb
+ 1578  gco api_pre
+ 1579  gitk
+ 1580  gfo api_pre3b:api_pre3b; gco api_pre3b
+ 1581  gitk
+ 1582  git stash pop
+ 1583  gst
+ 1584  gitk
+ 1585  git add .
+ 1586  git commit -am "fix(hydrator): Se agrega validacion de key en el array con un isset"
+ 1587  git rebase -i api_pre
+ 1588  ggpush
+ 1589  gst
+ 1590  ggpull
+ 1591  git rebase -i api_pre
+ 1592  git mergetool
+ 1593  git rebase --continue
+ 1594  gst
+ 1595  gitk
+ 1596  ggpush
+ 1597  gst
+ 1598  gco api_pre
+ 1599  git merge api_pre3b
+ 1600  ggpush
+ 1601  gitk
+ 1602  gst
+ 1603  gitk
+ 1604  ggpull
+ 1605  ggpush -f
+ 1606  gitk
+ 1607  gst
+ 1608  gb
+ 1609  gco testing
+ 1610  ggpush
+ 1611  gitk
+ 1612  cd Orbis/unt-micro-service-configserver
+ 1613  make up
+ 1614  cd ../urbania-docker
+ 1615  make up
+ 1616  cd ..
+ 1617  ls
+ 1618  cd ../urbania-project-microservice
+ 1619  make up
+ 1620  docker ps
+ 1621  make log
+ 1622  docker ps
+ 1623  make down
+ 1624  make down_lb
+ 1625  dokcer ps
+ 1626  docker ps
+ 1627  make up
+ 1628  docker ps
+ 1629  make up
+ 1630  make log
+ 1631  gitk
+ 1632  python3.5 app/project/domain/valueObjects/testing
+ 1633  python3.5 app/project/domain/valueObjects/testing9.py
+ 1634  make doen
+ 1635  make down
+ 1636  python3.5 app/project/domain/valueObjects/testing9.py
+ 1637  ..
+ 1638  ls
+ 1639  cd urbania-microservice-publisher
+ 1640  gst
+ 1641  gitk
+ 1642  cd app/vendor/orbisunt/urbania-core
+ 1643  gst
+ 1644  gitk
+ 1645  ggpull
+ 1646  cd ..
+ 1647  ls
+ 1648  sudo chown josue:josue -Rf urbania-core
+ 1649  cd urbania-core
+ 1650  gst
+ 1651  ggpull
+ 1652  gb
+ 1653  gfo api:api
+ 1654  gco api
+ 1655  gitk
+ 1656  gb
+ 1657  gfo api_pre:api_pre
+ 1658  gco api_pre
+ 1659  gitk
+ 1660  gb
+ 1661  gco api_dev3c
+ 1662  git merge api_pre
+ 1663  ggpush
+ 1664  gitk
+ 1665  ..
+ 1666  python3.5 app/project/domain/valueObjects/testing9.py
+ 1667  python3 app/project/domain/valueObjects/testing9.py
+ 1668  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 1669  python3 app/project/domain/valueObjects/testing9.py
+ 1670  git branch
+ 1671  gst
+ 1672  git add .
+ 1673  git commit -am "tesing"
+ 1674  gb
+ 1675  gco dev
+ 1676  ggpull
+ 1677  gst
+ 1678  gitk
+ 1679  git diff testing --name-only
+ 1680  git checkout testing app/project/domain/valueObjects/testing9.py
+ 1681  python3 app/project/domain/valueObjects/testing9.py
+ 1682  npm install -g api-designer
+ 1683  sudo apt-get install npm
+ 1684  npm install -g api-designer
+ 1685  sudo npm install -g api-designer
+ 1686  api-designer
+ 1687  sudo api-designer
+ 1688  api-designer
+ 1689  env node
+ 1690  sudo apt-get install nodejs
+ 1691  which node
+ 1692  which npm
+ 1693  sudo apt autoremove npm
+ 1694  sudo apt-get install nodejs
+ 1695  which node
+ 1696  sudo apt autoremove node
+ 1697  which nodejs
+ 1698  sudo apt autoremove nodejs
+ 1699  sudo apt-get install nodejs
+ 1700  sudo apt-get install npm
+ 1701  which nodejs
+ 1702  nodejs en
+ 1703  nodejs env
+ 1704  env nodejs
+ 1705  npm install -g api-designer
+ 1706  sudo npm install -g api-designer
+ 1707  api-designer
+ 1708  env node
+ 1709  ln -s /usr/bin/nodejs /usr/bin/node
+ 1710  sudo ln -s /usr/bin/nodejs /usr/bin/node
+ 1711  api-designer
+ 1712  make up
+ 1713  pip install cerberus
+ 1714  pip install --upgrade pip
+ 1715  make ssh
+ 1716  make log
+ 1717  ll
+ 1718  pwd
+ 1719  cd /home/josue/Orbis/urbania-docker
+ 1720  make down_lb
+ 1721  make up_lb
+ 1722  docker ps
+ 1723  make ssh
+ 1724  make down
+ 1725  cd ../unt-micro-service-configserver
+ 1726  gb
+ 1727  ggpull
+ 1728  make up
+ 1729  make down
+ 1730  make up
+ 1731  make lo
+ 1732  make log
+ 1733  make up
+ 1734  docker ps
+ 1735  make ssh
+ 1736  ..
+ 1737  ls
+ 1738  cd Orbis
+ 1739  ls
+ 1740  ..
+ 1741  mkdir Testing
+ 1742  cd Testing
+ 1743  git clone https://github.com/pyeve/cerberus.git
+ 1744  docker ps
+ 1745  make pull
+ 1746  cd ../urbania-docker
+ 1747  cat Makefile
+ 1748  cd ../unt-micro-service-configserver
+ 1749  make pull
+ 1750  cat /etc/hosts
+ 1751  ping 172.18.60.68
+ 1752  ifconfig
+ 1753  ping 172.18.60.68
+ 1754  make pull
+ 1755  docker ps
+ 1756  ..
+ 1757  ls
+ 1758  cd urbania-microservice-publisher
+ 1759  gst
+ 1760  git add .
+ 1761  git stash
+ 1762  ggpull
+ 1763  make up
+ 1764  docker ps
+ 1765  ..
+ 1766  ls
+ 1767  git clone git@bitbucket.org:orbisunt/urbania-microservice-token.git
+ 1768  ls
+ 1769  make up
+ 1770  make pull
+ 1771  cat Makefile
+ 1772  make up
+ 1773  docke ps
+ 1774  docker ps
+ 1775  ..
+ 1776  ls
+ 1777  git clone git@bitbucket.org:orbisunt/urbania-microservice-publisher-authorization.git
+ 1778  cd  urbania-microservice-publisher-authorization
+ 1779  gfo prod:prod
+ 1780  gco prod
+ 1781  make pull
+ 1782  gst
+ 1783  make up
+ 1784  make composer
+ 1785  cat Makefile
+ 1786  make migrate
+ 1787  docker ps
+ 1788  make migrate
+ 1789  docker ps
+ 1790  cd ../urbania-microservice-publisher
+ 1791  ls
+ 1792  cat Makefile
+ 1793  ls
+ 1794  make composer
+ 1795  cat Makefile
+ 1796  make migrate
+ 1797  ls
+ 1798  cat Makefile
+ 1799  docker ps
+ 1800  make down
+ 1801  make up
+ 1802  ll
+ 1803  cd ../urbania-web
+ 1804  gb
+ 1805  gco prod
+ 1806  gst
+ 1807  ggpull
+ 1808  gitk
+ 1809  make up
+ 1810  make composer
+ 1811  cd /home/josue/Orbis/urbania3-api
+ 1812  gb
+ 1813  gfo prod:prod; gco prod
+ 1814  make pull
+ 1815  make up
+ 1816  make composer
+ 1817  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 1818  docker ps
+ 1819  dokcer ps
+ 1820  docker ps
+ 1821  ..
+ 1822  git clone git@bitbucket.org:orbisunt/urbania-micro-service-user.git
+ 1823  cd urbania-micro-service-user
+ 1824  gfo prod:prod
+ 1825  gco prod
+ 1826  gst
+ 1827  make pull
+ 1828  make up
+ 1829  make composer
+ 1830  docker ps
+ 1831  ..
+ 1832  ls
+ 1833  git clone git@bitbucket.org:orbisunt/urbania-micro-service-package.git
+ 1834  ..
+ 1835  git clone git@bitbucket.org:orbisunt/urbania-microservice-consume-package.git
+ 1836  cd urbania-micro-service-package
+ 1837  gfo prod:prod; gco prod
+ 1838  make pull
+ 1839  cd urbania-microservice-consume-package
+ 1840  make up
+ 1841  gfo prod:prod; gco prod
+ 1842  make composer
+ 1843  make pull
+ 1844  make up
+ 1845  make composer
+ 1846  cat Makefile
+ 1847  make migrate
+ 1848  cat Makefile
+ 1849  make migrate
+ 1850  .. 
+ 1851  cd urbania-docker
+ 1852  ls
+ 1853  cat Makefile f
+ 1854  make init_packages_mysql
+ 1855  make migrate
+ 1856  cat Makefile
+ 1857  make init_consume_packages_mysql
+ 1858  make migrate
+ 1859  make down
+ 1860  make up
+ 1861  echo 'flush_all' | nc localhost 11211
+ 1862  ..
+ 1863  ll
+ 1864  git clone git@bitbucket.org:orbisunt/urbania-micro-service-graphql.git
+ 1865  cd urbania-micro-service-graphql
+ 1866  gfo prod:prod; gco prod
+ 1867  make pull
+ 1868  make up
+ 1869  make composer
+ 1870  gst
+ 1871  cat Makefile
+ 1872  make ssh
+ 1873  cd app/vendor/orbisunt/urbania-core
+ 1874  cd ..
+ 1875  ls
+ 1876  sudo chown josue:josue -Rf urbania-core
+ 1877  cd urbania-core
+ 1878  gb
+ 1879  gfo prod:prod; gco prod
+ 1880  gfo api:api; gco api
+ 1881  gst
+ 1882  git diff api_dev --name-only
+ 1883  git diff api_dev
+ 1884  gco api_dev
+ 1885  git merge api
+ 1886  ggpush
+ 1887  gitk
+ 1888  cd /home/josue/Orbis/urbania-microservice-consume-package
+ 1889  cd app/vendor/orbisunt
+ 1890  ls
+ 1891  sudo chown josue:josue -Rf urbania-core
+ 1892  cd urbania-core
+ 1893  gfo api:api
+ 1894  git merge api
+ 1895  gitk
+ 1896  gst
+ 1897  git stash
+ 1898  git stash clear
+ 1899  gst
+ 1900  git add .
+ 1901  git stash
+ 1902  gb
+ 1903  gfo api_dev:api;gco api_dev
+ 1904  gfo api_dev:api_dev;gco api_dev
+ 1905  gitk
+ 1906  ..
+ 1907  cd urbania-micro-service-package
+ 1908  ls
+ 1909  cd app
+ 1910  ls
+ 1911  ..
+ 1912  make ssh
+ 1913  docker ps
+ 1914  cat Makefile
+ 1915  make cache
+ 1916  make dev
+ 1917  make phinx
+ 1918  make development-enable
+ 1919  gst
+ 1920  git add .
+ 1921  git stash
+ 1922  gst
+ 1923  make ssh
+ 1924  make composer
+ 1925  gst
+ 1926  git add .
+ 1927  git stash
+ 1928  make composer
+ 1929  gitk
+ 1930  git add .
+ 1931  git stash
+ 1932  make composer
+ 1933  gst
+ 1934  cat Makefile
+ 1935  make ssh
+ 1936  make composer
+ 1937  make down
+ 1938  make up
+ 1939  ls
+ 1940  cd app/vendor/orbisunt
+ 1941  ls
+ 1942  sudo chown josue:josue -Rf urbania-core
+ 1943  cd urbania-core
+ 1944  ggpull
+ 1945  gitk
+ 1946  ..
+ 1947  .
+ 1948  ..
+ 1949  make ssh
+ 1950  ls
+ 1951  gitk
+ 1952  cd ../urbania-micro-service-announcement
+ 1953  gst
+ 1954  ggpull
+ 1955  make pull
+ 1956  make up
+ 1957  make composer
+ 1958  gst
+ 1959  make down
+ 1960  make up
+ 1961  gst
+ 1962  docker ps
+ 1963  cat Makefile
+ 1964  make down
+ 1965  make up
+ 1966  ..
+ 1967  git clone git@bitbucket.org:orbisunt/urbania-microservice-geolocation.git
+ 1968  cd urbania-microservice-geolocation
+ 1969  gst
+ 1970  gfo prod:prod; gco prod
+ 1971  make pull
+ 1972  gb
+ 1973  gfo dev3c:dev3c; gco dev3c
+ 1974  gst
+ 1975  make pull
+ 1976  cat Makefile
+ 1977  make pull
+ 1978  gfo dev:dev; gco dev
+ 1979  make pull
+ 1980  make up
+ 1981  make composer
+ 1982  cat Makefile
+ 1983  make up
+ 1984  make composer
+ 1985  make pull
+ 1986  docker images
+ 1987  docker rmi urbaniadevlocation:dev
+ 1988  make down
+ 1989  docker rmi -f urbaniadevlocation:dev
+ 1990  make pull
+ 1991  docker images
+ 1992  make build
+ 1993  make build-latest
+ 1994  make pull
+ 1995  make build-latest
+ 1996  cd ../urbania-web
+ 1997  gst
+ 1998  gitk
+ 1999  git add .
+ 2000  git stash
+ 2001  ggpull
+ 2002  cd src/vendor/orbisunt/urbania-core
+ 2003  cd ..
+ 2004  ls -la
+ 2005  sudo chown josue:josue -Rf urbania-core
+ 2006  cd urbania-core
+ 2007  gfo prod:prod; gco prod
+ 2008  gst
+ 2009  gitk
+ 2010  ..
+ 2011  ls
+ 2012  cd frontend/nova
+ 2013  ll
+ 2014  yarn 
+ 2015  sudo npm install yarn -g
+ 2016  yarn
+ 2017  npm install
+ 2018  cat package.json
+ 2019  yarn build:mpa:prod
+ 2020  npm run build:mpa:prod
+ 2021  node --version
+ 2022  pwd
+ 2023  ~
+ 2024  sudo npm install -g n
+ 2025  sudo n 8.5.0
+ 2026  cd /home/josue/Orbis/urbania-web/frontend/nova
+ 2027  sudo n
+ 2028  node --version
+ 2029  ~
+ 2030  sudo n 4.2.6
+ 2031  sudo n
+ 2032  node --version
+ 2033  sudo n
+ 2034  node --version
+ 2035  cd /home/josue/Orbis/urbania-web/frontend/nova
+ 2036  cat package.json | rgrep "mpa"
+ 2037  cat package.json | grep "mpa"
+ 2038  yarn build:mpa:prod
+ 2039  ll
+ 2040  cat tsconfig.ma
+ 2041  cat tsconfig.mpa.json
+ 2042  rm -rf node_modules
+ 2043  npm install 
+ 2044  npm install
+ 2045  ll
+ 2046  npm install
+ 2047  cat /home/josue/.npm/_logs/2018-05-30T17_05_33_925Z-debug.log
+ 2048  yarn
+ 2049  npm i
+ 2050  npm --version
+ 2051  cat package.json
+ 2052  npm install 
+ 2053  cat /home/josue/.npm/_logs/2018-05-30T17_06_26_530Z-debug.log
+ 2054  npm install npm@latest -g
+ 2055  sudo npm install npm@latest -g
+ 2056  sudo npm install node@latest -g
+ 2057  npm install node@latest -g
+ 2058  npm install
+ 2059  npm install npm@latest -g
+ 2060  sudo npm install npm@latest -g
+ 2061  npm install npm@latest -g
+ 2062  npm
+ 2063  npm i
+ 2064  node --version
+ 2065  where node
+ 2066  npm install gulp -g
+ 2067  /home/josue/.npm/_logs/2018-05-30T17_10_13_212Z-debug.log
+ 2068  cat /home/josue/.npm/_logs/2018-05-30T17_10_13_212Z-debug.log
+ 2069  sudo cnpm up -g npm
+ 2070  cnpm
+ 2071  sudo npm up -g npm
+ 2072  npm install npm@latest -g
+ 2073  sudo apt-get remove node
+ 2074  sudo apt-get remove nodejs
+ 2075  node --version
+ 2076  where node
+ 2077  cd /usr/local/bin
+ 2078  ll
+ 2079  ~
+ 2080  npm --version
+ 2081  sudo apt-get remove npm
+ 2082  npm
+ 2083  sudo apt-get remove npm
+ 2084  curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+ 2085  node --version
+ 2086  sudo apt-get install -y nodejs
+ 2087  where node
+ 2088  npm install
+ 2089  sudo purge npm 
+ 2090  sudo apt-get purge npm
+ 2091  sudo apt-get autoremove npm
+ 2092  npm --version
+ 2093  sudo apt-get remove npm
+ 2094  npm
+ 2095  npm install
+ 2096  sudo apt-get purge npm
+ 2097  sudo apt-get purge npmjs
+ 2098  sudo apt-get autoremove npm
+ 2099  sudo apt-get purge nodejs
+ 2100  sudo apt-get purge --auto-remove nodejs
+ 2101  sudo apt-get purge nodejs
+ 2102  sudo apt-get autoremove
+ 2103  sudo apt-get purge --auto-remove nodejs
+ 2104  sudo apt-get autoremove
+ 2105  node --version
+ 2106  where node
+ 2107  node --version
+ 2108  node
+ 2109  npm --version
+ 2110  npm instal
+ 2111  npm install
+ 2112  sudo apt-get remove purge npm
+ 2113  sudo apt-get remove npm
+ 2114  sudo apt-get autoremove
+ 2115  npm 
+ 2116  where npm
+ 2117  sudo rm -rf /usr/local/bin/npm
+ 2118  npm --version
+ 2119  npm
+ 2120  nde
+ 2121  node
+ 2122  node --version
+ 2123  where node
+ 2124  sudo rm -rf /usr/local/bin/node
+ 2125  node
+ 2126  curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+ 2127  node --version
+ 2128  sudo apt-get install -y nodejs
+ 2129  node --version
+ 2130  npm --version
+ 2131  npm install
+ 2132  where node
+ 2133  sudo npm install -g n
+ 2134  sudo n 8.5.0
+ 2135  sudo n 4.5.0
+ 2136  sudo n
+ 2137  node --version
+ 2138  cd Orbis/urbania-web/frontend/nova
+ 2139  npm install
+ 2140  npm
+ 2141  npm install
+ 2142  where node
+ 2143  rm -rf /usr/local/bin/node
+ 2144  sudo rm -rf /usr/local/bin/node
+ 2145  where node
+ 2146  npm install
+ 2147  sudo npm install
+ 2148  where npm
+ 2149  sudo rm -rf /usr/local/bin/npm
+ 2150  npm install
+ 2151  ll
+ 2152  yarn build:mpa:prod
+ 2153  gst
+ 2154  gb
+ 2155  gfo pre:pre; gco pre
+ 2156  gst
+ 2157  git add .
+ 2158  git stash
+ 2159  gitk
+ 2160  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 2161  gst
+ 2162  gb
+ 2163  gfo dev:dev; gco dev
+ 2164  ..
+ 2165  gb
+ 2166  gfo dev3c:dev3c; gco dev3c
+ 2167  gst
+ 2168  gitk
+ 2169  gco prod
+ 2170  gitk
+ 2171  gco dev3c
+ 2172  gitk
+ 2173  gco prod
+ 2174  gitk
+ 2175  gb
+ 2176  gfo pre3c:pre3c; gco pre3c
+ 2177  gitk
+ 2178  git diff prod --name-only
+ 2179  gb
+ 2180  gco pre
+ 2181  gitk
+ 2182  gfo pre3b;pre3b;gco pre3b
+ 2183  gitk
+ 2184  gco pre3c
+ 2185  gitk
+ 2186  gst
+ 2187  gfo sprint_proyecto_4:sprint_proyecto_4; gco sprint_proyecto_4
+ 2188  gco dev
+ 2189  ggpull
+ 2190  git merge sprint_proyecto_4
+ 2191  gitk
+ 2192  gco sprint_proyecto_4
+ 2193  gb -D dev
+ 2194  gfo dev:dev
+ 2195  git rebase -i dev
+ 2196  gitk
+ 2197  gco dev
+ 2198  git merge sprint_proyecto_4
+ 2199  ggpush
+ 2200  gitk
+ 2201  cd ../urbania-microservice-publisher
+ 2202  gst
+ 2203  git add .
+ 2204  git stash
+ 2205  git stash clear
+ 2206  gst
+ 2207  gco
+ 2208  gst
+ 2209  git add .
+ 2210  git stash
+ 2211  gst
+ 2212  cd ../urbania-micro-service-announcement
+ 2213  gst
+ 2214  docker ps
+ 2215  ls
+ 2216  cd app
+ 2217  ls
+ 2218  ..
+ 2219  ls
+ 2220  gst
+ 2221  cd app/vendor/orbisunt/urbania-core
+ 2222  gst
+ 2223  git add .
+ 2224  git stash
+ 2225  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 2226  cd urbania-micro-service-announcement
+ 2227  cd app/vendor/orbisunt/urbania-core
+ 2228  ..
+ 2229  sudo chown josue:josue -Rf urbania-core
+ 2230  cd urbania-core
+ 2231  pwd
+ 2232  gst
+ 2233  git add .
+ 2234  git stash
+ 2235  gst
+ 2236  git add .
+ 2237  git stash
+ 2238  cd /home/josue/Orbis/urbania-web
+ 2239  gst
+ 2240  git add .
+ 2241  gitk
+ 2242  gst
+ 2243  git stash clear
+ 2244  git add .
+ 2245  git stash
+ 2246  gb
+ 2247  gco prod
+ 2248  ggpull
+ 2249  git diff dev
+ 2250  git diff dev --name-only
+ 2251  gst
+ 2252  cd src/vendor/orbisunt/urbania-core
+ 2253  gst
+ 2254  ggpull
+ 2255  pwd
+ 2256  cd src/vendor/orbisunt/urbania-core
+ 2257  ls
+ 2258  gb
+ 2259  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 2260  cd /home/josue/Orbis/urbania-docker
+ 2261  make up
+ 2262  cd ..
+ 2263  ls
+ 2264  cd urbania-web
+ 2265  make up
+ 2266  cd ..
+ 2267  cd urbania-micro-service-announcement
+ 2268  make up
+ 2269  make up_lb
+ 2270  cd ../unt-micro-service-configserver
+ 2271  make up
+ 2272  cd ../urbania-microservice-token
+ 2273  make up
+ 2274  cd ..
+ 2275  ls
+ 2276  cd urbania-microservice-publisher
+ 2277  make up
+ 2278  cd ../urbania-micro-service-graphql
+ 2279  make up
+ 2280  cd ../urbania-microservice-consume-package
+ 2281  make up
+ 2282  cd ../urbania-micro-service-package
+ 2283  make up
+ 2284  cd ../urbania-micro-service-search
+ 2285  make up
+ 2286  cd ../urbania-solr
+ 2287  make up
+ 2288  docker ps
+ 2289  cd ../urbania-project-microservice
+ 2290  make down
+ 2291  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 2292  cd ../urbania-microservice-publisher
+ 2293  gst
+ 2294  cd ../urbania-microservice-publisher-authorization
+ 2295  make up
+ 2296  cd ../urbania-microservice-publisher
+ 2297  make up
+ 2298  docker ps
+ 2299  make log
+ 2300  cat Makefile
+ 2301  cd ../urbania-micro-service-announcement
+ 2302  cat Makefile
+ 2303  ..
+ 2304  ls
+ 2305  cd urbania-micro-service-graphql
+ 2306  cat Makefile
+ 2307  vim Makefile
+ 2308  make log
+ 2309  cat Makefile
+ 2310  make ssh
+ 2311  cd ../urbania-microservice-publisher
+ 2312  make log
+ 2313  gst
+ 2314  gitk
+ 2315  cat Makefile
+ 2316  vim Makefile
+ 2317  make composer_cache_clear
+ 2318  make ssh
+ 2319  make composer_cache_clear
+ 2320  vim Makefile
+ 2321  make development-enable
+ 2322  sudo rm app/data/config-cache.php
+ 2323  gst
+ 2324  \tdocker ps
+ 2325  gst
+ 2326  git stash clear
+ 2327  git add .
+ 2328  git stash
+ 2329  gb
+ 2330  gfo dev:dev; gco dev
+ 2331  git stash pop
+ 2332  gst
+ 2333  gitk
+ 2334  gst
+ 2335  git add .
+ 2336  git stash
+ 2337  gst
+ 2338  gfo dev3c:dev3c; gco dev3c
+ 2339  git diff prod --name-only
+ 2340  git stash pop
+ 2341  git add .
+ 2342  git commit -am "feat(log): Se guardan los print request en CloudWatch"
+ 2343  ggpush
+ 2344  cd app
+ 2345  cd vendor/orbisunt/urbania-core
+ 2346  gst
+ 2347  gitk
+ 2348  git add .
+ 2349  git commit -am "feat(log): Se guardan los print request en CloudWatch"
+ 2350  ggpush
+ 2351  git commit -am "feat(log): Se guardan los print request en CloudWatch"
+ 2352  ggpush
+ 2353  gitk
+ 2354  gst
+ 2355  git commit -am "feat(log): Se guardan los print request en CloudWatch"
+ 2356  ggpush
+ 2357  ggpull
+ 2358  make log
+ 2359  sudo rm app/data/config-cache.php
+ 2360  gst
+ 2361  make log
+ 2362  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 2363  gst
+ 2364  git add .
+ 2365  git stash
+ 2366  ggpull
+ 2367  git stash pop
+ 2368  gst
+ 2369  make down
+ 2370  cat Makefile
+ 2371  make up
+ 2372  make composer
+ 2373  make log
+ 2374  ..
+ 2375  make log
+ 2376  make composer
+ 2377  cd ../urbania-web
+ 2378  cd ../urbania-docker
+ 2379  make down
+ 2380  make up
+ 2381  echo 'flush_all' | nc localhost 11211
+ 2382  gst
+ 2383  cd /media/josue/2446-8D5A
+ 2384  ls
+ 2385  sudo rm -Rf starcraft
+ 2386  ..
+ 2387  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 2388  cd /
+ 2389  cd ~
+ 2390  cd Orbis/urbania-project-microservice
+ 2391  gb
+ 2392  gst
+ 2393  gitk
+ 2394  git add .
+ 2395  gco -b testing2
+ 2396  git commit -am "tesing"
+ 2397  ggpush
+ 2398  docker ps
+ 2399  gst
+ 2400  make up
+ 2401  dcoker ps
+ 2402  docker ps
+ 2403  python3.5 app/project/domain/valueObjects/value_object.py
+ 2404  python3 app/project/domain/valueObjects/value_object.py
+ 2405  python3 app/project/domain/valueObjects/value_object3.py
+ 2406  python app/project/domain/valueObjects/value_object3.py
+ 2407  python3.5 app/project/domain/valueObjects/value_object3.py
+ 2408  python3.5 app/project/domain/valueObjects/value_object.py
+ 2409  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 2410  python3.5 app/project/domain/valueObjects/value_object4.py
+ 2411  python3.5 app/project/domain/valueObjects/value_object.py
+ 2412  python3.5 app/project/domain/valueObjects/value_object4.py
+ 2413  python3.5 app/project/domain/valueObjects/value_object.py
+ 2414  python3.5 app/project/domain/valueObjects/value_object4.py
+ 2415  gb
+ 2416  git diff testing --name-only
+ 2417  git diff testing app/project/domain/valueObjects/* --name-only
+ 2418  git diff testing app/project/domain/valueObjects/ --name-only
+ 2419  git diff testing app/project/domain/valueObjects/ 
+ 2420  git diff testing --name-only  app/project/domain/valueObjects/ 
+ 2421  cd ../urbania-project-microservice/1
+ 2422  cd ../urbania-project-microservice/
+ 2423  ls
+ 2424  gco testing app/project/domain/valueObjects/testing7.py
+ 2425  gco testing app/project/domain/valueObjects/testing6.py
+ 2426  python3.5 app/project/domain/valueObjects/value_object4.py
+ 2427  gst
+ 2428  python3.5 app/project/domain/valueObjects/value_object4.py
+ 2429  gst
+ 2430  git add .
+ 2431  gst
+ 2432  git commit -am "fix(value_object): Avance"
+ 2433  gb
+ 2434  gst
+ 2435  gfo fix_refactor:fix_refactor
+ 2436  gfo refactor:refactor
+ 2437  gst
+ 2438  make downgrade
+ 2439  gco refactor
+ 2440  make migrate
+ 2441  make migrate local=true
+ 2442  gb
+ 2443  git checkout testing2 app/project/domain/valueObjects/value_object4.py
+ 2444  gst
+ 2445  python3.5 app/project/domain/valueObjects/value_object4.py
+ 2446  gitk
+ 2447  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 2448  make up
+ 2449  docker ps
+ 2450  make log
+ 2451  gst
+ 2452  git stash clear
+ 2453  git add .
+ 2454  git stash
+ 2455  make down
+ 2456  make up
+ 2457  docker ps
+ 2458  make log
+ 2459  gst
+ 2460  git stash pop
+ 2461  docker ps
+ 2462  gb
+ 2463  make log
+ 2464  gst
+ 2465  docker ps
+ 2466  gst
+ 2467  make down
+ 2468  make up
+ 2469  make log
+ 2470  docker ps
+ 2471  cd ../urbania-docker
+ 2472  make down_lb
+ 2473  make down
+ 2474  make up_lb
+ 2475  make up
+ 2476  make log
+ 2477  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 2478  make log
+ 2479  dokce rps
+ 2480  docker ps
+ 2481  gst
+ 2482  make log
+ 2483  gst
+ 2484  git add .
+ 2485  git stash
+ 2486  ggpull
+ 2487  git stash pop
+ 2488  git mergetool
+ 2489  gst
+ 2490  make log
+ 2491  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 2492  make log
+ 2493  make tests
+ 2494  gst
+ 2495  rm app/project/application/services/bank.py.orig
+ 2496  rm app/project/domain/entities/bank.py.orig
+ 2497  gst
+ 2498  git add .
+ 2499  git stash
+ 2500  make downgrade
+ 2501  make migrate local=true
+ 2502  git stash pop
+ 2503  gst
+ 2504  git add .
+ 2505  git stash
+ 2506  ggpull
+ 2507  git stash pop
+ 2508  gst
+ 2509  git stash
+ 2510  gst
+ 2511  ggpull
+ 2512  git stash pop
+ 2513  gst
+ 2514  make tests
+ 2515  git add .
+ 2516  git commit -am "feat(bank): Value objects validation"
+ 2517  gco -b value_objects
+ 2518  gst
+ 2519  gitk
+ 2520  git add .
+ 2521  git commit -am "feat(bank): Value objects validation"
+ 2522  gb
+ 2523  gb -D refactor
+ 2524  gfo refactor:refactor
+ 2525  git rebase -i refactor
+ 2526  gst
+ 2527  gitk
+ 2528  ggpush
+ 2529  gst
+ 2530  git add .
+ 2531  git commit -am "feat(bank): Value objects cambio de nombre tupla"
+ 2532  gst
+ 2533  git rebase -i refactor
+ 2534  ggpush
+ 2535  ggpush -f
+ 2536  gb
+ 2537  gco refactor
+ 2538  ggpull
+ 2539  gitk
+ 2540  make ssh
+ 2541  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 2542  make migrate local=true
+ 2543  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 2544  gts
+ 2545  gst
+ 2546  git add .
+ 2547  git stash
+ 2548  ggpull
+ 2549  gitk
+ 2550  git stash pop
+ 2551  gitk
+ 2552  make up
+ 2553  ..
+ 2554  ls
+ 2555  ls -la
+ 2556  cd ../urbania3-api
+ 2557  make up
+ 2558  cd ../urbania-docker
+ 2559  make up
+ 2560  cd ../urbania-micro-service-announcement
+ 2561  make up
+ 2562  ../urbania-microservice-consume-package
+ 2563  make up
+ 2564  cd ../urbania-microservice-publisher
+ 2565  make up
+ 2566  cd ../urbania-microservice-publisher-authorization
+ 2567  make up
+ 2568  cd ../urbania-microservice-token
+ 2569  make up
+ 2570  cd ../urbania-micro-service-user
+ 2571  make up
+ 2572  cd ../urbania-solr
+ 2573  make up
+ 2574  cd ../urbania-web
+ 2575  make up
+ 2576  cd ../urbania-micro-service-search
+ 2577  make up
+ 2578  docker ps
+ 2579  cd ../urbania-docker
+ 2580  cd ../urbania-project-microservice
+ 2581  make up
+ 2582  docker ps
+ 2583  make log
+ 2584  gst
+ 2585  make down
+ 2586  make up
+ 2587  make log
+ 2588  cd urbania-micro-service-announcement
+ 2589  make push
+ 2590  cd ../urbania-micro-service-search
+ 2591  make push
+ 2592  docker ps
+ 2593  make down
+ 2594  make up
+ 2595  make log
+ 2596  docker ps
+ 2597  make log
+ 2598  docker ps
+ 2599  make down
+ 2600  make up
+ 2601  docker ps
+ 2602  make log
+ 2603  cd ../urbania-docker
+ 2604  make up_lb
+ 2605  docker ps
+ 2606  make down
+ 2607  make up
+ 2608  make log
+ 2609  docker ps
+ 2610  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 2611  make push
+ 2612  make log
+ 2613  make tests
+ 2614  make test
+ 2615  make tests
+ 2616  make log
+ 2617  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 2618  make log
+ 2619  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 2620  make log
+ 2621  make pull
+ 2622  make down
+ 2623  make pull
+ 2624  make up
+ 2625  docker ps
+ 2626  make log
+ 2627  docker ps
+ 2628  cd ../urbania-web
+ 2629  gb
+ 2630  gco dev
+ 2631  gst
+ 2632  git stash
+ 2633  ggpull
+ 2634  make log
+ 2635  cd ../urbania-microservice-geolocation
+ 2636  make up
+ 2637  docker ps
+ 2638  cd ../urbania-project-microservice
+ 2639  make tests
+ 2640  gst
+ 2641  git add .
+ 2642  git stash
+ 2643  gb
+ 2644  gb -D dev
+ 2645  gfo dev:dev
+ 2646  gco dev
+ 2647  make pull
+ 2648  gst
+ 2649  git stash pop
+ 2650  git mergetool
+ 2651  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 2652  make down
+ 2653  docker ps
+ 2654  make up
+ 2655  make pull
+ 2656  make build
+ 2657  make up
+ 2658  make migrate local=true
+ 2659  make pull
+ 2660  make down
+ 2661  make up
+ 2662  make migrate local=true
+ 2663  ggpull
+ 2664  gst
+ 2665  git add .
+ 2666  git stash
+ 2667  make migrate local=true
+ 2668  gst
+ 2669  cd ../unt-micro-service-configserver
+ 2670  make down
+ 2671  make up
+ 2672  make migrate local=true
+ 2673  cd ../urbania-docker
+ 2674  make down_lb
+ 2675  make up_lb
+ 2676  make migrate local=true
+ 2677  make down
+ 2678  make pull
+ 2679  make up
+ 2680  docker ps
+ 2681  make migrate local=true
+ 2682  gb
+ 2683  make down
+ 2684  make up
+ 2685  make migrate local=true
+ 2686  gco -b "project"
+ 2687  git stash pop
+ 2688  gst
+ 2689  gitk
+ 2690  rm app/project/domain/entities/project.py.orig
+ 2691  rm app/project/domain/factories/entities/project.py.orig
+ 2692  rm app/project/domain/valueObjects/primitives.py.orig
+ 2693  rm app/project/infrastructure/repository/mockup/project.py.orig
+ 2694  rm app/tests/project.py.orig
+ 2695  gst
+ 2696  docker ps
+ 2697  make log
+ 2698  cat Makefile
+ 2699  make log
+ 2700  make down
+ 2701  make pull
+ 2702  make up
+ 2703  make log
+ 2704  make build
+ 2705  make down
+ 2706  make up
+ 2707  make log
+ 2708  gst
+ 2709  rm app/project/domain/entities/project.py.orig
+ 2710  rm app/project/domain/factories/entities/project.py.orig
+ 2711  rm app/project/domain/valueObjects/primitives.py.orig
+ 2712  rm app/project/infrastructure/repository/mockup/project.py.orig
+ 2713  rm app/tests/project.py.orig
+ 2714  gst
+ 2715  sudo rm app/tests/project.py.orig
+ 2716  gst
+ 2717  git add .
+ 2718  gst
+ 2719  git stash
+ 2720  make log
+ 2721  make down
+ 2722  docker images .i
+ 2723  docker images -i
+ 2724  docker images -a
+ 2725  docker rmi dcabeab579f6
+ 2726  docker ps
+ 2727  docker rmi urbania-dev-projects:dev
+ 2728  docker rmi urbaniadevprojects
+ 2729  docker rmi urbaniadevprojects:20181004.000006
+ 2730  docker rmi urbania-dev-projects:20181004.000006
+ 2731  docker rmi urbaniadevprojects:dev 
+ 2732  docker images -a
+ 2733  docker rmi 61d74c31965c
+ 2734  docker rmi $(sudo docker images --filter "dangling=true" -q --no-trunc)
+ 2735  docker image -a
+ 2736  docker images -a
+ 2737  make build
+ 2738  git stash pop
+ 2739  gst
+ 2740  gitk
+ 2741  make up
+ 2742  make log
+ 2743  docker ps
+ 2744  docker rm -f 41d155acd2cd
+ 2745  vim Makefile
+ 2746  make u
+ 2747  make up
+ 2748  vim Makefile
+ 2749  make up
+ 2750  make log
+ 2751  docker ps
+ 2752  gst
+ 2753  git stash clear
+ 2754  git stash
+ 2755  gst
+ 2756  make down
+ 2757  make up
+ 2758  make log
+ 2759  vim Makefile
+ 2760  make down
+ 2761  make up
+ 2762  gst
+ 2763  gco .
+ 2764  gst
+ 2765  vim Makefile
+ 2766  make up
+ 2767  make log
+ 2768  gst
+ 2769  git stash pop
+ 2770  make test
+ 2771  make tests
+ 2772  cat Makefile
+ 2773  make downgrade
+ 2774  make downgrade local=true
+ 2775  make down
+ 2776  make up
+ 2777  make migrate local=true
+ 2778  gst
+ 2779  gco dev
+ 2780  make migrate dev
+ 2781  make migrate local=true
+ 2782  gco project
+ 2783  make migrate local=true
+ 2784  make pull
+ 2785  make down
+ 2786  make up
+ 2787  make migrate local=true
+ 2788  make log
+ 2789  docker pś
+ 2790  docker ps
+ 2791  make up
+ 2792  cd ../urbania-docker
+ 2793  make down_lb
+ 2794  make up_ld
+ 2795  make up_lb
+ 2796  make down
+ 2797  make up
+ 2798  make migrate local=true
+ 2799  make log
+ 2800  make down
+ 2801  make up
+ 2802  make migrate local=true
+ 2803  make down
+ 2804  make migrate local=true
+ 2805  make up
+ 2806  make log
+ 2807  make tests
+ 2808  gst
+ 2809  git add .
+ 2810  git commit -am "feat(project): Value Objects added, Changes on project table; some plural fields changed to singular."
+ 2811  ggpush
+ 2812  cd /home/josue/Orbis/urbania-docker
+ 2813  make up
+ 2814  cd ../urbania-project-microservice
+ 2815  make up
+ 2816  cd ..
+ 2817  ls
+ 2818  cd ../urbania-microservice-publisher
+ 2819  make up
+ 2820  cd ../unt-micro-service-configserver
+ 2821  make up
+ 2822  cd ../urbania-web
+ 2823  make up
+ 2824  cd ../urbania-microservice-geolocation
+ 2825  make up
+ 2826  ../urbania-micro-service-user
+ 2827  make up
+ 2828  docker ps
+ 2829  cd ../urbania-project-microservice
+ 2830  make ddown
+ 2831  make down
+ 2832  make up
+ 2833  cd ../urbania-docker
+ 2834  make up_lb
+ 2835  docker ps
+ 2836  make down
+ 2837  make up
+ 2838  make log
+ 2839  docker ps
+ 2840  cd ../urbania-project-microservice
+ 2841  gst
+ 2842  gitk
+ 2843  gb
+ 2844  gb -D dev
+ 2845  gfo dev:dev
+ 2846  git rebase -i dev
+ 2847  git rebase --continue
+ 2848  git mergetool
+ 2849  git rebase --continue
+ 2850  ggpush
+ 2851  gst
+ 2852  sudo rm app/alembic/env.py.orig
+ 2853  ggpush -f
+ 2854  gst
+ 2855  git add .
+ 2856  gst
+ 2857  git commit -am "refact(codigo): Limpiando comentarios"
+ 2858  git rebase -i dev
+ 2859  ggpush -f
+ 2860  gst
+ 2861  git add .
+ 2862  git commit -am "refact(codigo): Return Array project"
+ 2863  git rebase -i dev
+ 2864  ggpush -f
+ 2865  gst
+ 2866  git commit -am "refact(codigo): Observaciones PR"
+ 2867  git rebase -i dev
+ 2868  ggpush -f
+ 2869  git commit -am "refact(codigo): Observaciones PR"
+ 2870  git rebase -i dev
+ 2871  ggpush -f
+ 2872  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 2873  GB
+ 2874  gb
+ 2875  gco dev
+ 2876  gst
+ 2877  ggpull
+ 2878  gitk
+ 2879  gst
+ 2880  ggpull
+ 2881  gb
+ 2882  gco -b multimedia
+ 2883  gst
+ 2884  gitk
+ 2885  docker-compose -v
+ 2886  docker -v
+ 2887  docker ps
+ 2888  cd ../urbania-micro-service-user
+ 2889  make up
+ 2890  docker ps
+ 2891  make log
+ 2892  cd ../urbania-web
+ 2893  make up
+ 2894  docker ps
+ 2895  cd ../urbania-micro-service-user
+ 2896  gst
+ 2897  gb
+ 2898  gfo dev:dev
+ 2899  gco dev
+ 2900  make log
+ 2901  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 2902  make log
+ 2903  make composer
+ 2904  make ssh
+ 2905  make down
+ 2906  cat Makefile
+ 2907  make up
+ 2908  make log
+ 2909  make ssh
+ 2910  gst
+ 2911  git stash
+ 2912  gst
+ 2913  gb
+ 2914  gb -D prod
+ 2915  gfo prod:prod; gco prod
+ 2916  gst
+ 2917  gitk
+ 2918  gco dev
+ 2919  gitk
+ 2920  sudo chown josue:josue -Rf app/vendor/orbisunt/urbania-core
+ 2921  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 2922  cd ../urbania-web
+ 2923  make pull
+ 2924  make push
+ 2925  make log
+ 2926  cd ../urbania-project-microservice
+ 2927  cat Makefile
+ 2928  cd ../urbania-docker
+ 2929  cat Makefile
+ 2930  cd ../urbania-web
+ 2931  cat Makefile
+ 2932  cd ../urbania-micro-service-package
+ 2933  cat Makefile
+ 2934  cd ../urbania-micro-service-graphql
+ 2935  cat Makefile
+ 2936  docker images ls
+ 2937  docker image ls
+ 2938  make push 
+ 2939  make push IMAGE_NAME=urbania_web
+ 2940  docker image ls
+ 2941  make push IMAGE_NAME=urbania_phalcon
+ 2942  make push IMAGE_NAME=urbania-dev-package
+ 2943  make push IMAGE_NAME=urbania-dev-consume-package
+ 2944  make push IMAGE_NAME=urbania-dev-announcement
+ 2945  make push IMAGE_NAME=urbania-dev-search
+ 2946  cd ../unt-micro-service-configserver
+ 2947  gb
+ 2948  gitk
+ 2949  gfo dev:dev; gco dev
+ 2950  gitk
+ 2951  make push IMAGE_NAME=urbania-dev-migration
+ 2952  make push IMAGE_NAME=urbaniadevlocation
+ 2953  make push IMAGE_NAME=urbaniadevlocation:dev
+ 2954  make push IMAGE_NAME=urbania-solr63
+ 2955  make push IMAGE_NAME=urbania-dev-publisher-authorization
+ 2956  cd ../urbania-project-microservice
+ 2957  make tests
+ 2958  make log
+ 2959  sudo apt-get install calibre
+ 2960  cd ~/.local/share/applications
+ 2961  ls
+ 2962  history
+ 2963  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 2964  make log
+ 2965  cd /home/josue/Orbis/urbania-project-microservice
+ 2966  make log
+ 2967  make tests
+ 2968  gst
+ 2969  gitk
+ 2970  gst
+ 2971  gitk
+ 2972  gst
+ 2973  gb
+ 2974  gitk
+ 2975  git add .
+ 2976  gitk
+ 2977  gst
+ 2978  git add .
+ 2979  git commit -am "feat(multimedia): Value Objects"
+ 2980  gst
+ 2981  gb 
+ 2982  gb -D dev
+ 2983  gfo dev:dev
+ 2984  git rebase -i dev 
+ 2985  ggpush
+ 2986  make log
+ 2987  make down
+ 2988  make up
+ 2989  make log
+ 2990  make down
+ 2991  make log
+ 2992  make up
+ 2993  docker ps
+ 2994  make log
+ 2995  make down
+ 2996  make up
+ 2997  make log
+ 2998  make lo
+ 2999  make log
+ 3000  gat
+ 3001  gst
+ 3002  docker image ls
+ 3003  cd ../urbania-micro-service-graphql
+ 3004  make push IMAGE_NAME=urbania-dev-publisher-authorization
+ 3005  make push IMAGE_NAME=urbania-dev-publisher
+ 3006  make push IMAGE_NAME=jwt-services
+ 3007  make push IMAGE_NAME=urbaniadevlocation
+ 3008  cd ../urbania-project-microservice
+ 3009  gst
+ 3010  gitk
+ 3011  make tests
+ 3012  gst
+ 3013  gb
+ 3014  gnb -D dev
+ 3015  gfo dev:dev; gco dev
+ 3016  gb
+ 3017  gb -D dev
+ 3018  gfo dev:dev
+ 3019  gsy
+ 3020  gst
+ 3021  git add .
+ 3022  git commit -am "fix(project): Database update, Value objects projects update"
+ 3023  git rebase -i dev 
+ 3024  ggpush
+ 3025  docker image ls
+ 3026  cd ../urbania-micro-service-graphql
+ 3027  make push IMAGE_NAME=urbania-dev-user
+ 3028  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 3029  gitk
+ 3030  cd ../urbania-micro-service-search
+ 3031  gst
+ 3032  gitk
+ 3033  docker ps
+ 3034  cd ../urbania-solr
+ 3035  make up
+ 3036  docker ps
+ 3037  gitk
+ 3038  cd /home/josue/Orbis/urbania-docker
+ 3039  make up
+ 3040  cd ../urbania-web
+ 3041  cd ../urbania-solr
+ 3042  make up
+ 3043  cd ../urbania-micro-service-search
+ 3044  make 2up
+ 3045  make up
+ 3046  cd ../urbania-project-microservice
+ 3047  make up
+ 3048  cd ../urbania-micro-service-announcement
+ 3049  make up
+ 3050  cd ../urbania-microservice-consume-package
+ 3051  make up
+ 3052  cd ../urbania-micro-service-package
+ 3053  make up
+ 3054  docker ps
+ 3055  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 3056  api-designer
+ 3057  cd ../urbania-project-microservice
+ 3058  make log
+ 3059  cd ../urbania-docker
+ 3060  make up_lg
+ 3061  make up_lb
+ 3062  docker ps
+ 3063  make down
+ 3064  make up
+ 3065  docker ps
+ 3066  make log
+ 3067  docker ps
+ 3068  cd ../docker 
+ 3069  make down
+ 3070  cd ../urbania-docker
+ 3071  make down
+ 3072  make down_lb
+ 3073  make up
+ 3074  make up_lb
+ 3075  docker ps
+ 3076  gst
+ 3077  gitk
+ 3078  git add .
+ 3079  git stash clear
+ 3080  git stash
+ 3081  gst
+ 3082  make down
+ 3083  make up
+ 3084  docker ps
+ 3085  make down
+ 3086  make up
+ 3087  docker ps
+ 3088  make log
+ 3089  gb
+ 3090  gb -D dev
+ 3091  gfo dev:dev; gco dev
+ 3092  gst
+ 3093  docker ps
+ 3094  make log
+ 3095  gst
+ 3096  ggpull
+ 3097  make down
+ 3098  make up
+ 3099  make log
+ 3100  docker ps
+ 3101  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 3102  docker ps
+ 3103  make down
+ 3104  make up
+ 3105  docker ps
+ 3106  make log
+ 3107  make down
+ 3108  make pull
+ 3109  make down
+ 3110  gitk
+ 3111  gb
+ 3112  gfo pre:pre; gco pre
+ 3113  make up
+ 3114  docker ps
+ 3115  git diff dev --name-only
+ 3116  make down
+ 3117  make pull
+ 3118  docker ps
+ 3119  make up
+ 3120  docker ps
+ 3121  gb
+ 3122  gco dev
+ 3123  gst
+ 3124  dpocker ps
+ 3125  docker ps
+ 3126  make down
+ 3127  make up
+ 3128  docker ps
+ 3129  make log
+ 3130  gitk
+ 3131  make log
+ 3132  cd ../unt-micro-service-configserver
+ 3133  make up
+ 3134  cd ../urbania-docker
+ 3135  make down_lb
+ 3136  make down
+ 3137  make up_lb
+ 3138  make up
+ 3139  docker ps
+ 3140  make down
+ 3141  make up
+ 3142  gitk
+ 3143  cd ../unt-micro-service-configserver
+ 3144  gitk
+ 3145  cd ../unt-config-lab/
+ 3146  gitk
+ 3147  ggpull
+ 3148  gitk
+ 3149  gst
+ 3150  ggpull
+ 3151  make down
+ 3152  make pull
+ 3153  make up
+ 3154  docker ps -a
+ 3155  docker ps
+ 3156  make down
+ 3157  docker ps -a
+ 3158  docker ps
+ 3159  docker ps -a
+ 3160  make pull
+ 3161  make up
+ 3162  make migrate local=true
+ 3163  git stash pop
+ 3164  gitk
+ 3165  make log
+ 3166  cd ../urbania-microservice-geolocation
+ 3167  gst
+ 3168  gitk
+ 3169  make pull
+ 3170  cd ../urbania-micro-service-graphql
+ 3171  docker ps -i
+ 3172  docker image ls
+ 3173  make push IMAGE_NAME=urbaniadevlocation
+ 3174  make push IMAGE_NAME=urbaniadevlocation:dev
+ 3175  make push IMAGE_NAME=urbaniadevlocation
+ 3176  cd ../urbania-project-microservice
+ 3177  gst
+ 3178  gitk
+ 3179  make downb
+ 3180  make down
+ 3181  make pull
+ 3182  make up
+ 3183  cat Makefile
+ 3184  gst
+ 3185  git add .
+ 3186  git stash
+ 3187  gst
+ 3188  ggpull
+ 3189  make up
+ 3190  docker ps
+ 3191  docker rm urbaniadevprojects_mysql57_1
+ 3192  make down
+ 3193  cd ../urbania-docker
+ 3194  docker rm urbaniadevprojects_mysql57_1
+ 3195  docker ps
+ 3196  docker stop urbaniadevprojects_mysql57_1
+ 3197  docker rm urbaniadevprojects_mysql57_1
+ 3198  docker ps
+ 3199  make pull
+ 3200  make up
+ 3201  make down
+ 3202  make up
+ 3203  make migrate local=true
+ 3204  git stash pop
+ 3205  make migrate local=true
+ 3206  gst
+ 3207  make tests
+ 3208  gst
+ 3209  git stash clear
+ 3210  git stash
+ 3211  make tests
+ 3212  git stash pop
+ 3213  make test
+ 3214  make tests
+ 3215  make log
+ 3216  cd ../urbania-project-microservice
+ 3217  make tests
+ 3218  make migrate local=true
+ 3219  make tests
+ 3220  make migrate local=true
+ 3221  gst
+ 3222  gb
+ 3223  gb -D project
+ 3224  gco -b project
+ 3225  git add .
+ 3226  git commit -am "fix(business): Applu rules"
+ 3227  git rebase -i dev
+ 3228  gst
+ 3229  gco dev
+ 3230  ggpull
+ 3231  gco project
+ 3232  git rebase -i dev
+ 3233  ggpush
+ 3234  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 3235  cd /home/josue/Orbis/urbania-project-microservice
+ 3236  gst
+ 3237  gitk
+ 3238  git add .
+ 3239  git commit -am "fix(project): Project"
+ 3240  git rebase -i dev
+ 3241  ggpush
+ 3242  ggpush -f
+ 3243  gst
+ 3244  gitk
+ 3245  cd ../urbania-docker
+ 3246  make down
+ 3247  make pull
+ 3248  docker ps -a
+ 3249  make up
+ 3250  gitk
+ 3251  make down
+ 3252  gitk
+ 3253  gb
+ 3254  gco master
+ 3255  gb -D services
+ 3256  gfo services:services; gco services
+ 3257  gitk
+ 3258  make pull
+ 3259  make up
+ 3260  cd ../urbania-web
+ 3261  gb
+ 3262  gco pre
+ 3263  gb -D dev
+ 3264  gfo dev:dev; gco dev
+ 3265  gitk
+ 3266  \tcd ../urbania-web
+ 3267  cd ../urbania-micro-service-search
+ 3268  gb
+ 3269  make up
+ 3270  make composer
+ 3271  cd app/vendor/
+ 3272  ls
+ 3273  ls- la
+ 3274  ls -la
+ 3275  cd orbisunt
+ 3276  ls -la
+ 3277  sudo chown josue:josue -Rf urbania-core
+ 3278  ls
+ 3279  ls -la
+ 3280  cd urbania-core
+ 3281  ls
+ 3282  gb
+ 3283  gfo api:api; gco api
+ 3284  ls
+ 3285  cd app
+ 3286  ls
+ 3287  cat composer.json
+ 3288  cd ../urbania-solr
+ 3289  make up
+ 3290  gitk
+ 3291  gst
+ 3292  gitk
+ 3293  gst
+ 3294  git stash clear
+ 3295  gb
+ 3296  gb -D dev
+ 3297  gfo dev:dev; gco dev
+ 3298  gb -D multimedia
+ 3299  gco -b multimedia
+ 3300  gco dev
+ 3301  gb -D multimedia
+ 3302  gb
+ 3303  gst
+ 3304  gco -b project
+ 3305  gb -D project
+ 3306  gco -b project
+ 3307  gst
+ 3308  make migrate local=true
+ 3309  gst
+ 3310  git add .
+ 3311  git commit -am "fix(project): Null value allowed for description field"
+ 3312  git rebase -i dev
+ 3313  ggpush
+ 3314  make tests
+ 3315  gitk
+ 3316  gb
+ 3317  gco dev
+ 3318  gb -D project
+ 3319  ggpull
+ 3320  gitk
+ 3321  gb
+ 3322  gb -D ut2-1227_feat
+ 3323  gb -D ut2-1129_feat
+ 3324  gb -D query_string_local
+ 3325  gb -D refactor
+ 3326  gb -D 
+ 3327  gb -D fix_cli
+ 3328  gb -D dev_refactor
+ 3329  gb -D dev_stage
+ 3330  gb 
+ 3331  gb -D dev_query_string
+ 3332  gb -D dev_pagination
+ 3333  gb -D dev_migrations
+ 3334  gb
+ 3335  docker ps
+ 3336  gst
+ 3337  ggpull
+ 3338  ..
+ 3339  make up
+ 3340  make ssh
+ 3341  docker exec -u root -it solr_solr63 bash
+ 3342  make down
+ 3343  make up
+ 3344  docker exec -u root -it solr_solr63 bash
+ 3345  make down
+ 3346  make up
+ 3347  chown josue:josue -Rf app/vendor
+ 3348  docker ps
+ 3349  make log
+ 3350  cd ..
+ 3351  ls
+ 3352  cd urbania-micro-service-announcement
+ 3353  cat Makefile
+ 3354  cd ../
+ 3355  ls
+ 3356  cd urbania-microservice-publisher
+ 3357  ls
+ 3358  cat Makefile
+ 3359  vim ../urbania-micro-service-search/Makefile
+ 3360  cd ../urbania-micro-service-search
+ 3361  make up
+ 3362  make log
+ 3363  cat Makefile
+ 3364  make log
+ 3365  gb
+ 3366  gb -D dev
+ 3367  gfo dev:dev; gco dev
+ 3368  gst
+ 3369  git add .
+ 3370  git stash
+ 3371  gco de
+ 3372  gco dev
+ 3373  gst
+ 3374  gitk
+ 3375  wine /home/josue/Downloads/SC1.16/StarCraft.exe
+ 3376  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 3377  cd /home/josue/Orbis/urbania-docker
+ 3378  make up
+ 3379  cd ../urbania-micro-service-search
+ 3380  make up
+ 3381  cd ../unt-micro-service-configserver
+ 3382  make up
+ 3383  make up_lb
+ 3384  cd ../urbania-project-microservice
+ 3385  make up
+ 3386  dcoker ps
+ 3387  docker ps
+ 3388  cd ../urbania-solr
+ 3389  make up
+ 3390  dcoker ps
+ 3391  docker ps
+ 3392  cd ../urbania-micro-service-search/app/vendor/orbisunt
+ 3393  ls
+ 3394  cd urbania-core
+ 3395  gst
+ 3396  git stash
+ 3397  gst
+ 3398  cd ../urbania-micro-service-search
+ 3399  gst
+ 3400  cd ../urbania-project-microservice
+ 3401  gst
+ 3402  cd ../urbania-docker
+ 3403  make up
+ 3404  cd ../
+ 3405  cd  urbania-solr
+ 3406  gat
+ 3407  gst
+ 3408  make down
+ 3409  make up
+ 3410  make log
+ 3411  gst
+ 3412  git stash pop
+ 3413  gst
+ 3414  gitk
+ 3415  docker ps
+ 3416  git stash
+ 3417  gst
+ 3418  git add .
+ 3419  git stash
+ 3420  gst
+ 3421  git stash clear
+ 3422  make log
+ 3423  dokce rps
+ 3424  docker ps
+ 3425  gst
+ 3426  git stash clear
+ 3427  gst
+ 3428  git stash
+ 3429  ggpull
+ 3430  gco -b alembic
+ 3431  git add . 
+ 3432  git commit -am "fix(operation_type): Alias field added"
+ 3433  git rebase -i dev
+ 3434  gst
+ 3435  ggpush
+ 3436  gst
+ 3437  gitk
+ 3438  git stash pop
+ 3439  git add . 
+ 3440  git commit -am "fix(operation_type): Alias field added"
+ 3441  git rebase -i dev
+ 3442  ggpush
+ 3443  make migrate local=true
+ 3444  gco dev
+ 3445  ggpull
+ 3446  gitk
+ 3447  echo 'flush_all' | nc localhost 11211
+ 3448  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 3449  cd /home/josue/Orbis/urbania-docker
+ 3450  make up
+ 3451  cd ../unt-micro-service-configserver
+ 3452  make up
+ 3453  cd ../urbania-solr
+ 3454  make up
+ 3455  cd ../urbania-micro-service-search
+ 3456  make up
+ 3457  make up_lb
+ 3458  docke rps
+ 3459  docker ps
+ 3460  cd ../urbania-micro-service-announcement
+ 3461  make up
+ 3462  gst
+ 3463  gitk
+ 3464  make down
+ 3465  make up
+ 3466  cat Makefile
+ 3467  vim Makefile
+ 3468  make ssh
+ 3469  make down
+ 3470  make up
+ 3471  make down
+ 3472  make true
+ 3473  make up
+ 3474  make down
+ 3475  make up
+ 3476  make down
+ 3477  make up
+ 3478  make down
+ 3479  make up
+ 3480  make down
+ 3481  make up
+ 3482  docker ps
+ 3483  cat Makefile
+ 3484  make log
+ 3485  gst
+ 3486  cd app/vendor/orbisunt/urbania-core
+ 3487  gst
+ 3488  ggpull
+ 3489  make down
+ 3490  make pull
+ 3491  make up
+ 3492  gitk
+ 3493  make log
+ 3494  gst
+ 3495  gitk
+ 3496  make composer
+ 3497  gb
+ 3498  gb -D api
+ 3499  gfo api_dev:api_dev; gco api_dev
+ 3500  gst
+ 3501  cd ..
+ 3502  ls -la
+ 3503  sudo chmod 777 -Rf urbania-core
+ 3504  gst
+ 3505  git add .
+ 3506  git stash
+ 3507  cd urbania-core
+ 3508  gst
+ 3509  git add .
+ 3510  git stash
+ 3511  gb
+ 3512  gco api_searchdev
+ 3513  gb -D api_dev
+ 3514  gfo api_dev:api_dev; gco api_dev
+ 3515  gst
+ 3516  cd ../urbania-micro-service-graphql
+ 3517  cat Makefile
+ 3518  vim Makefile
+ 3519  make log
+ 3520  sudo vim /etc/hosts
+ 3521  make down
+ 3522  make pull
+ 3523  docker image ls
+ 3524  make pull
+ 3525  ls
+ 3526  la app
+ 3527  sudo rm app/composer.lock
+ 3528  make down
+ 3529  make up
+ 3530  make composer
+ 3531  make log
+ 3532  gst
+ 3533  sudo rm app/composer.lock
+ 3534  cd app
+ 3535  ls
+ 3536  ..
+ 3537  make composer
+ 3538  make log
+ 3539  cd ../urbania-solr
+ 3540  make down
+ 3541  make up
+ 3542  ..
+ 3543  ls
+ 3544  cd urbania-core
+ 3545  ls
+ 3546  ls -la
+ 3547  car composer.json
+ 3548  cat composer.json
+ 3549  composer
+ 3550  sudo apt-get install composer
+ 3551  ..
+ 3552  ls
+ 3553  ..
+ 3554  sudo rm -Rf vendor
+ 3555  ls
+ 3556  sudo rm composer.lock
+ 3557  composer update
+ 3558  la
+ 3559  ..
+ 3560  gst
+ 3561  cp Makefile /home/josue/Desktop/
+ 3562  cat /home/josue/Desktop/Makefile
+ 3563  ..
+ 3564  ls
+ 3565  sudo rm -Rf urbania-micro-service-search
+ 3566  git clone git@bitbucket.org:orbisunt/urbania-micro-service-search.git
+ 3567  cd urbania-micro-service-search
+ 3568  gitk
+ 3569  make pull
+ 3570  make up
+ 3571  make composer
+ 3572  ls 
+ 3573  rm Makefile
+ 3574  cp /home/josue/Desktop/Makefile ./
+ 3575  ls
+ 3576  gst
+ 3577  make log
+ 3578  pwd
+ 3579  ls
+ 3580  ..
+ 3581  cd urbania-micro-service-search
+ 3582  ls
+ 3583  make log
+ 3584  cd app/vendor/orbisunt/urbania-core
+ 3585  ..
+ 3586  ls
+ 3587  chmod 777 -Rf urbania-core
+ 3588  cd urbania-core
+ 3589  gb
+ 3590  gfo api:api; gco api
+ 3591  gb.
+ 3592  ..
+ 3593  ls
+ 3594  la
+ 3595  sudo chmod 777 -Rf urbania-core
+ 3596  cd urbania-core
+ 3597  gfo api:api; gco api
+ 3598  gst
+ 3599  git add .
+ 3600  git stash
+ 3601  gb
+ 3602  gst
+ 3603  gb -D api
+ 3604  gfo api:api; gco api
+ 3605  git stash clear
+ 3606  gst
+ 3607  make log
+ 3608  make composer
+ 3609  make log
+ 3610  docker ssh
+ 3611  cat Makefile
+ 3612  la
+ 3613  chmod 775 Makefile
+ 3614  la
+ 3615  make log
+ 3616  make ssh
+ 3617  make down
+ 3618  make log
+ 3619  cd ../urbania-docker
+ 3620  make down_lb
+ 3621  make up_lb
+ 3622  make down
+ 3623  make up
+ 3624  make log
+ 3625  make build
+ 3626  gb
+ 3627  gfo pre3b:pre3b; gco pre3b
+ 3628  git add .
+ 3629  git stash
+ 3630  gfo pre3b:pre3b; gco pre3b
+ 3631  make build
+ 3632  make push
+ 3633  make up
+ 3634  make composer
+ 3635  make log
+ 3636  cat /home/josue/Desktop/Makefile
+ 3637  make log
+ 3638  pwd
+ 3639  gb
+ 3640  gb -D api
+ 3641  gfo api:api; gco api
+ 3642  gst
+ 3643  git add .
+ 3644  git sta
+ 3645  git stash
+ 3646  gst
+ 3647  ..
+ 3648  la
+ 3649  gst
+ 3650  ..
+ 3651  cd orbisunt
+ 3652  ls
+ 3653  cd urbania-core
+ 3654  gb
+ 3655  gst
+ 3656  git add .
+ 3657  git stash
+ 3658  gst
+ 3659  ls
+ 3660  cd ..
+ 3661  sudo chmod 777 -rf urbania-core
+ 3662  sudo chmod 777 -Rf urbania-core
+ 3663  cd urbania-core
+ 3664  gst
+ 3665  git add .
+ 3666  git stash
+ 3667  gb
+ 3668  gco api_search
+ 3669  gb
+ 3670  gb -D api
+ 3671  gfo api:api; gco api
+ 3672  make log
+ 3673  gb 
+ 3674  gb -D api_search
+ 3675  gfo api_search:api_search; gco api_search
+ 3676  ..
+ 3677  gst
+ 3678  git stash clear
+ 3679  cd /home/josue/Orbis/urbania-solr
+ 3680  make down
+ 3681  make up
+ 3682  cd ../urbania-micro-service-search
+ 3683  make log
+ 3684  cd /home/josue/Orbis/urbania-docker
+ 3685  make up
+ 3686  cd ../urbania-solr
+ 3687  make up
+ 3688  cd ../urbania-project-microservice
+ 3689  cd ../urbania-docker
+ 3690  make up
+ 3691  make up_lb
+ 3692  cd ../urbania-micro-service-search
+ 3693  make up
+ 3694  cd ../unt-micro-service-configserver
+ 3695  make up
+ 3696  cd ../urbania-docker
+ 3697  make down_lb
+ 3698  make up_lb
+ 3699  make log
+ 3700  cd ../urbania-micro-service-search
+ 3701  gitk
+ 3702  cd app/vendor/orbisunt/urbania-core
+ 3703  gb
+ 3704  gb -D api
+ 3705  gfo api:api; gfo api
+ 3706  gfo api:api; gco api
+ 3707  cat composer.json | grep goaop "goaop/framework": "2.0.0"
+ 3708  cat app/composer.json | grep goaop "goaop/framework": "2.0.0"
+ 3709  make composer
+ 3710  make down
+ 3711  ls
+ 3712  cd app
+ 3713  ls
+ 3714  sudo rm -Rf vendor
+ 3715  sudo rm composer.lock
+ 3716  la
+ 3717  make composer
+ 3718  ..
+ 3719  make log
+ 3720  ls
+ 3721  cat Makefile
+ 3722  gst
+ 3723  gitk
+ 3724  make log
+ 3725  cd ../urbania-docker
+ 3726  make down_lb
+ 3727  make up_lb
+ 3728  cd ../urbania-micro-service-search
+ 3729  make down
+ 3730  make up
+ 3731  cd ../urbania-solr
+ 3732  gst
+ 3733  gitk
+ 3734  gst
+ 3735  git add .
+ 3736  gitk
+ 3737  gco solrcores/ubigeo/conf/currency.xml
+ 3738  gst
+ 3739  gco ./idea/
+ 3740  gco ./idea/*
+ 3741  gst
+ 3742  git add .
+ 3743  gco -b local
+ 3744  gco prod
+ 3745  gco local
+ 3746  git commit -am "local"
+ 3747  gco prod
+ 3748  git diff local --name-only
+ 3749  cd ../urbania-solr
+ 3750  gco local Makefile
+ 3751  gst
+ 3752  gco local solrcores/announcement/conf/db-data-config.xml
+ 3753  gco local solrcores/announcement/conf/managed-schema
+ 3754  gco local solrcores/ubigeo/conf/managed-schema
+ 3755  gst
+ 3756  gco -b project
+ 3757  git add .
+ 3758  git commit -am "feat(project): Actualizacion de la rmama para contener cambios de Proyecto"
+ 3759  gst
+ 3760  gb
+ 3761  gfo dev:dev; gco dev
+ 3762  git diff prod --name-only
+ 3763  git diff prod
+ 3764  cd /home/josue/Orbis/urbania-solr
+ 3765  gitk
+ 3766  git merge prod
+ 3767  gitk
+ 3768  gst
+ 3769  git merge prod
+ 3770  gco prod
+ 3771  git rebase -i dev
+ 3772  gco project
+ 3773  git rebase -i dev
+ 3774  ggpush
+ 3775  cd ../urbania-web
+ 3776  make up
+ 3777  cd ../urbania-micro-service-search
+ 3778  cd app/vendor/orbisunt
+ 3779  ls
+ 3780  la
+ 3781  sudo chmod 777 -Rf urbania-core
+ 3782  docker ps
+ 3783  ..
+ 3784  .
+ 3785  ..
+ 3786  gst
+ 3787  cd app/vendor/orbisunt/urbania-core
+ 3788  gst
+ 3789  git add .
+ 3790  git stash
+ 3791  gst
+ 3792  git stash clear
+ 3793  cd /home/josue/Orbis/urbania-web
+ 3794  gst
+ 3795  gitk
+ 3796  ggpull
+ 3797  gst
+ 3798  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 3799  cd /home/josue/Orbis/urbania-docker
+ 3800  make up
+ 3801  cd ../urbania-solr
+ 3802  make up
+ 3803  cd ../urbania-micro-service-search
+ 3804  make up
+ 3805  cd ../urbania-project-microservice
+ 3806  make up
+ 3807  docker ps
+ 3808  cd ../urbania-project-microservice
+ 3809  make down
+ 3810  gst
+ 3811  cd ../urbania-docker
+ 3812  make up_lb
+ 3813  docker ps 
+ 3814  make down_lb
+ 3815  make up_lb
+ 3816  cd ..
+ 3817  ls
+ 3818  la
+ 3819  cd urbania-solr
+ 3820  make up
+ 3821  cd ../urbania-micro-service-search
+ 3822  make up
+ 3823  ..
+ 3824  la
+ 3825  make down_lb
+ 3826  make up_l
+ 3827  make up_lb
+ 3828  cd urbania-web
+ 3829  make up
+ 3830  docker ps
+ 3831  cd ../unt-micro-service-configserver
+ 3832  make up
+ 3833  cd ../urbania-solr
+ 3834  gst
+ 3835  make down
+ 3836  make up
+ 3837  gb
+ 3838  gitk
+ 3839  gco dev
+ 3840  gst 
+ 3841  git merge pre3b
+ 3842  gfo pre3b:pre3b; gco pre3b
+ 3843  gco dev
+ 3844  git merge pre3b
+ 3845  gst
+ 3846  make down
+ 3847  gco pre3b
+ 3848  make up
+ 3849  docker ps
+ 3850  cat
+ 3851  cat Makefile
+ 3852  make compile_jar
+ 3853  make down
+ 3854  make up
+ 3855  gst
+ 3856  gco dev
+ 3857  ggpull
+ 3858  git merge pre3b
+ 3859  gitk
+ 3860  gco prod
+ 3861  gst
+ 3862  gitk
+ 3863  gco dev
+ 3864  git merge prod
+ 3865  gst
+ 3866  gco prod
+ 3867  make down
+ 3868  make up
+ 3869  java -version
+ 3870  sudo apt-get install maven
+ 3871  make compile_jar
+ 3872  make down
+ 3873  make up
+ 3874  gco dev
+ 3875  make down
+ 3876  make up
+ 3877  make down
+ 3878  make up
+ 3879  make build
+ 3880  make down
+ 3881  make up
+ 3882  make ssh
+ 3883  make down
+ 3884  make up
+ 3885  ..
+ 3886  cd urbania-solr
+ 3887  make ssh
+ 3888  make compile
+ 3889  cd ../urbania-project-microservice
+ 3890  gat
+ 3891  gst
+ 3892  make up
+ 3893  docker ps
+ 3894  gst
+ 3895  ggpull
+ 3896  gitk
+ 3897  ggpull
+ 3898  gco pre
+ 3899  ggpull
+ 3900  gco dev
+ 3901  gitk
+ 3902  cd /home/josue/Downloads
+ 3903  ls
+ 3904  tar xvfJ linux-4.17.5.tar.xz
+ 3905  cd linux-4.17.5
+ 3906  ls
+ 3907  la
+ 3908  cat README
+ 3909  cd ../urbania-microservice-geolocation
+ 3910  gst
+ 3911  git stash clear
+ 3912  git stash
+ 3913  gst
+ 3914  ggpull
+ 3915  gitk
+ 3916  gb
+ 3917  gst
+ 3918  gco prod
+ 3919  gb -D dev
+ 3920  gfo dev:dev; gco dev
+ 3921  git stash pop
+ 3922  gitk
+ 3923  make up
+ 3924  make log
+ 3925  cd ../urbania-docker
+ 3926  make down_lb
+ 3927  make up_lb
+ 3928  gst
+ 3929  gikt
+ 3930  gitk
+ 3931  cd ../urbania-microservice-geolocation
+ 3932  make composer
+ 3933  gst
+ 3934  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 3935  cd /home/josue/Orbis/urbania-docker
+ 3936  make up
+ 3937  cd ../unt-micro-service-configserver
+ 3938  make up
+ 3939  cd ../urbania-project-microservice
+ 3940  make up
+ 3941  cd ../urbania-solr
+ 3942  make up
+ 3943  cd ../urbania-micro-service-search
+ 3944  make up
+ 3945  cd ../urbania-web/make up
+ 3946  cd ../urbania-web
+ 3947  make up
+ 3948  docker ps
+ 3949  make up_lb
+ 3950  gat
+ 3951  gst
+ 3952  docker ps
+ 3953  cd ../urbania-microservice-geolocation
+ 3954  make up
+ 3955  make pul
+ 3956  make pull
+ 3957  make composer
+ 3958  make build
+ 3959  make down
+ 3960  make up
+ 3961  gitk
+ 3962  make pull
+ 3963  make down
+ 3964  make up
+ 3965  cd ../urbania-docker
+ 3966  make down_lb
+ 3967  make up_lb
+ 3968  docker ps
+ 3969  ../urbania-project-microservice
+ 3970  make down
+ 3971  cd ../urbania-microservice-geolocation
+ 3972  make down
+ 3973  cd ../urbania-docker
+ 3974  make down
+ 3975  make down_lb
+ 3976  make up
+ 3977  make up_lb
+ 3978  cd ../urbania-microservice-geolocation
+ 3979  make up
+ 3980  docker ps
+ 3981  cd ../urbania-docker
+ 3982  make down_lb
+ 3983  make up_lb
+ 3984  make down_lb
+ 3985  make up_lb
+ 3986  cd ../urbania-microservice-geolocation
+ 3987  docker ps
+ 3988  cat Makefile
+ 3989  make lo
+ 3990  make log
+ 3991  make composer
+ 3992  cd app/vendor/orbisunt/urbania-core
+ 3993  ..
+ 3994  cd ../urbania-project-microservice
+ 3995  make up
+ 3996  docker ps
+ 3997  cd ../urbania-project-microservice
+ 3998  make log
+ 3999  cd ../unt-config-lab
+ 4000  gst
+ 4001  gitk
+ 4002  ggpull
+ 4003  gitk
+ 4004  cd ../urbania-microservice-geolocation
+ 4005  make log
+ 4006  make ssh
+ 4007  gst
+ 4008  gitk
+ 4009  make tests
+ 4010  gitk
+ 4011  gb
+ 4012  gco -b project
+ 4013  git add .
+ 4014  git commit -am "feat(project): Value objects project"
+ 4015  gco dev
+ 4016  ggpull
+ 4017  gco project
+ 4018  git rebase -i dev
+ 4019  ggpush
+ 4020  git add .
+ 4021  git commit -am "feat(project): Spaces"
+ 4022  ggpush -f
+ 4023  gco dev
+ 4024  gitk
+ 4025  ls
+ 4026  make migrate local=true
+ 4027  gco project
+ 4028  gst
+ 4029  gitk
+ 4030  gs
+ 4031  gst
+ 4032  git add .
+ 4033  git commit -am "feat(project): None"
+ 4034  git rebase -i dev
+ 4035  ggpush -f
+ 4036  gst
+ 4037  git addd .
+ 4038  git add .
+ 4039  git stash
+ 4040  gco dev
+ 4041  ggpull
+ 4042  git stash po
+ 4043  git stash pop
+ 4044  gst
+ 4045  make migrate local=true
+ 4046  gitk app/alembic/versions/e916a178a1f8_create_bank_table.py
+ 4047  make downgrade
+ 4048  make migrate local=true
+ 4049  make downgrade
+ 4050  gst
+ 4051  make migrate local=true
+ 4052  make downgrade
+ 4053  make migrate local=true
+ 4054  make downgrade
+ 4055  make migrate local=true
+ 4056  make downgrade
+ 4057  make migrate local=true
+ 4058  make downgrade
+ 4059  make migrate local=true
+ 4060  make downgrade
+ 4061  make migrate local=true
+ 4062  make downgrade
+ 4063  make migrate local=true
+ 4064  gst
+ 4065  gco -b alembic
+ 4066  git add .
+ 4067  git commit -am "fix(alembic): Fix on update field value"
+ 4068  gb -D alembic
+ 4069  gco -b alembic
+ 4070  git rebase -i dev
+ 4071  gitk
+ 4072  gb -D dev
+ 4073  gfo dev:dev; gco dev
+ 4074  git rebase -i dev
+ 4075  gco alembic
+ 4076  git rebase -i dev
+ 4077  ggpush
+ 4078  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 4079  cd /home/josue/Orbis/dokc
+ 4080  cd /home/josue/Orbis/urbania-docker
+ 4081  make up
+ 4082  make up_lb
+ 4083  cd ../unt-micro-service-configserver
+ 4084  make up
+ 4085  cd ../urbania-solr
+ 4086  make up
+ 4087  cd ../urbania-micro-service-search
+ 4088  make up
+ 4089  cd ../urbania-project-microservice
+ 4090  make up
+ 4091  cd ../urbania-web
+ 4092  make up
+ 4093  docker ps
+ 4094  cd ../urbania-docker
+ 4095  make dow_
+ 4096  make dow_l
+ 4097  make down_lb
+ 4098  male up_l
+ 4099  make up_lb
+ 4100  gst
+ 4101  make up
+ 4102  gst
+ 4103  ..
+ 4104  cd urbania-micro-service-search/app/vendor/orbisunt/urbania-core
+ 4105  gst
+ 4106  cd ..
+ 4107  cd urbania-docker
+ 4108  gst
+ 4109  gitk
+ 4110  git add .
+ 4111  git commit -am "feat(geo): Adding geolocation project"
+ 4112  ggpush
+ 4113  gitk
+ 4114  ggpull
+ 4115  docker ps
+ 4116  cd /home/josue/Orbis/urbania-microservice-geolocation
+ 4117  make up
+ 4118  cd /home/josue/Orbis/urbania-project-microservice
+ 4119  gst
+ 4120  gitk
+ 4121  make log
+ 4122  gst
+ 4123  gitk
+ 4124  docker ps
+ 4125  cd /home/josue/Orbis/urbania-docker
+ 4126  make down
+ 4127  docker ps
+ 4128  make up
+ 4129  make migrate local=true
+ 4130  gst
+ 4131  gb -D dev
+ 4132  gfo dev:dev; gco dev
+ 4133  gitk
+ 4134  make log
+ 4135  gst
+ 4136  make log
+ 4137  cd ../urbania-project-microservice
+ 4138  make log
+ 4139  cd /home/josue/Orbis/urbania-micro-service-user
+ 4140  make up
+ 4141  cd ../urbania-docker
+ 4142  make down_lb
+ 4143  make up_lb
+ 4144  gst
+ 4145  cd ../urbania-microservice-publisher
+ 4146  gst
+ 4147  git add .
+ 4148  git stash
+ 4149  git stash pop
+ 4150  gb
+ 4151  gst
+ 4152  git stash clear
+ 4153  git add .
+ 4154  git stash
+ 4155  gb
+ 4156  gco project
+ 4157  gitk
+ 4158  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 4159  CD /home/josue/Orbis/urbania-docker
+ 4160  make up
+ 4161  cd /home/josue/Orbis/urbania-docker/docker
+ 4162  ..
+ 4163  make up
+ 4164  cd ../unt-micro-service-configserver
+ 4165  make up
+ 4166  cd ..
+ 4167  ls
+ 4168  cd urbania-project-microservice
+ 4169  make up
+ 4170  ../urbania-micro-service-search
+ 4171  make up
+ 4172  ../urbania-web
+ 4173  make up
+ 4174  ..
+ 4175  cd urbania-solr
+ 4176  make up
+ 4177  cd ../urbania-micro-service-user
+ 4178  make up
+ 4179  ..
+ 4180  ls
+ 4181  cd urbania-micro-service-graphql
+ 4182  make up
+ 4183  ..
+ 4184  cd urbania-microservice-consume-package
+ 4185  make up
+ 4186  cd ../urbania-micro-service-package
+ 4187  make up
+ 4188  cd ../urbania-microservice-publisher
+ 4189  make up
+ 4190  ls -la
+ 4191  cd ..
+ 4192  ls -la
+ 4193  cd urbania-microservice-geolocation
+ 4194  make up
+ 4195  cd ../urbania-docker
+ 4196  make up_lb
+ 4197  docker ps
+ 4198  gst
+ 4199  cd ../urbania-micro-service-search
+ 4200  cd app/vendor/orbisunt/urbania-core
+ 4201  gitk
+ 4202  gst
+ 4203  f
+ 4204  docker ps
+ 4205  cd ..
+ 4206  pwd
+ 4207  cd /home/josue/Orbis/urbania-project-microservice
+ 4208  make log
+ 4209  cd ../urbania-micro-service-search/app/vendor/orbisunt/urbania-core
+ 4210  gst
+ 4211  gitk
+ 4212  ..
+ 4213  gitk
+ 4214  make log
+ 4215  docker ps
+ 4216  make log
+ 4217  gst
+ 4218  gco -b avance
+ 4219  git ad .
+ 4220  git add .
+ 4221  git commit -am "feat(geo): Adding geolocation project"
+ 4222  ggpush
+ 4223  cd /home/josue/Orbis/urbania-docker
+ 4224  make up
+ 4225  cd ../unt-micro-service-configserver
+ 4226  make up
+ 4227  cd ../urbania-solr
+ 4228  make up
+ 4229  cd ../urbania-micro-service-search
+ 4230  make up
+ 4231  cd ../urbania-project-microservice
+ 4232  make up
+ 4233  cd ../
+ 4234  ls
+ 4235  la
+ 4236  cd urbania-microservice-geolocation
+ 4237  make up
+ 4238  cd ../urbania-micro-service-user
+ 4239  make up
+ 4240  la
+ 4241  cd ..
+ 4242  la
+ 4243  cd ../urbania-web
+ 4244  make up
+ 4245  cd ../urbania-microservice-token
+ 4246  make up
+ 4247  docker ps
+ 4248  cd urbania-project-microservice
+ 4249  gst
+ 4250  make log
+ 4251  cd ../urbania-docker
+ 4252  make up_lb
+ 4253  docker ps
+ 4254  cd ../urbania-project-microservice
+ 4255  make down
+ 4256  docke rps
+ 4257  docker ps
+ 4258  make up
+ 4259  docker ps
+ 4260  make log
+ 4261  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 4262  make log
+ 4263  gst
+ 4264  git add .
+ 4265  git commit -am "feat(project): Avance"
+ 4266  ggpush
+ 4267  cd ../urbania-micro-service-search
+ 4268  gst
+ 4269  gco -b avance_josue
+ 4270  git add .
+ 4271  git commit -am "avance"
+ 4272  cd app/vendor/orbisunt/urbania-core
+ 4273  gst
+ 4274  gco -b avance_josue
+ 4275  gst
+ 4276  git add .
+ 4277  git commit -am "avance"
+ 4278  ggpush
+ 4279  cd /home/josue/Orbis/urbania-docker
+ 4280  make up
+ 4281  cd ../urbania-project-microservice
+ 4282  cd ../unt-micro-service-configserver
+ 4283  make up
+ 4284  cd ../urbania-solr
+ 4285  make up
+ 4286  cd ../urbania-micro-service-search
+ 4287  make up
+ 4288  docker ps
+ 4289  cd ../urbania-project-microservice
+ 4290  make down
+ 4291  cd ..
+ 4292  sl
+ 4293  ls
+ 4294  cd urbania-microservice-geolocation
+ 4295  make up
+ 4296  gst
+ 4297  make up
+ 4298  docker ps
+ 4299  make up_lb
+ 4300  cd ../urbania-web
+ 4301  make up
+ 4302  docker ps
+ 4303  gst
+ 4304  make up
+ 4305  docker ps
+ 4306  cd ../urbania-micro-service-user
+ 4307  make up
+ 4308  cd ../unt-micro-service-configserver
+ 4309  make up
+ 4310  cd ../urbania-project-microservice
+ 4311  cd ../urbania-micro-service-search
+ 4312  gst
+ 4313  gb
+ 4314  gco dev
+ 4315  gst
+ 4316  ggpull
+ 4317  cd ../urbania-micro-service-search/app/vendor/orbisunt/urbania-core
+ 4318  gst
+ 4319  gb
+ 4320  gco api
+ 4321  ggpull
+ 4322  gitk
+ 4323  gb
+ 4324  git diff avance_josue --name-only
+ 4325  git diff avance_josue src/Domain/Context/Search/Factory/ProjectQueryContextFactory.php
+ 4326  git diff avance_josue --name-only
+ 4327  git diff avance_josue app/src/App/Resources/Factory/ProjectQueryResourceFactory.php
+ 4328  git diff avance_josue 
+ 4329  git diff avance_josue --name-only
+ 4330  git diff avance_josue src/Infrastructure/Persistence/Rest/RestProjectRepository.php
+ 4331  pwd
+ 4332  cat src/Infrastructure/Persistence/Rest/RestProjectRepository.php
+ 4333  git diff origin/avance_josue src/Infrastructure/Persistence/Rest/RestProjectRepository.php
+ 4334  git diff avance_josue --name-only
+ 4335  git diff avance_josue src/Infrastructure/Util/Hydrator/ContactHydrator.php
+ 4336  git diff avance_josue src/Infrastructure/Persistence/Rest/RestProjectRepository.php
+ 4337  git diff avance_josue src/Infrastructure/Persistence/Rest/RestUnityRepository.php
+ 4338  git diff avance_josue -- src/Infrastructure/Persistence/Rest/RestUnityRepository.php
+ 4339  git diff avance_josue -- src/Infrastructure/Persistence/Rest/RestProjectRepository.php
+ 4340  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 4341  make log
+ 4342  pwd
+ 4343  cd ../
+ 4344  la
+ 4345  cd /home/josue/Orbis
+ 4346  la
+ 4347  cd urbania-microservice-publisher
+ 4348  cat Makefile
+ 4349  make log
+ 4350  cd ../urbania-solr
+ 4351  gb
+ 4352  make down
+ 4353  make up
+ 4354  make compile_jar
+ 4355  make compile
+ 4356  make down
+ 4357  make up
+ 4358  make compile
+ 4359  pwd
+ 4360  gst
+ 4361  git add .
+ 4362  gitk
+ 4363  gst
+ 4364  git add .
+ 4365  gitk
+ 4366  gco -b search
+ 4367  git commit -am "feat(search): Actualizacion de proyecto Solr"
+ 4368  gst
+ 4369  gitk
+ 4370  gst
+ 4371  gitk
+ 4372  cd ../urbania-micro-service-search
+ 4373  gst
+ 4374  gitk
+ 4375  git add .
+ 4376  gitk
+ 4377  gco -b search
+ 4378  git commit -am "feat(search): Actualizacion de proyecto Solr"
+ 4379  git rebase -i dev
+ 4380  ggpush
+ 4381  git rebase -i dev
+ 4382  gst
+ 4383  gitk
+ 4384  gb
+ 4385  git rebase -i api
+ 4386  ggpush
+ 4387  gst
+ 4388  git add .
+ 4389  gco -b search
+ 4390  git commit -am "feat(search): Actualizacion de proyecto Solr"
+ 4391  git rebase -i dev
+ 4392  ggpush
+ 4393  gb
+ 4394  gfo api_dev:api_dev
+ 4395  gb
+ 4396  git rebase -i api_dev
+ 4397  gst
+ 4398  gco -b search_bkp
+ 4399  gco search
+ 4400  git merge api_dev
+ 4401  gst
+ 4402  gitk
+ 4403  git rebase -i api_dev
+ 4404  cd /home/josue/Orbis/urbania-micro-service-search/app/vendor/orbisunt/urbania-core
+ 4405  gb
+ 4406  gco api_dev
+ 4407  git rebase -i search
+ 4408  git rebase --continue
+ 4409  gst
+ 4410  git merge api_dev
+ 4411  gitk
+ 4412  gco api_dev
+ 4413  gitk
+ 4414  gco search
+ 4415  git rebase -i api_dev
+ 4416  ggpush
+ 4417  ggpush -f
+ 4418  git rebase -i api_dev
+ 4419  gb -D api_dev
+ 4420  gfo api_dev:api_dev
+ 4421  git rebase -i api_dev
+ 4422  ggpush
+ 4423  gco api_dev
+ 4424  ggpull
+ 4425  gitk
+ 4426  gb
+ 4427  gb -D search
+ 4428  gco search
+ 4429  gco search_bkp
+ 4430  gb
+ 4431  gb -D search
+ 4432  gb
+ 4433  gco -b search
+ 4434  git rebase -i api_dev
+ 4435  ggpush
+ 4436  ggpush -f
+ 4437  gco search_bkp
+ 4438  git rebase -i api_dev
+ 4439  ggpush
+ 4440  gb
+ 4441  gco -b solr
+ 4442  gco api_dev
+ 4443  gst
+ 4444  git rebase -i solr
+ 4445  gco solr
+ 4446  git merge api_dev
+ 4447  git diff api_dev --name-only
+ 4448  gco  search
+ 4449  gst
+ 4450  gitk
+ 4451  git reset --soft HEAD~1
+ 4452  gst
+ 4453  git stash clear
+ 4454  gst
+ 4455  gb
+ 4456  gst
+ 4457  git stash
+ 4458  gst
+ 4459  gb
+ 4460  gb -D api_dev
+ 4461  gco api_dev
+ 4462  gb
+ 4463  gco -b search_project
+ 4464  gitk
+ 4465  git stash pop
+ 4466  gst
+ 4467  git add .
+ 4468  gitk
+ 4469  git commit -am "feat(search): Actualizacion de proyecto Solr"
+ 4470  git rebase -i api_dev
+ 4471  ggpush
+ 4472  wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+ 4473  echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+ 4474  sudo apt-get update
+ 4475  sudo apt-get install sublime-text
+ 4476  gst
+ 4477  gitk
+ 4478  gst
+ 4479  gitk
+ 4480  git add .
+ 4481  git commit -am "refactor(documentacion): Tipo de datos de archivos"
+ 4482  git rebase -i api_dev
+ 4483  ggpush -f
+ 4484  cd ../sol
+ 4485  cd /home/josue/Orbis/urbania-solr
+ 4486  git add .
+ 4487  git commit -am "fix(field): Actualizacion"
+ 4488  gb
+ 4489  git rebase -i dev
+ 4490  ggpush -f
+ 4491  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 4492  pwd
+ 4493  gst
+ 4494  gb
+ 4495  gco api_dev
+ 4496  ggpull
+ 4497  gitk
+ 4498  gb
+ 4499  gb -D search
+ 4500  gb -D search_bkp
+ 4501  gb -D search_project
+ 4502  gb -D solr
+ 4503  gb
+ 4504  gb -D avance_josue
+ 4505  gb
+ 4506  gitk
+ 4507  gco -b solr_project
+ 4508  gst
+ 4509  gb
+ 4510  gst
+ 4511  gb
+ 4512  gfo pre:pre; gco pre
+ 4513  git
+ 4514  gitk
+ 4515  gco dev
+ 4516  git rebase -i pre
+ 4517  gco pre
+ 4518  git merge dev
+ 4519  gitk
+ 4520  ggpush
+ 4521  cd ../urbania-micro-service-search
+ 4522  gb
+ 4523  gst
+ 4524  git stash clear
+ 4525  git stash
+ 4526  gst
+ 4527  git add .
+ 4528  git stash
+ 4529  gst
+ 4530  gb
+ 4531  gb -D dev
+ 4532  gfo dev:dev
+ 4533  gfo pre;pre; gco dev
+ 4534  git rebase -i pre
+ 4535  gst
+ 4536  git rebase -i pre
+ 4537  gb
+ 4538  gfo pre:pre
+ 4539  git rebase -i pre
+ 4540  ggpull
+ 4541  gco pre
+ 4542  git merge dev
+ 4543  gitk
+ 4544  ggpush
+ 4545  gst
+ 4546  ggpush
+ 4547  gb
+ 4548  gco dev
+ 4549  gitk
+ 4550  gb -D pre
+ 4551  gfo pre:pre
+ 4552  gco pre
+ 4553  git merge dev
+ 4554  ggpush
+ 4555  gitk
+ 4556  gb
+ 4557  gfo api_pre:api_pre
+ 4558  gco api_dev
+ 4559  gst
+ 4560  git add .
+ 4561  git stash
+ 4562  gst
+ 4563  ggpull
+ 4564  gitk
+ 4565  gco api_dev
+ 4566  gco api_pre
+ 4567  git merge api_dev
+ 4568  gitk
+ 4569  ggpush
+ 4570  gitk
+ 4571  ggpull
+ 4572  gitk
+ 4573  gb
+ 4574  gco -b solr_project
+ 4575  git stash pop
+ 4576  gco solr_project
+ 4577  git stash pop
+ 4578  gst
+ 4579  git stash pop
+ 4580  gitk
+ 4581  gb
+ 4582  gco dev
+ 4583  gst
+ 4584  gitk
+ 4585  ggpull
+ 4586  gco pre
+ 4587  git merge dev
+ 4588  ggpush
+ 4589  gitk
+ 4590  gst
+ 4591  gitk
+ 4592  gst
+ 4593  git add .
+ 4594  git commit -am "feat(solr): Update/Delete projects"
+ 4595  git add .
+ 4596  git commit -am "feat(solr): Update/Delete projects"
+ 4597  gb
+ 4598  gco api_dev
+ 4599  ggpul
+ 4600  ggpull
+ 4601  gitk
+ 4602  gst
+ 4603  gco -b view_project
+ 4604  git add .
+ 4605  git commit -am "test(view): Cambio de nombre en la vista de solr"
+ 4606  gst
+ 4607  gco api_pre
+ 4608  ggpull
+ 4609  gco view_project
+ 4610  gco api_pre
+ 4611  git merge view_project
+ 4612  gitk
+ 4613  ggpush
+ 4614  gb
+ 4615  gco solr_project
+ 4616  gco api_pre
+ 4617  gitk
+ 4618  wine /home/josue/Downloads/Half-Life.exe
+ 4619  wine --version
+ 4620  gb
+ 4621  gco solr_project
+ 4622  gitk
+ 4623  gst
+ 4624  gitk
+ 4625  gst
+ 4626  git add .
+ 4627  gitk
+ 4628  git add .
+ 4629  gitk
+ 4630  git add .
+ 4631  gitk
+ 4632  git commit -am "fix(project): Actualizacion de campos para Solr"
+ 4633  gst
+ 4634  gitk
+ 4635  git add .
+ 4636  git commit -am "fix(project): Actualizacion de campos para Solr"
+ 4637  gb
+ 4638  gst
+ 4639  gco dev
+ 4640  ggpull
+ 4641  gco solr_project
+ 4642  git rebase -i dev
+ 4643  ggpush
+ 4644  gst
+ 4645  gb
+ 4646  gco dev
+ 4647  ggpull
+ 4648  gco solr_project
+ 4649  git rebase -i dev
+ 4650  git rebase --abort
+ 4651  git reset --soft HEAD~1
+ 4652  gst
+ 4653  git stash clear
+ 4654  git stash
+ 4655  gst
+ 4656  git reset --soft HEAD~1
+ 4657  gst
+ 4658  git stash pop
+ 4659  gst
+ 4660  git add .
+ 4661  git stash
+ 4662  gb
+ 4663  gb -D dev
+ 4664  gfo dev:dev; gco dev
+ 4665  gb
+ 4666  gco -b project_solr
+ 4667  git stash pop
+ 4668  git mergetool
+ 4669  gst
+ 4670  git add .
+ 4671  gitk
+ 4672  gb
+ 4673  git reset --soft HEAD~1
+ 4674  gst
+ 4675  gb -D dev
+ 4676  rm src/Domain/Context/Search/ProjectQueryContext.php.orig
+ 4677  rm src/Domain/Entity/Search/PublisherDocument.php.orig
+ 4678  gst
+ 4679  rm *.php.orig
+ 4680  rm src/Domain/Implement/PublisherDocumentImplement.php.orig src/Domain/Repository/Search/PublisherDocumentRepository.php.orig src/Domain/ServiceInterface/PublisherDocumentService.php.orig src/Infrastructure/Persistence/Solr/PublisherDocumentSolrRepository.php.orig src/Infrastructure/Persistence/ZendGateway/ProjectDocumentZendRepository.php.orig src/Infrastructure/Util/Hydrator/Document/PublisherDocumentHydrator.php.orig
+ 4681  gst
+ 4682  git add .
+ 4683  git stash
+ 4684  gst
+ 4685  gb -D api_dev
+ 4686  gco api_dev
+ 4687  gst
+ 4688  gb
+ 4689  gb -D project_solr
+ 4690  gco -b project_solr
+ 4691  git stash pop
+ 4692  git mergetool
+ 4693  gst
+ 4694  gitk
+ 4695  gco src/Infrastructure/Util/Hydrator/TransactionHydrator.php
+ 4696  gst
+ 4697  git reset
+ 4698  gst
+ 4699  gco src/Infrastructure/Util/Hydrator/TransactionHydrator.php
+ 4700  gst
+ 4701  git add .
+ 4702  gitk
+ 4703  git commit -am "fix(project): Actualizacion de campos para Solr"
+ 4704  git rebase -i dev
+ 4705  git rebase -i api_dev
+ 4706  ggpush
+ 4707  gst
+ 4708  gitk
+ 4709  git add .
+ 4710  git commit -am "fix(project): Actualizacion de campos para Solr"
+ 4711  git rebase -i dev
+ 4712  ggpush -f
+ 4713  gst
+ 4714  git add .
+ 4715  gitk
+ 4716  git commit -am "fix(project): Actualizacion de campos para Solr"
+ 4717  git rebase -i dev
+ 4718  git rebase -i api_dev
+ 4719  ggpush -f
+ 4720  gco dev
+ 4721  ggpull
+ 4722  gco api_dev
+ 4723  ggpull
+ 4724  gco dev
+ 4725  ggpull
+ 4726  gitk
+ 4727  gb
+ 4728  gco api_pre
+ 4729  gst
+ 4730  gitk
+ 4731  gco api_pre
+ 4732  git merge api_dev
+ 4733  gst
+ 4734  gitk
+ 4735  gst
+ 4736  gco api_dev
+ 4737  gb -D api_pre
+ 4738  gst
+ 4739  gfo api_pre:api_pre
+ 4740  git rebase -i api_pre
+ 4741  gco api_pre
+ 4742  git merge api_dev
+ 4743  gitk
+ 4744  ggpush
+ 4745  gitk
+ 4746  gb
+ 4747  gb -D pre
+ 4748  gfo pre:pre
+ 4749  git rebase -i pre
+ 4750  gco pre
+ 4751  git merge dev
+ 4752  gitk
+ 4753  ggpush
+ 4754  cd /home/josue/Orbis/urbania-micro-service-search
+ 4755  cd ../urbania-docker
+ 4756  make up
+ 4757  cd ../urbania-micro-service-search
+ 4758  make up
+ 4759  cd ../urbania-solr
+ 4760  make up
+ 4761  cd ../urbania-project-microservice
+ 4762  make up
+ 4763  cd ../urbania-docker
+ 4764  make up_
+ 4765  make up_lb
+ 4766  cd ../
+ 4767  docker ps
+ 4768  cd urbania-project-microservice
+ 4769  ls
+ 4770  docker ps
+ 4771  make down
+ 4772  make up
+ 4773  docker ps
+ 4774  make down
+ 4775  docker ps
+ 4776  cd ../urbania-micro-service-search
+ 4777  gst
+ 4778  git stash
+ 4779  gb
+ 4780  gco dev
+ 4781  ggpush
+ 4782  ggpull
+ 4783  gst
+ 4784  gitk
+ 4785  gb
+ 4786  gst
+ 4787  gco pre
+ 4788  gb -D dev
+ 4789  gfo dev
+ 4790  gfo dev:dev
+ 4791  gb
+ 4792  gco dev
+ 4793  git merge pre
+ 4794  gst
+ 4795  gitk
+ 4796  gst
+ 4797  gco pre
+ 4798  gitk
+ 4799  gb -D dev
+ 4800  gco dev
+ 4801  gb
+ 4802  gco pre
+ 4803  gb -D dev
+ 4804  gb
+ 4805  gfo dev:dev
+ 4806  gco dev
+ 4807  gitk
+ 4808  git diff pre 
+ 4809  ggpush
+ 4810  cd app/vendor/orbisunt/urbania-core
+ 4811  gst
+ 4812  gb
+ 4813  git diff api_dev
+ 4814  gst
+ 4815  gco api_dev
+ 4816  ggpull
+ 4817  git stash
+ 4818  gst
+ 4819  ggpull
+ 4820  gb
+ 4821  gst
+ 4822  gco api_pre
+ 4823  gb
+ 4824  gb -D api_dev
+ 4825  gfo api_dev:api_dev
+ 4826  gco api_dev
+ 4827  gst
+ 4828  gitk
+ 4829  add .
+ 4830  git commit -am "test"
+ 4831  ggpush
+ 4832  git add .
+ 4833  git commit -am "test-remove"
+ 4834  ggpush
+ 4835  cd /home/josue/Orbis/urbania-solr
+ 4836  gst
+ 4837  gb
+ 4838  git diff dev
+ 4839  gco dev
+ 4840  gst
+ 4841  gitk
+ 4842  gst
+ 4843  git stash
+ 4844  make log
+ 4845  gst
+ 4846  gitk
+ 4847  git add .
+ 4848  git commit -am "fix(search)"
+ 4849  ggpush
+ 4850  ggpull
+ 4851  make down
+ 4852  make up
+ 4853  make compile
+ 4854  make down
+ 4855  make up
+ 4856  make compile
+ 4857  gst
+ 4858  gitk
+ 4859  git add .
+ 4860  git commit -am "fix(solr): Publicacion de proyectos, campos multivalor"
+ 4861  ggpush
+ 4862  gst
+ 4863  gitk
+ 4864  git add .
+ 4865  git commit -am "fix(solr): Publicacion de proyectos, campos multivalor"
+ 4866  ggpush
+ 4867  gst
+ 4868  gitk
+ 4869  gst
+ 4870  wine /home/josue/Downloads/Half-Life.exe
+ 4871  make compile
+ 4872  gst
+ 4873  gitk
+ 4874  git add .
+ 4875  git commit -am "fix(solr): Publicacion de proyectos, campos multivalor"
+ 4876  ggpush
+ 4877  gst
+ 4878  gitk
+ 4879  git diff pre --name-only
+ 4880  git rebase -i pre
+ 4881  git rebase -i api_pre
+ 4882  git rebase --abort
+ 4883  gst
+ 4884  gitk
+ 4885  git add .
+ 4886  git commit -am "refactor(solr): Quitando comentarios"
+ 4887  git rebase -i api_pre
+ 4888  gst
+ 4889  git rebase --abort
+ 4890  gst
+ 4891  gitk
+ 4892  git add .
+ 4893  git commit -am "refactor(solr): Quitando comentarios"
+ 4894  ggpush
+ 4895  git rebase -i api_pre
+ 4896  git rebase --continue
+ 4897  git rebase --abort
+ 4898  gb
+ 4899  gb -D solr_project project_solr view_project
+ 4900  gb
+ 4901  gst
+ 4902  gco search_fixes
+ 4903  gco -b search_fixes
+ 4904  git rebase -i api_pre
+ 4905  git rebase --abort
+ 4906  gfo test_dev:test_dev
+ 4907  git diff test_dev --name-only
+ 4908  git diff test_dev
+ 4909  gb
+ 4910  gco -D api_dev
+ 4911  gb
+ 4912  gb -D api_dev
+ 4913  gfo api_dev:api_dev
+ 4914  gco api_dev
+ 4915  gst
+ 4916  gitk
+ 4917  gst
+ 4918  git diff pre
+ 4919  gst
+ 4920  gitk
+ 4921  ggpull
+ 4922  gco pre
+ 4923  ggpull
+ 4924  gco dev
+ 4925  git rebase -i pre
+ 4926  gco pre
+ 4927  git merge dev
+ 4928  gitk
+ 4929  ggpush
+ 4930  gb
+ 4931  gb -D api_pre
+ 4932  gfo api_pre:api_pre
+ 4933  git diff api_pre
+ 4934  gst
+ 4935  gitk
+ 4936  git rebase -i api_pre
+ 4937  git rebase --continue
+ 4938  git mergetool
+ 4939  git rebase --continue
+ 4940  git mergetool
+ 4941  git rebase --continue
+ 4942  gst
+ 4943  gco api_pre
+ 4944  git merge api_debv
+ 4945  git merge api_dev
+ 4946  gst
+ 4947  gitk
+ 4948  ggpush
+ 4949  gst
+ 4950  git diff pre
+ 4951  gitk
+ 4952  cd ../urbania-project-microservice
+ 4953  make up
+ 4954  cd ../urbania-micro-service-user
+ 4955  make up
+ 4956  docker ps
+ 4957  make log
+ 4958  gst
+ 4959  ggpull
+ 4960  gitk
+ 4961  git add .
+ 4962  git commit -am "refactor(solr): Quitando comentarios"
+ 4963  gb
+ 4964  gb -D dev
+ 4965  gfo dev:dev; gco dev
+ 4966  gb -D pre
+ 4967  gb -D testing testing2 value_objects dev3c container UT2-1139_feat UT3-833_feat
+ 4968  gb
+ 4969  gco dev
+ 4970  gb -D alembic
+ 4971  gst
+ 4972  git add .
+ 4973  git commit -am "refactor(solr): Quitando comentarios"
+ 4974  gb
+ 4975  gst
+ 4976  git stash
+ 4977  gst
+ 4978  git stash clear
+ 4979  gst
+ 4980  gb
+ 4981  gb -D dev
+ 4982  gfo dev:dev; gco dev
+ 4983  gitk
+ 4984  dokcer ps
+ 4985  docker ps
+ 4986  cd ../urbania-docker
+ 4987  make down_lb
+ 4988  make ddown
+ 4989  make down
+ 4990  make up
+ 4991  make up_lb
+ 4992  dokcer ps
+ 4993  docker ps
+ 4994  docker ps
+ 4995  make log
+ 4996  cd ../unt-micro-service-configserver
+ 4997  make up
+ 4998  cd ../unt-config-lab
+ 4999  ggpull
+ 5000  make down
+ 5001  make up
+ 5002  cd ../urbania-docker
+ 5003  docker ps
+ 5004  make down_lb
+ 5005  make up_lb
+ 5006  docker ps
+ 5007  wine /home/josue/Downloads/Half-Life.exe
+ 5008  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 5009  gst
+ 5010  gitk
+ 5011  git add .
+ 5012  gb
+ 5013  gco -b value_objects
+ 5014  git commit -am "fix(value_objects): Aplicando fix solicitado"
+ 5015  gitk
+ 5016  gco dev
+ 5017  ggpull
+ 5018  gco value_objects
+ 5019  git reset ~HEAD 1
+ 5020  gst
+ 5021  git reset --soft HEAD~1
+ 5022  gst
+ 5023  git stash clea
+ 5024  git stash clear
+ 5025  git stash
+ 5026  gco dev
+ 5027  gb -D value_objects
+ 5028  gco -b value_objects
+ 5029  git stash pop
+ 5030  git add .
+ 5031  git commit -am "fix(value_objects): Aplicando fix solicitado"
+ 5032  git rebase -i dev
+ 5033  ggpush
+ 5034  gst
+ 5035  git add .
+ 5036  git commit -am "fix(value_objects): Actualizando valores con QA"
+ 5037  git rebase -i dev
+ 5038  ggpush -f
+ 5039  ggpush
+ 5040  gst
+ 5041  git add .
+ 5042  git commit -am "fix(value_objects): Actualizando valores con QA - 2"
+ 5043  git rebase -i dev
+ 5044  gst
+ 5045  git add .
+ 5046  git commit -am "fix(value_objects): Actualizando valores con QA - 2"
+ 5047  gst
+ 5048  git reset HEAD
+ 5049  gst
+ 5050  git add .
+ 5051  git commit -am "fix(value_objects): Actualizando valores con QA - 2"
+ 5052  gst
+ 5053  ggpush -f
+ 5054  ggpush
+ 5055  ggpull
+ 5056  gst
+ 5057  git add .
+ 5058  gst
+ 5059  git commit -am "fix(value_objects): Actualizando valores con QA 3"
+ 5060  gst
+ 5061  gitk
+ 5062  git reset --soft HEAD~1
+ 5063  gst
+ 5064  gitk
+ 5065  git add 
+ 5066  git add .
+ 5067  git add . --all
+ 5068  git commit -am "fix(value_objects): Actualizando valores con QA"
+ 5069  gst
+ 5070  git reset HEAD
+ 5071  gst
+ 5072  git stash clear
+ 5073  git stash
+ 5074  gb -D 
+ 5075  gb -D dev
+ 5076  gst
+ 5077  gfo dev:dev; gco dev
+ 5078  gb -D value_objects
+ 5079  gb
+ 5080  gco -b value_objects:value_objects; gco value_objects
+ 5081  gst
+ 5082  git stash pop
+ 5083  git mergetool
+ 5084  gst
+ 5085  rm app/project/domain/valueObjects/basics.py.orig
+ 5086  rm app/project/domain/valueObjects/project.py.orig
+ 5087  gst
+ 5088  git add .
+ 5089  gst
+ 5090  gitk
+ 5091  cd ../urbania-microservice-geolocation
+ 5092  gst
+ 5093  make up
+ 5094  cd ../urbania-docker
+ 5095  make down_lb
+ 5096  make up_lb
+ 5097  gst
+ 5098  git add --all
+ 5099  gst
+ 5100  gitk
+ 5101  git commit -am "fix(value_objects): Actualizando valores con QA"
+ 5102  gst
+ 5103  git reset --soft HEAD~1
+ 5104  gst
+ 5105  gitk
+ 5106  gb
+ 5107  gst
+ 5108  git reset HEAD
+ 5109  gst
+ 5110  git stash clear
+ 5111  git stash
+ 5112  gst
+ 5113  gb
+ 5114  gco dev
+ 5115  gco -b objects
+ 5116  git stash pop
+ 5117  gst
+ 5118  git add .
+ 5119  git commit -am "fix(value_objects): Actualizando valores con QA"
+ 5120  gitk
+ 5121  gst
+ 5122  git commit -am "fix(value_objects): Actualizando valores con QA"
+ 5123  make tests
+ 5124  gst
+ 5125  make tests
+ 5126  git commit -am "fix(value_objects): Actualizando valores con QA"
+ 5127  gst
+ 5128  git rebase -i dev
+ 5129  ggpush
+ 5130  gst
+ 5131  git add .
+ 5132  git commit -am "fix(value_objects): Actualizando valores con QA 2"
+ 5133  ggpush -f
+ 5134  gst
+ 5135  gitk
+ 5136  cd ../urbania-micro-service-search
+ 5137  make down
+ 5138  gst
+ 5139  gitk
+ 5140  git commit -am "fix(value_objects): Actualizando valores con QA 2"
+ 5141  gco dev
+ 5142  ggpull
+ 5143  gb
+ 5144  gco objects
+ 5145  git rebase -i dev
+ 5146  git rebase --abort
+ 5147  gst
+ 5148  git reset --soft HEAD~1
+ 5149  gst
+ 5150  git stash
+ 5151  gst
+ 5152  gco dev
+ 5153  gco -b fixes
+ 5154  git stash pop
+ 5155  gst
+ 5156  gitk
+ 5157  git add .
+ 5158  git commit -am "fix(value_objects): Actualizando valores con QA 3"
+ 5159  git rebase -i dev
+ 5160  ggpush
+ 5161  cd ../urbania-micro-service-search
+ 5162  gst
+ 5163  git stash clear
+ 5164  git stash
+ 5165  gst
+ 5166  cd app/vendor/orbisunt/urbania-core
+ 5167  gst
+ 5168  git stash clear
+ 5169  git stash
+ 5170  gst
+ 5171  gco api_dev
+ 5172  ggpull
+ 5173  gb
+ 5174  gco api_pre
+ 5175  gb -D api_dev
+ 5176  gb
+ 5177  gfo api_dev:api_dev
+ 5178  gco api_dev
+ 5179  gb
+ 5180  ggpull
+ 5181  gst
+ 5182  gitk
+ 5183  gst
+ 5184  gitk
+ 5185  git add .
+ 5186  git commit -am "feta(project): Field project_logo added"
+ 5187  gst
+ 5188  ggpush
+ 5189  gitk
+ 5190  git stash pop
+ 5191  docker ps
+ 5192  make up
+ 5193  gst
+ 5194  git stash
+ 5195  gst
+ 5196  gb
+ 5197  gb -D api_pre
+ 5198  gfo api_pre:api_pre; gco api_pre
+ 5199  git merge api_dev
+ 5200  gitk
+ 5201  gst
+ 5202  gco api_dev
+ 5203  gb -D api_pre
+ 5204  gfo api_pre:api_pre; gco api_pre
+ 5205  git rebase -i api_pre
+ 5206  gst
+ 5207  gco api_dev
+ 5208  gb -D api_pre
+ 5209  gfo api_pre:api_pre; gco api_pre
+ 5210  gco api_dev
+ 5211  git rebase -i api_pre
+ 5212  git mergetool
+ 5213  git rebase --continue
+ 5214  git mergetool
+ 5215  git rebase --continue
+ 5216  gst
+ 5217  gco api_pre
+ 5218  git merge api_dev
+ 5219  gst
+ 5220  gitk
+ 5221  ggpush
+ 5222  gst
+ 5223  cd ../urbania-project-microservice
+ 5224  gst
+ 5225  make log
+ 5226  gst
+ 5227  cd ../urbania-micro-service-search
+ 5228  gb
+ 5229  gco api_dev
+ 5230  gst
+ 5231  git stash pop
+ 5232  gitk
+ 5233  gst
+ 5234  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 5235  gst
+ 5236  git stash
+ 5237  ggpush
+ 5238  git stash
+ 5239  cd ../urbania-web
+ 5240  gst
+ 5241  ggpull
+ 5242  gitk
+ 5243  gst
+ 5244  ggpull
+ 5245  gitk
+ 5246  ggpull
+ 5247  git stash
+ 5248  git stash pop
+ 5249  gitk
+ 5250  gst
+ 5251  git stash
+ 5252  ggpull
+ 5253  git stash pop
+ 5254  git add .
+ 5255  gitk
+ 5256  git add .
+ 5257  git commit -am "feat(search): Similar projects"
+ 5258  git add .
+ 5259  git commit -am "feat(search): Similar projects"
+ 5260  ggpush
+ 5261  gst
+ 5262  gpgpull
+ 5263  gitk
+ 5264  ggpush
+ 5265  cd /home/josue/Orbis/urbania-microservice-publisher-authorization
+ 5266  ../urbania-docker
+ 5267  make up
+ 5268  ../urbania-microservice-geolocation
+ 5269  make up
+ 5270  cd ../urbania-micro-service-user
+ 5271  make up
+ 5272  cd ../urbania-project-microservice
+ 5273  make up
+ 5274  cd ../urbania-web
+ 5275  make up
+ 5276  cd ../urbania-micro-service-search
+ 5277  make up
+ 5278  cd ../urbania-solr
+ 5279  make up
+ 5280  ../urbania-docker
+ 5281  make up_lb
+ 5282  docker ps
+ 5283  cd ../unt-micro-service-configserver
+ 5284  make up
+ 5285  docker ps
+ 5286  cd ../urbania-project-microservice
+ 5287  make down
+ 5288  make up
+ 5289  docker ps
+ 5290  cd ../unt-micro-service-configserver
+ 5291  ls
+ 5292  make ssh
+ 5293  ggpull
+ 5294  gb
+ 5295  gfo pre:pre;gco pre
+ 5296  gitk
+ 5297  make build
+ 5298  make build-jar
+ 5299  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 5300  cd ../urbania-micro-service-search
+ 5301  gitk
+ 5302  cd ../urbania-micro-service-search/app/vendor/orbisunt/urbania-core
+ 5303  gb
+ 5304  gco -b api_dev_bkp
+ 5305  gco api_dev
+ 5306  ggpull
+ 5307  gst
+ 5308  gitk
+ 5309  gco  api_dev_bkp
+ 5310  gb -D api_dev
+ 5311  gfo api_dev:api_dev
+ 5312  git diff api_dev
+ 5313  gco api_dev
+ 5314  git diff api_dev_bkp
+ 5315  gitk
+ 5316  gst
+ 5317  ggpull
+ 5318  gitk
+ 5319  cd Orbis/
+ 5320  ls
+ 5321  cd urbania-docker
+ 5322  make up
+ 5323  ggpull
+ 5324  cd ..
+ 5325  cd urbania3-api
+ 5326  gb
+ 5327  make up
+ 5328  make up_lb
+ 5329  gfo pre:pre
+ 5330  gco pre
+ 5331  ggpul
+ 5332  ggpull
+ 5333  docker ps
+ 5334  make up
+ 5335  docker ps
+ 5336  cd ../urbania-project-microservice
+ 5337  make down
+ 5338  docker ps
+ 5339  cd ../urbania-web
+ 5340  ggpull
+ 5341  gb
+ 5342  gb -D pre
+ 5343  gst
+ 5344  git reset HEAD --hard
+ 5345  gst
+ 5346  gb
+ 5347  gfo pre:pre
+ 5348  gco pre
+ 5349  gb -D dev
+ 5350  gfo dev:dev
+ 5351  make up
+ 5352  gb
+ 5353  gco dev
+ 5354  make up
+ 5355  ggpull
+ 5356  gitk
+ 5357  ggpull
+ 5358  gitk
+ 5359  git reset HEAD --hard
+ 5360  gst
+ 5361  gitk
+ 5362  sudo rm -rf /opt/Postman
+ 5363  cd /home/josue/Downloads
+ 5364  ls
+ 5365  ..
+ 5366  sudo mv ./Downloads/Postman /opt
+ 5367  cd Orbis/urbania-project-microservice
+ 5368  gb
+ 5369  gb -D dev
+ 5370  gfo dev:dev
+ 5371  sudo vim /etc/hosts
+ 5372  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 5373  cd ../urbania-solr
+ 5374  make up
+ 5375  cd ../urbania-micro-service-search
+ 5376  make up
+ 5377  cd ../urbania-web
+ 5378  make up
+ 5379  docker ps
+ 5380  cd ..
+ 5381  ls
+ 5382  cd urbania-docker
+ 5383  make down_lb
+ 5384  make up_lb
+ 5385  cd ../urbania-solr
+ 5386  make down
+ 5387  make up
+ 5388  make compile
+ 5389  make compile_jar
+ 5390  cd ../urbania-project-microservice
+ 5391  make up
+ 5392  gst
+ 5393  gitk
+ 5394  gb
+ 5395  gb -D dev
+ 5396  gfo dev:dev
+ 5397  gco dev
+ 5398  make down
+ 5399  echo 'flush_all' | nc localhost 11211
+ 5400  docker ps
+ 5401  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 5402  cd ..
+ 5403  ls
+ 5404  cd urbania3-api
+ 5405  gst
+ 5406  git stash clerar
+ 5407  git stash clear
+ 5408  git stash
+ 5409  gst
+ 5410  ggpull
+ 5411  gitk
+ 5412  git stash pop
+ 5413  gitk
+ 5414  cd ../web
+ 5415  cd ../urbania-web
+ 5416  ls
+ 5417  cd src
+ 5418  cd vendor/orbisunt/urbania-core
+ 5419  ls
+ 5420  gb
+ 5421  gst
+ 5422  ggpull
+ 5423  gitk
+ 5424  cd /home/josue/Orbis/urbania3-api
+ 5425  gst
+ 5426  gitk
+ 5427  gco -b UT3-1550
+ 5428  gst
+ 5429  git add .
+ 5430  git commit -am "fix(api): Se soluciona Url de imagenes de proyectos similares"
+ 5431  git rebase -i pre
+ 5432  ggpush
+ 5433  gb
+ 5434  gfo dev:dev
+ 5435  gco dev
+ 5436  gitk
+ 5437  git merge UT3-1550
+ 5438  gitk
+ 5439  git mergetool
+ 5440  gst
+ 5441  gitk
+ 5442  git reset HEAD --hard
+ 5443  gb
+ 5444  gco UT3-1550
+ 5445  git rebase -i dev
+ 5446  git rebase --abort
+ 5447  gitk
+ 5448  gco dev
+ 5449  ggpull
+ 5450  git cherry-pick 489197290db411bdb369cd3e64b27f1c57e2670a
+ 5451  gitk
+ 5452  gst
+ 5453  ggpush
+ 5454  gitk
+ 5455  gco pre
+ 5456  gitk
+ 5457  ggpull
+ 5458  cd ../urbania-docker
+ 5459  ls
+ 5460  ..
+ 5461  ls -la
+ 5462  echo 'flush_all' | nc localhost 11211
+ 5463  gst
+ 5464  cd urbania-micro-service-search
+ 5465  gst
+ 5466  gitk
+ 5467  cd ../urbania-web
+ 5468  gst
+ 5469  gitk
+ 5470  gco package-lock.json
+ 5471  gst
+ 5472  gitk
+ 5473  gst
+ 5474  cd ../urbania-web/src/vendor/orbisunt/urbania-core
+ 5475  gst
+ 5476  cd /home/josue/Orbis/urbania-micro-service-search/app/vendor/orbisunt/urbania-core
+ 5477  gst
+ 5478  gitk
+ 5479  gst
+ 5480  git stash clear
+ 5481  git stash
+ 5482  git stash clear
+ 5483  git stash
+ 5484  gb
+ 5485  gst
+ 5486  gb -D pre
+ 5487  gfo pre:pre; gco pre
+ 5488  gb
+ 5489  gco -b similars_fix
+ 5490  git stash pop
+ 5491  gst
+ 5492  gitk
+ 5493  gst
+ 5494  gb
+ 5495  gb -D pre
+ 5496  gfo pre:pre; gco pre; gb -D dev
+ 5497  gb
+ 5498  gfo dev:dev
+ 5499  gco dev
+ 5500  gco -b similars_fix
+ 5501  git stash pop
+ 5502  gitk
+ 5503  git add .
+ 5504  git commit -am "fix(similar_project): Se corrigen parametros enviados"
+ 5505  git rebase -i dev
+ 5506  ggpush
+ 5507  gst
+ 5508  gitk
+ 5509  git add .
+ 5510  git commit -am "fix(similar_project): Se corrigen parametros enviados"
+ 5511  git rebase -i pre
+ 5512  ggpush
+ 5513  gb
+ 5514  gb -D pre
+ 5515  gfo pre:pre
+ 5516  gco pre
+ 5517  gitk
+ 5518  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 5519  ggpull
+ 5520  gitk
+ 5521  gb
+ 5522  gco pre
+ 5523  ggpull
+ 5524  gitk
+ 5525  gco dev
+ 5526  gitk
+ 5527  ggpull
+ 5528  gitk
+ 5529  gst
+ 5530  gitk
+ 5531  cd /home/josue/Orbis/urbania-web
+ 5532  git rebase -i HEAD~3
+ 5533  gitk
+ 5534  ggpush -f
+ 5535  ggpull
+ 5536  gco pre
+ 5537  gitk
+ 5538  gst
+ 5539  ggpull
+ 5540  gitk
+ 5541  git add .
+ 5542  git commit -am "fix(similar_project): Se corrigen parametros enviados"
+ 5543  ggpush
+ 5544  gitk
+ 5545  cd Orbis/urbania-micro-service-search
+ 5546  ls
+ 5547  cd ..
+ 5548  cd urbania-docker
+ 5549  make up
+ 5550  ..
+ 5551  ls
+ 5552  ll
+ 5553  cd unt-micro-service-configserver
+ 5554  make up
+ 5555  cd ..
+ 5556  ls
+ 5557  ll
+ 5558  cd urbania-micro-service-announcement
+ 5559  make up
+ 5560  cd ..
+ 5561  cd urbania-microservice-consume-package
+ 5562  make up
+ 5563  cd ../urbania-microservice-publisher
+ 5564  make up
+ 5565  ll
+ 5566  cd ..
+ 5567  ll
+ 5568  cd urbania-project-microservice
+ 5569  make up
+ 5570  cd ../urbania-solr
+ 5571  make up
+ 5572  cd ../urbania-web
+ 5573  make up
+ 5574  cd ../urbania-docker
+ 5575  make up_lb
+ 5576  ls
+ 5577  docker ps
+ 5578  cd ../urbania-project-microservice
+ 5579  make down
+ 5580  make up
+ 5581  docker ps
+ 5582  cd ../urbania3-api
+ 5583  make up
+ 5584  cd ../urbania-micro-service-search
+ 5585  make up
+ 5586  docker ps
+ 5587  make log
+ 5588  cd ../urbania-docker
+ 5589  make down_lb
+ 5590  docker ps
+ 5591  make up_lb
+ 5592  make composer
+ 5593  cd ../urbania-micro-service-search/app/vendor/orbisunt/urbania-core
+ 5594  gst
+ 5595  gitk
+ 5596  ggpull
+ 5597  gb
+ 5598  gco api_pre
+ 5599  ggpull
+ 5600  gst
+ 5601  git reset HEAD
+ 5602  git reset HEAD --hard
+ 5603  gst
+ 5604  gco api_pre
+ 5605  gb -D api_pre
+ 5606  gfo api_pre:api_pre; gco api_pre
+ 5607  gco api_dev
+ 5608  gb -D api_pre
+ 5609  gfo api_pre:api_pre; gco api_pre
+ 5610  gitk
+ 5611  make log
+ 5612  echo 'flush_all' | nc localhost 11211
+ 5613  make down
+ 5614  make up
+ 5615  make down
+ 5616  make up
+ 5617  echo 'flush_all' | nc localhost 11212
+ 5618  echo 'flush_all' | nc localhost 11211
+ 5619  ll
+ 5620  cd..
+ 5621  ..
+ 5622  ll
+ 5623  sudo chown josue:josue -Rf urbania-core
+ 5624  cd urbania-core
+ 5625  ll
+ 5626  cd ..
+ 5627  sudo chmod -Rf 777 urbania-core
+ 5628  cd urbania-core
+ 5629  ..
+ 5630  ls
+ 5631  ..
+ 5632  ls
+ 5633  cd carmanuelz
+ 5634  ls
+ 5635  sudo chown josue:josue -rf php-remote-config
+ 5636  sudo chown josue:josue -Rf php-remote-config
+ 5637  gitk
+ 5638  gst
+ 5639  git reset HEAD --hard
+ 5640  gst
+ 5641  gb
+ 5642  gco dev
+ 5643  gb -D pre
+ 5644  gfo pre:pre; gco pre
+ 5645  ls
+ 5646  vim .git/config
+ 5647  gco dev
+ 5648  gb -D pre
+ 5649  gb
+ 5650  gfo pre:pre; gco pre
+ 5651  gitk
+ 5652  sudo vim /etc/hosts
+ 5653  make pull
+ 5654  sudo vim /etc/hosts
+ 5655  make build
+ 5656  make build-latest
+ 5657  make down
+ 5658  make push
+ 5659  make up
+ 5660  docker ps
+ 5661  echo 'flush_all' | nc localhost 11211
+ 5662  docker images 
+ 5663  cat Makefile
+ 5664  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 5665  cd /home/josue/Orbis/urbania-project-microservice
+ 5666  cat Makefile
+ 5667  make downgrade
+ 5668  gb
+ 5669  gfo pre:pre; gco pre
+ 5670  gst
+ 5671  make migrate
+ 5672  make migrate local=true
+ 5673  cd ../urbania-microservice-geolocation
+ 5674  gb
+ 5675  gfo pre:pre; gco pre
+ 5676  make up
+ 5677  docker ps
+ 5678  cd ../urbania-micro-service-user
+ 5679  make up
+ 5680  gb
+ 5681  gfo pre:pre; gco pre
+ 5682  cd ../urbania-micro-service-search
+ 5683  cd app/vendor/orbisunt/urbania-core
+ 5684  cd /home/josue/Orbis/urbania-micro-service-search/app/vendor/orbisunt/urbania-core/src/Infrastructure/Util/Hydrator/Document/
+ 5685  gitk /home/josue/Orbis/urbania-micro-service-search/app/vendor/orbisunt/urbania-core/src/Infrastructure/Util/Hydrator/Document/ProjectDocumentHydrator.php
+ 5686  gitk /home/josue/Orbis/urbania-micro-service-search/app/vendor/orbisunt/urbania-core/src/Infrastructure/Util/Hydrator/Document/PublisherDocumentHydrator.php
+ 5687  gitk /home/josue/Orbis/urbania-micro-service-search/app/vendor/orbisunt/urbania-core/src/Domain/Context/Search/ProjectQueryContext.php
+ 5688  cd ../urbania-micro-service-search
+ 5689  git fetch && git checkout UT3-1556-refactor-project-document
+ 5690  gb
+ 5691  cat .git/config
+ 5692  gts
+ 5693  gst
+ 5694  git stash
+ 5695  gst
+ 5696  git reset HEAD --hard
+ 5697  ggpull
+ 5698  gst
+ 5699  rm -Rf app/src/App/Resources/Service
+ 5700  gst
+ 5701  ggpull
+ 5702  gitk
+ 5703  gitk /home/josue/Orbis/urbania-micro-service-search/app/vendor/orbisunt/urbania-core/src/Domain/Context/Search/ProjectQueryContext.php
+ 5704  gitk /home/josue/Orbis/urbania-micro-service-search/app/src/App/Resources/ProjectQueryResource.php
+ 5705  gitk /home/josue/Orbis/urbania-micro-service-search/app/vendor/orbisunt/urbania-core/src/Domain/Context/Search/ProjectQueryContext.php
+ 5706  gitk /home/josue/Orbis/urbania-micro-service-search/app/vendor/orbisunt/urbania-core/src/Domain/ServiceInterface/ProjectService.php
+ 5707  gitk /home/josue/Orbis/urbania-micro-service-search/app/vendor/orbisunt/urbania-core/src/Infrastructure/Persistence/ZendGateway/ProjectDocumentZendRepository.php
+ 5708  gitk /home/josue/Orbis/urbania-micro-service-search/app/vendor/orbisunt/urbania-core/src/Infrastructure/Util/Hydrator/Document/ProjectDocumentHydrator.php
+ 5709  gst
+ 5710  gitk
+ 5711  gb
+ 5712  gst
+ 5713  git stash
+ 5714  gst
+ 5715  gco pre
+ 5716  gst
+ 5717  gco UT3-1556-refactor-project-document
+ 5718  ggpull
+ 5719  gitk
+ 5720  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 5721  cd /home/josue/Orbis/urbania-project-microservice
+ 5722  gst
+ 5723  make log
+ 5724  cd /home/josue/Orbis/urbania-docker
+ 5725  make up
+ 5726  cd ../urbania-micro-service-search
+ 5727  make up
+ 5728  cd ../urbania-solr
+ 5729  make up
+ 5730  cd ../
+ 5731  cd ..
+ 5732  ls
+ 5733  ll
+ 5734  cd urbania3-api
+ 5735  make up
+ 5736  cd ../urbania-micro-service-announcement
+ 5737  make up
+ 5738  cd ../urbania-micro-service-user
+ 5739  make up
+ 5740  cd ../urbania-web
+ 5741  make up
+ 5742  cd ..
+ 5743  ll
+ 5744  cd urbania-microservice-consume-package
+ 5745  make up
+ 5746  cd ../unt-micro-service-configserver/make up
+ 5747  cd ../unt-micro-service-configserver
+ 5748  make up
+ 5749  make up_
+ 5750  make up_lb
+ 5751  docker ps
+ 5752  cd ../urbania-microservice-geolocation
+ 5753  make up
+ 5754  cd ../urbania-micro-service-search
+ 5755  make up
+ 5756  make down_lb
+ 5757  make up_lb
+ 5758  make log
+ 5759  cd ../urbania-micro-service-search
+ 5760  make down
+ 5761  make up
+ 5762  docker ps
+ 5763  cd ../urbania-docker
+ 5764  make down_lb
+ 5765  make up_lb
+ 5766  make log
+ 5767  cd ../urbania-micro-service-search
+ 5768  make log
+ 5769  gst
+ 5770  gitk
+ 5771  make down
+ 5772  git stash clear
+ 5773  git stash
+ 5774  gst
+ 5775  gb
+ 5776  gco pre
+ 5777  make up
+ 5778  make log
+ 5779  gco dev
+ 5780  make up
+ 5781  gb
+ 5782  gco UT3-1556-refactor-project-document
+ 5783  git stash pop
+ 5784  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 5785  make log
+ 5786  make ssh
+ 5787  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 5788  echo 'flush_all' | nc localhost 11211
+ 5789  cd ../urbania-solr
+ 5790  make compile
+ 5791  gst
+ 5792  git stash clea
+ 5793  git stash clear
+ 5794  git stash
+ 5795  ggpull
+ 5796  gco -b refactor
+ 5797  git stash pop
+ 5798  git add .
+ 5799  git commit -am "refact(search): Refactor search publication"
+ 5800  git rebase -i UT3-1556-refactor-project-document
+ 5801  ggpush
+ 5802  gb
+ 5803  gitk
+ 5804  git log
+ 5805  gb
+ 5806  gst
+ 5807  gitk
+ 5808  git stash
+ 5809  gb
+ 5810  gb -D dev
+ 5811  gb
+ 5812  gfo dev:dev; gco dev
+ 5813  git stash pop
+ 5814  gst
+ 5815  gitk
+ 5816  git stash pop
+ 5817  gitk
+ 5818  cd ../urbania-micro-service-search/app/vendor/orbisunt/urbania-core
+ 5819  gst
+ 5820  gitk
+ 5821  cd /home/josue/Orbis/urbania-project-microservice
+ 5822  gb
+ 5823  gst
+ 5824  gitk
+ 5825  git stash
+ 5826  gst
+ 5827  gb
+ 5828  gb -D dev
+ 5829  gfo dev:dev; gco dev
+ 5830  git stash pop
+ 5831  gst
+ 5832  gitk
+ 5833  git add .
+ 5834  git commit -am "refact(search): Refactor search publication"
+ 5835  gitk
+ 5836  make tests
+ 5837  make log
+ 5838  make tests
+ 5839  cd ../urbania-project-microservice
+ 5840  make log
+ 5841  make tests
+ 5842  make log
+ 5843  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 5844  make log
+ 5845  make tests
+ 5846  make log
+ 5847  make tests
+ 5848  make log
+ 5849  make tests
+ 5850  gts
+ 5851  gst
+ 5852  gitk
+ 5853  gb
+ 5854  gco -b refator_search
+ 5855  git add .
+ 5856  gitk
+ 5857  gst
+ 5858  git add .
+ 5859  gb
+ 5860  gst
+ 5861  git stash
+ 5862  gb
+ 5863  gst
+ 5864  gb -D dev
+ 5865  gfo dev:dev;gco dev; gb -D refator_search
+ 5866  gco -b refactor_search
+ 5867  git stash pop
+ 5868  gitk
+ 5869  git commit -am "refact(search): Refactor search publication"
+ 5870  git rebase -i dev
+ 5871  ggpush
+ 5872  cd ../urbania-micro-service-search
+ 5873  gst
+ 5874  gitk
+ 5875  cd ../urbania-project-microservice
+ 5876  gst
+ 5877  git add .
+ 5878  git commit -am "refact(search): Clean comments"
+ 5879  git rebase -i dev
+ 5880  ggpush -f
+ 5881  cd ../urbania-micro-service-search
+ 5882  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 5883  gst
+ 5884  gitk
+ 5885  gb
+ 5886  git add .
+ 5887  git commit -am "refact(search): Clean comments"
+ 5888  git rebase -i UT3-1556-refactor-project-document
+ 5889  ggpush -f
+ 5890  cd app/vendor/orbisunt/urbania-core
+ 5891  gst
+ 5892  gb
+ 5893  gitk
+ 5894  git add .
+ 5895  git commit -am "refact(search): Clean comments"
+ 5896  git rebase -i UT3-1556-refactor-project-document
+ 5897  ggpush -f
+ 5898  git commit -am "refact(search): Clean comments"
+ 5899  git rebase -i UT3-1556-refactor-project-document
+ 5900  ggpush -f
+ 5901  gb
+ 5902  gb -D dev
+ 5903  gfo dev:dev;gco dev
+ 5904  b
+ 5905  gb
+ 5906  gb -D dev
+ 5907  gfo dev:dev;gco dev
+ 5908  gitk
+ 5909  gb
+ 5910  gb -D pre
+ 5911  gb
+ 5912  gb -D pre
+ 5913  gfo pre:pre; gco pre
+ 5914  gitk
+ 5915  gco dev
+ 5916  git rebase -i pre
+ 5917  gco pre
+ 5918  git merge pre
+ 5919  gitk
+ 5920  git merge dev
+ 5921  gitk
+ 5922  ggpush
+ 5923  gco dev
+ 5924  git rebase -i pre
+ 5925  gco pre
+ 5926  git merge dev
+ 5927  gitk
+ 5928  ggpush
+ 5929  gitk
+ 5930  ggpull
+ 5931  cd ..
+ 5932  gb
+ 5933  ls
+ 5934  ll
+ 5935  cd urbania-docker
+ 5936  cd ../urbania-db-migrations
+ 5937  cd ../urbania-docker
+ 5938  cd ../urbania-web
+ 5939  cd ../urbania-db-migrations
+ 5940  ggpull
+ 5941  gitk
+ 5942  make migrate
+ 5943  cd ../urbania-docker
+ 5944  cd ../urbania-web
+ 5945  gb
+ 5946  gitk
+ 5947  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 5948  cd ..
+ 5949  ll
+ 5950  git clone https://github.com/und-tech/rubick
+ 5951  gst
+ 5952  gb
+ 5953  ls
+ 5954  cd rubick
+ 5955  gitk
+ 5956  cd ../urbania-project-microservice
+ 5957  gb
+ 5958  gfo value_objects:value_objects; gco value_objects
+ 5959  gitk
+ 5960  gb
+ 5961  gco dev
+ 5962  gst
+ 5963  make log
+ 5964  echo 'flush_all' | nc localhost 11211
+ 5965  cd ../urbania-micro-service-user
+ 5966  make up
+ 5967  cd ../urbania-docker
+ 5968  make down_lb
+ 5969  make up_lb
+ 5970  cd ../urbania-micro-service-user
+ 5971  gst
+ 5972  ggpull
+ 5973  make log
+ 5974  gco dev
+ 5975  gst
+ 5976  make log
+ 5977  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 5978  cd Orbis/urbania-docker
+ 5979  make up
+ 5980  cd ../urbania-micro-service-search
+ 5981  make up
+ 5982  cd ../urbania-solr
+ 5983  make up
+ 5984  cd ../urbania-micro-service-user
+ 5985  make up
+ 5986  cd ../unt-micro-service-configserver
+ 5987  make up
+ 5988  cd ../urbania-project-microservice
+ 5989  make up
+ 5990  cd ../urbania-docker
+ 5991  make up_lb
+ 5992  cd ..
+ 5993  ll
+ 5994  cd ../urbania-micro-service-announcement
+ 5995  make up
+ 5996  ../toke
+ 5997  ../urbania-microservice-token
+ 5998  make up
+ 5999  cd ../we
+ 6000  cd urbania-web
+ 6001  make up
+ 6002  cd ../urbania-project-microservice
+ 6003  make log
+ 6004  cd ../urbania-project-microservice
+ 6005  gst
+ 6006  gitk
+ 6007  gco app/project/infrastructure/adapter/config/spring_config.py
+ 6008  gst
+ 6009  gitk
+ 6010  gb
+ 6011  git stash clear
+ 6012  git stash
+ 6013  gst
+ 6014  ggpull
+ 6015  gst
+ 6016  gco -b refactor_search
+ 6017  git stash pop
+ 6018  gitk
+ 6019  git add .
+ 6020  git commit -am "fix(search): NoneType error fix"
+ 6021  git rebase -i dev
+ 6022  ggpush
+ 6023  gb
+ 6024  gitk
+ 6025  gb -D pre
+ 6026  gfo pre:pre
+ 6027  git rebase -i pre
+ 6028  gco pre
+ 6029  git merge dev
+ 6030  gitk
+ 6031  ggpush
+ 6032  ggpull
+ 6033  gitk
+ 6034  cd ../urbania-micro-service-search
+ 6035  make up
+ 6036  cd ../urbania-docker
+ 6037  make down_lb
+ 6038  make up_lb
+ 6039  cd ../urbania-micro-service-search
+ 6040  make down
+ 6041  gst
+ 6042  gco dev
+ 6043  make up
+ 6044  make log
+ 6045  gst
+ 6046  gitk
+ 6047  cd ../urbania-docker
+ 6048  make down_lb
+ 6049  make ssh
+ 6050  make up_lb
+ 6051  make down
+ 6052  make pull
+ 6053  docker images -i
+ 6054  docker images
+ 6055  make up
+ 6056  cd app/vendor/orbisunt/urbania-core
+ 6057  gb
+ 6058  ggpull
+ 6059  gst
+ 6060  gb 
+ 6061  git stash
+ 6062  git stash clear
+ 6063  gb
+ 6064  gb -D api_dev
+ 6065  gfo api_dev:api_dev
+ 6066  gco api_dev
+ 6067  make log
+ 6068  cd /home/josue/Orbis/urbania-micro-service-announcement
+ 6069  gst
+ 6070  make up
+ 6071  make log
+ 6072  cd ..
+ 6073  ll
+ 6074  ls 
+ 6075  cd urbania-microservice-geolocation
+ 6076  make log
+ 6077  gst
+ 6078  make up
+ 6079  docker ps
+ 6080  cd ../urbania-project-microservice
+ 6081  gb
+ 6082  gst
+ 6083  gco dev
+ 6084  ggpull
+ 6085  make migrate local=true
+ 6086  cd ../urbania-micro-service-search
+ 6087  make up
+ 6088  docker ps
+ 6089  dokcer ps
+ 6090  docker ps
+ 6091  make down
+ 6092  make pull
+ 6093  make up
+ 6094  docker ps
+ 6095  make down
+ 6096  make build-latest
+ 6097  make up
+ 6098  docker ps
+ 6099  make status
+ 6100  cd ..
+ 6101  ls
+ 6102  cd urbania-micro-service-search
+ 6103  make composer
+ 6104  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 6105  make down
+ 6106  docker ps -aq --no-trunc -f status=exited | xargs docker rm
+ 6107  docker images -q --filter dangling=true | xargs docker rmi
+ 6108  make pull
+ 6109  docker images
+ 6110  make up
+ 6111  make composer
+ 6112  docker rmi urbania-dev-search
+ 6113  docker ps
+ 6114  make down
+ 6115  docker images -i
+ 6116  docker images
+ 6117  docker rmi urbania-dev-search
+ 6118  docker rmi urbania-dev-search:20180404.000006
+ 6119  docker rmi urbania-dev-search:cli
+ 6120  docker rmi urbania-dev-search:dev 
+ 6121  docker images
+ 6122  make pull
+ 6123  cd ../urbania-micro-service-search/app/
+ 6124  ls
+ 6125  ll
+ 6126  cd vendor
+ 6127  ll
+ 6128  ..
+ 6129  ls
+ 6130  ll
+ 6131  sudo rm -rf vendor
+ 6132  lll
+ 6133  ll
+ 6134  make up
+ 6135  make composer
+ 6136  ll
+ 6137  ..
+ 6138  ll
+ 6139  cd app
+ 6140  ll
+ 6141  sudo rm composer.lock
+ 6142  ll
+ 6143  docker ps
+ 6144  make composer
+ 6145  ..
+ 6146  make down
+ 6147  ll
+ 6148  cd urbania-micro-service-search
+ 6149  make down
+ 6150  gst
+ 6151  docker ps
+ 6152  docker stop urbania-dev-search:cli
+ 6153  docker stop urbania-dev-search
+ 6154  docker ps
+ 6155  docker rm urbania-dev-search:cli
+ 6156  docker rm f6afe964e5c3
+ 6157  docker rm -f f6afe964e5c3
+ 6158  docker rm -f fd08b56e12fa
+ 6159  docker rm -f b526ab14152f
+ 6160  dokcer ps
+ 6161  docker ps
+ 6162  docker ps -a
+ 6163  docker rm -f e068921974b1
+ 6164  docker rm -f 6ca673e8ae70
+ 6165  docker images -a
+ 6166  docker rmi urbania-dev-search:20180404.000006
+ 6167  docker rmi urbania-dev-search:cli
+ 6168  docker rmi urbania-dev-search:dev
+ 6169  docker images -a
+ 6170  ..
+ 6171  sudo rm -rf urbania-micro-service-search
+ 6172  git clone git@bitbucket.org:orbisunt/urbania-microservice-search.git
+ 6173  cd urbania-microservice-search
+ 6174  make pull
+ 6175  make up
+ 6176  make composer
+ 6177  docker ps
+ 6178  docker rmi urbania-dev-search:20180404.000006
+ 6179  docker rmi urbania-dev-search:cli
+ 6180  docker rmi urbania-dev-search:dev 
+ 6181  make build
+ 6182  make up
+ 6183  make composer
+ 6184  gitk
+ 6185  gb
+ 6186  gfo pre:pre; gco pre
+ 6187  gitk
+ 6188  docker ps
+ 6189  cd /home/josue/Orbis/urbania-docker
+ 6190  make down_lb
+ 6191  make up_lb
+ 6192  make log
+ 6193  docker ssh
+ 6194  gco dev
+ 6195  ggpull
+ 6196  gitk
+ 6197  make pulll
+ 6198  make pull
+ 6199  make down
+ 6200  make up
+ 6201  make log
+ 6202  docker ps
+ 6203  make log
+ 6204  cd ../urbania-docker
+ 6205  make down_lb
+ 6206  make up_lb
+ 6207  cd ..
+ 6208  ll
+ 6209  sudo rm -Rf urbania-micro-service-search
+ 6210  cd urbania-microservice-search
+ 6211  make up
+ 6212  docker ps
+ 6213  make log
+ 6214  cd ../urbania-docker
+ 6215  make pull
+ 6216  make down
+ 6217  make up
+ 6218  cd ../urbania-project-microservice
+ 6219  make downgrade
+ 6220  make downgrade local=true
+ 6221  ggpull
+ 6222  make migrate
+ 6223  make migrate local=true
+ 6224  cd ../urbania-microservice-search/app/vendor/orbisunt
+ 6225  ls
+ 6226  sudo chown -Rf josue:josue urbania-core
+ 6227  cd /home/josue/Orbis/urbania-microservice-geolocation
+ 6228  make down
+ 6229  make up
+ 6230  cd ../urbania-micro-service-user
+ 6231  make up
+ 6232  cd ../urbania-project-microservice
+ 6233  make log
+ 6234  gst
+ 6235  gco app/project/infrastructure/adapter/config/spring_config.py
+ 6236  gst
+ 6237  git stash clear
+ 6238  git stash
+ 6239  ggpull
+ 6240  git stash pop
+ 6241  gitk
+ 6242  git add .
+ 6243  git commit -am "fix(search): Change tables name to lowercase"
+ 6244  ggpush
+ 6245  cd ../urbania-microservice-search
+ 6246  gst
+ 6247  gitk
+ 6248  git add .
+ 6249  git commit -am "fix(search): Fix price, images bug publishing on solr"
+ 6250  cd app/vendor/orbisunt/urbania-core
+ 6251  gst
+ 6252  git
+ 6253  gitk
+ 6254  git add .
+ 6255  git commit -am "fix(search): Fix price, images bug publishing on solr"
+ 6256  ggpush
+ 6257  gst
+ 6258  ggpull
+ 6259  gitk
+ 6260  ggpush
+ 6261  gitk
+ 6262  gb
+ 6263  gfo api_pre:api_pre
+ 6264  gb
+ 6265  gb -D pre
+ 6266  gfo pre:pre
+ 6267  git rebase -i api_pre
+ 6268  gco api_pre
+ 6269  git merge api_dev
+ 6270  gitk
+ 6271  ggpush
+ 6272  git rebase -i pre
+ 6273  gco pre
+ 6274  git merge dev
+ 6275  gitk
+ 6276  ggpush
+ 6277  gb -D pre
+ 6278  gfo pre:pre
+ 6279  git rebase -i pre
+ 6280  gco pre
+ 6281  git merge dev
+ 6282  git
+ 6283  gitk
+ 6284  ggpush
+ 6285  ggpull
+ 6286  gitk
+ 6287  make log
+ 6288  cd ../urbania-microservice-geolocation
+ 6289  make up
+ 6290  gst
+ 6291  gitk
+ 6292  gb
+ 6293  git stash
+ 6294  gb -D dev
+ 6295  gfo dev:dev; gco dev
+ 6296  git stash pop
+ 6297  git add .
+ 6298  git commit -am "fix(search): Fix price projects on solr"
+ 6299  gitk
+ 6300  ggpush
+ 6301  gst
+ 6302  gitk
+ 6303  gst
+ 6304  git add .
+ 6305  git commit -am "fix(search): Fix rooms projects on solr"
+ 6306  ggpush
+ 6307  make log 
+ 6308  gst
+ 6309  gitk
+ 6310  gst+
+ 6311  gst
+ 6312  git add .
+ 6313  gitk
+ 6314  git commit -am "fix(search): Fix prices projects on solr"
+ 6315  ggpush
+ 6316  gst
+ 6317  git add .
+ 6318  git commit -am "fix(search): Fix exchangeRate projects on solr"
+ 6319  ggpush
+ 6320  gitk
+ 6321  git add .
+ 6322  git commit -am "fix(search): Fix currency projects on solr"
+ 6323  ggpush
+ 6324  gitk
+ 6325  cd ../urbania-project-microservice
+ 6326  gitk
+ 6327  gst
+ 6328  git stash
+ 6329  ggpull
+ 6330  gitk
+ 6331  cd ../urbania-docker
+ 6332  make down
+ 6333  make up
+ 6334  make down_lb
+ 6335  make up_lb
+ 6336  docker ps
+ 6337  cd ../urbania3-api
+ 6338  make up
+ 6339  gst
+ 6340  wine /home/josue/Downloads/SC1.16/StarCraft.exe 
+ 6341  wine /home/josue/Downloads/SC1.16/Chaoslauncher/Chaoslauncher.exe
+ 6342  ..
+ 6343  git clone git@bitbucket.org:zzzeek/sqlalchemy.git
+ 6344  ll
+ 6345  wine /home/josue/Downloads/SC1.16/Chaoslauncher/Chaoslauncher.exe
+ 6346  cd Orbis/urbania-docker
+ 6347  make up
+ 6348  cd ../urbania-solr
+ 6349  make up
+ 6350  cd ../urbania-microservice-search
+ 6351  make up
+ 6352  cd ../urbania-micro-service-announcement
+ 6353  make up
+ 6354  cd ../urbania-web
+ 6355  make up
+ 6356  cd ../urbania-micro-service-user
+ 6357  make up
+ 6358  cd ../urbania-project-microservice
+ 6359  make up
+ 6360  cd ../urbania-micro-service-announcement
+ 6361  make up
+ 6362  cd ../urbania-docker
+ 6363  cd ../unt-micro-service-configserver
+ 6364  make up
+ 6365  cd ../urbania-web
+ 6366  make up
+ 6367  docker ps
+ 6368  make up_lb
+ 6369  cd ../urbania-project-microservice
+ 6370  make down
+ 6371  make up
+ 6372  cd ../urbania3-api
+ 6373  make up
+ 6374  cd ../urbania-microservice-search
+ 6375  make log
+ 6376  cd ../urbania-microservice-geolocation
+ 6377  make up
+ 6378  gst
+ 6379  gitk
+ 6380  gst
+ 6381  git stash
+ 6382  ggpull
+ 6383  gitk
+ 6384  gco pre
+ 6385  ggpull
+ 6386  gitk
+ 6387  cd ../urbania-microservice-search
+ 6388  git reset HEAD~1
+ 6389  gst
+ 6390  gco .
+ 6391  gst
+ 6392  gitk
+ 6393  git stash pop
+ 6394  gitk
+ 6395  git add .
+ 6396  git commit -am "fix(lift): Filter value fix for elevators"
+ 6397  ggpush -f
+ 6398  gitk
+ 6399  cd ..
+ 6400  gitk
+ 6401  wine /home/josue/Downloads/SC1.16/Chaoslauncher/Chaoslauncher.exe
+ 6402  cd urbania-web
+ 6403  make log
+ 6404  cat Makefile
+ 6405  make log
+ 6406  cd ../urbania
+ 6407  cd ../urbania-micro-service-announcement
+ 6408  cat Makefile
+ 6409  cd ..
+ 6410  ll
+ 6411  cd urbania-microservice-publisher
+ 6412  cat Makefile
+ 6413  make log
+ 6414  echo 'flush_all' | nc localhost 11211
+ 6415  \tcd ../urbania-web
+ 6416  echo 'flush_all' | nc localhost 11211
+ 6417  ..
+ 6418  git clone git@bitbucket.org:orbisunt/urbania-moderacion.git
+ 6419  cd urbania-moderacion
+ 6420  ls
+ 6421  gst
+ 6422  gfo prod:prod; gco prod
+ 6423  make pull
+ 6424  cd ../urbania-project-microservice
+ 6425  make log
+ 6426  cd ../urbania-moderacion
+ 6427  make pull
+ 6428  make up
+ 6429  sudo vim /etc/hosts
+ 6430  cd ../urbania-web
+ 6431  make log
+ 6432  wine /home/josue/Downloads/SC1.16/Chaoslauncher/Chaoslauncher.exe
+ 6433  GST
+ 6434  gst
+ 6435  gitk
+ 6436  git stash
+ 6437  gb -D dev
+ 6438  gst
+ 6439  gco dev
+ 6440  git stash pop
+ 6441  git add .
+ 6442  git commit -am "fix(min): Fix PHP warning on min() function"
+ 6443  ggpush
+ 6444  ggpull
+ 6445  gitk
+ 6446  git stash
+ 6447  gst
+ 6448  git stash
+ 6449  gst
+ 6450  gco .
+ 6451  gst
+ 6452  gco -b local
+ 6453  gb
+ 6454  git add .
+ 6455  git commit -am "wrong"
+ 6456  gco -b local
+ 6457  gst
+ 6458  gitk
+ 6459  gb
+ 6460  gco dev
+ 6461  gitk
+ 6462  gco local
+ 6463  gb -D dev
+ 6464  gfo dev:dev
+ 6465  gb
+ 6466  git diff dev
+ 6467  git diff dev --name-only
+ 6468  cd ../urbania-web
+ 6469  gitk
+ 6470  gco dev
+ 6471  git cherry-pick e3c97565bca5afa4ee0153e7b48582be22dab611
+ 6472  gst
+ 6473  gitk
+ 6474  ggpush
+ 6475  gitk
+ 6476  make log
+ 6477  gst
+ 6478  gco .
+ 6479  gst
+ 6480  wine /home/josue/Downloads/SC1.16/Chaoslauncher/Chaoslauncher.exe
+ 6481  cd ../urbania-micro-service-graphql
+ 6482  make up
+ 6483  docker ps
+ 6484  cd ../urbania-docker
+ 6485  make down_lb
+ 6486  make up_lb
+ 6487  ..
+ 6488  ll
+ 6489  cd ../urbania-microservice-consume-package
+ 6490  make up
+ 6491  cd ../urbania-micro-service-package
+ 6492  make up
+ 6493  cd ..
+ 6494  ll
+ 6495  cd urbania-micro-service-announcement
+ 6496  make up
+ 6497  cd dokc
+ 6498  cd urbania-docker
+ 6499  make down_lb
+ 6500  make up_lb
+ 6501  cd ../urbania-web
+ 6502  gst
+ 6503  gitk
+ 6504  gco .
+ 6505  sudo vim /etc/hosts
+ 6506  cd ../urbania-micro-service-announcement/app
+ 6507  pwd
+ 6508  /home/josue/Downloads/sonar-runner-2.4/bin/sonar-runner 
+ 6509  gst
+ 6510  cd /home/josue/Orbis
+ 6511  ll
+ 6512  cd urbania-microservice-publisher
+ 6513  make up
+ 6514  cd ../urbania-microservice-publisher-authorization
+ 6515  make up
+ 6516  cd ../urbania-docker
+ 6517  make down_lb
+ 6518  make up_lb
+ 6519  make log
+ 6520  wine /home/josue/Downloads/SC1.16/Chaoslauncher/Chaoslauncher.exe
+ 6521  make log
+ 6522  cd ../urbania-microservice-search
+ 6523  gitk
+ 6524  cd ../urbania-web
+ 6525  gb
+ 6526  gb -D pre
+ 6527  gfo pre:pre; gco pre
+ 6528  gitk
+ 6529  gst
+ 6530  gitk
+ 6531  cd ../urbania-micro-service-announcement
+ 6532  gst
+ 6533  git stash
+ 6534  gst
+ 6535  gco .
+ 6536  gst
+ 6537  ggpull
+ 6538  cd ../urbania-microservice-publisher
+ 6539  gb
+ 6540  gb -D prod
+ 6541  gb
+ 6542  gfo prod:prod; gco prod
+ 6543  gb
+ 6544  gfo dev:dev; gco dev
+ 6545  gst
+ 6546  gb -D prod
+ 6547  gb
+ 6548  gfo prod:prod; gco prod
+ 6549  gitk
+ 6550  git stash pop
+ 6551  gst
+ 6552  gitk
+ 6553  gst
+ 6554  gitk
+ 6555  git stash clear
+ 6556  git stash
+ 6557  gb
+ 6558  gst
+ 6559  gco .
+ 6560  gb
+ 6561  gco prod
+ 6562  gitk
+ 6563  gb
+ 6564  cd ../urbania-microservice-publisher-authorization
+ 6565  gst
+ 6566  ggpull
+ 6567  gitk
+ 6568  make migrate
+ 6569  cd ../urbania-microservice-publisher
+ 6570  make migrate
+ 6571  gst
+ 6572  cd ../urbania-microservice-search
+ 6573  cd app/vendor/orbisunt/urbania-core
+ 6574  cd ../urbania-micro-service-announcement
+ 6575  cd app/vendor/orbisunt/urbania-core
+ 6576  gb
+ 6577  gfo api:api; gco api
+ 6578  gb -D api
+ 6579  gb
+ 6580  gfo api:api; gco api
+ 6581  cd ..
+ 6582  ..
+ 6583  make log
+ 6584  cd ../urbania-microservice-search
+ 6585  make log
+ 6586  cat Makefile
+ 6587  make log
+ 6588  cd ../urbania-microservice-publisher
+ 6589  ll
+ 6590  cd app/vendor/orbisunt/urbania-core
+ 6591  gb
+ 6592  gb -D api
+ 6593  gb
+ 6594  gfo api:api; gco api
+ 6595  cd ..
+ 6596  make migrate
+ 6597  cd ../urbania-microservice-search
+ 6598  gitk
+ 6599  gco dev
+ 6600  gitk
+ 6601  cat Makefile
+ 6602  cd ../urbania-db-migrations
+ 6603  gb
+ 6604  gco master
+ 6605  gst
+ 6606  gitk
+ 6607  git stash
+ 6608  gst
+ 6609  gb
+ 6610  gco master
+ 6611  gst
+ 6612  gb -D prod
+ 6613  gb
+ 6614  gfo prod:prod; gco prod
+ 6615  make migrate
+ 6616  gitk
+ 6617  make log
+ 6618  cd ../urbania-moderacion
+ 6619  ll
+ 6620  make down
+ 6621  make up
+ 6622  make down
+ 6623  make pull
+ 6624  make up
+ 6625  cat /etc/hosts
+ 6626  make composer
+ 6627  make down
+ 6628  make up
+ 6629  cd ../urbania-db-migrations
+ 6630  make migrate
+ 6631  make log
+ 6632  cd ../urbania-web
+ 6633  cat Makefile
+ 6634  make log
+ 6635  make down
+ 6636  docker ps
+ 6637  make down
+ 6638  docker images -a
+ 6639  docker images -f dangling=true
+ 6640  docker images purge
+ 6641  \n\ndocker images -a |  grep "moderacion"
+ 6642  docker ps -a
+ 6643  make up
+ 6644  docker image -a
+ 6645  docker images
+ 6646  docker images -f dangling=true
+ 6647  docker rmi $(docker images -q -f dangling=true)
+ 6648  docker images -f dangling=true
+ 6649  docker images
+ 6650  docker image prune -a
+ 6651  docker images
+ 6652  docker ps
+ 6653  docker ps -a
+ 6654  docker rm 4d72c766fcc1
+ 6655  make down
+ 6656  docker rm -f 4d72c766fcc1
+ 6657  docker images
+ 6658  docker rmi urbania_moderacion
+ 6659  sudo docker iamges
+ 6660  sudo docker images
+ 6661  docker images -i
+ 6662  docker images -a
+ 6663  make pull
+ 6664  make up
+ 6665  make composer
+ 6666  cd ../urbania-web
+ 6667  gb
+ 6668  gst
+ 6669  gfo storeHistory:storeHistory
+ 6670  gst
+ 6671  git stash
+ 6672  gb
+ 6673  gco dev
+ 6674  ggpull
+ 6675  git reset HEAD --hard
+ 6676  gst
+ 6677  gco .
+ 6678  gco pre
+ 6679  gb -D dev
+ 6680  gfo dev:dev; gco dev
+ 6681  gitk
+ 6682  gco -b continuidad_history
+ 6683  git stash
+ 6684  git stash pop
+ 6685  git add .
+ 6686  git commit -am "test"
+ 6687  ggpush
+ 6688  docker -v
+ 6689  cat /home/josue/.ssh/id_rsa.pub
+ 6690  git clone git@github.com:CodJuanGabriella/capacitacion-problema1.git
+ 6691  gb
+ 6692  ll
+ 6693  sudo rm -Rf capacitacion-problema1
+ 6694  ..
+ 6695  ll
+ 6696  ..
+ 6697  ll
+ 6698  mkdir Test
+ 6699  cd Test
+ 6700  git clone git@github.com:CodJuanGabriella/capacitacion-problema1.git
+ 6701  cd capacitacion-problema1
+ 6702  gb
+ 6703  make down
+ 6704  cd ../urbania-project-microservice
+ 6705  make down
+ 6706  cd ../urbania-docker
+ 6707  make down
+ 6708  cd ../urbania-micro-service-announcement
+ 6709  make down
+ 6710  make down_lb
+ 6711  docker ps
+ 6712  cd ../urbania-moderacion
+ 6713  make down
+ 6714  cd ../urbania-micro-service-graphql
+ 6715  make down
+ 6716  cd ../urbania-solr
+ 6717  make down
+ 6718  gst
+ 6719  gco -b docker
+ 6720  docker ps
+ 6721  cd ../urbania-microservice-publisher
+ 6722  make down
+ 6723  cd ../urbania-microservice-publisher-authorization
+ 6724  make down
+ 6725  cd ../urbania-microservice-search/
+ 6726  make down
+ 6727  docker stop apiuser_backend
+ 6728  docker stop apilogin_backend
+ 6729  docker ps
+ 6730  docker stop apipackage_backend
+ 6731  docker stop apiconsumepackage_backend
+ 6732  docker stop urbaniadevlocation_backend
+ 6733  docker stop apiconfig_backend
+ 6734  docker ps
+ 6735  cd ..
+ 6736  git clone git@github.com:CodJuanGabriella/orbis-training-project.git
+ 6737  ll
+ 6738  cd orbis-training-project
+ 6739  gco -b docker
+ 6740  gst
+ 6741  git add .
+ 6742  git commit -am "doc(readme): Rename 'README.md' file to 'preguntas.md'"
+ 6743  ggpush
+ 6744  gitk
+ 6745  docker run hello-world
+ 6746  docker ps
+ 6747  cd ../
+ 6748  ..
+ 6749  cd Orbis/urbania-solr
+ 6750  cat Makefile
+ 6751  docker-compose -p
+ 6752  make up
+ 6753  docker ps
+ 6754  make down
+ 6755  docker ps
+ 6756  docker-compose -p solr up -d
+ 6757  docker-compose -p solr ps
+ 6758  docker ps
+ 6759  docker images
+ 6760  docker build -t josu3e/orbis-training-docker:0.1.0
+ 6761  docker build -t https://hub.docker.com/r/josu3e/training/orbis-training-docker:0.1.0
+ 6762  docker build -t josue/orbis-training-docker:0.1.0
+ 6763  docker build -t josue/orbis-training-docker:0.1.0 .
+ 6764  docker images
+ 6765  export DOCKER_ID_USER="josu3e"
+ 6766  docker login
+ 6767  docker tag josue/orbis-training-docker:0.1.0 $DOCKER_ID_USER/orbis-training-docker
+ 6768  docker $DOCKER_ID_USER/orbis-training-docker
+ 6769  docker push $DOCKER_ID_USER/orbis-training-docker
+ 6770  docker images
+ 6771  docker tag 936235ed53c4 $DOCKER_ID_USER/orbis-training-docker:0.2.0
+ 6772  docker push $DOCKER_ID_USER/orbis-training-docker:0.2.0
+ 6773  docker push $DOCKER_ID_USER/orbis-training-docker:0.1.0
+ 6774  docker tag 936235ed53c4 $DOCKER_ID_USER/orbis-training-docker:0.1.0
+ 6775  docker images
+ 6776  docker tag 936235ed53c4 $DOCKER_ID_USER/orbis-training-docker:0.1.0
+ 6777  docker push $DOCKER_ID_USER/orbis-training-docker:0.1.0
+ 6778  gst
+ 6779  git tag
+ 6780  git add .
+ 6781  git commit -am "feat(docker): Training docker"
+ 6782  git tag -a v1.2.0
+ 6783  git tag
+ 6784  git tag -a v1.2.0 -m 'Version with docker test'
+ 6785  git tag
+ 6786  git show v1.2.0
+ 6787  gitk
+ 6788  ggpush
+ 6789  wine /home/josue/Downloads/SC1.16/Chaoslauncher/Chaoslauncher.exe
+ 6790  gst
+ 6791  gitk
+ 6792  ggpush
+ 6793  git rebase -i master
+ 6794  ggpush -f
+ 6795  gco master
+ 6796  git merge docker
+ 6797  ggpush
+ 6798  gitk
+ 6799  git push --tags
+ 6800  pwd
+ 6801  cd ../
+ 6802  gitk
+ 6803  git tag
+ 6804  docker ps
+ 6805  docker images
+ 6806  docker run -it pwd
+ 6807  PWD
+ 6808  pwd
+ 6809  docker run -it pwd
+ 6810  docker run josu3e/orbis-training-docker:0:2:0 -it pwd
+ 6811  docker run josu3e/orbis-training-docker:0:2:0 -it
+ 6812  docker run josu3e/orbis-training-docker:0:2:0
+ 6813  docker run -it pwd
+ 6814  docker ps
+ 6815  docker image
+ 6816  docker images
+ 6817  docker run josu3e/orbis-training-docker:0.2.0
+ 6818  docker run josu3e/orbis-training-docker:0.2.0 -it pwd
+ 6819  docker run josu3e/orbis-training-docker:0.2.0 -it ls
+ 6820  docker run josu3e/orbis-training-docker:0.2.0 -it ls /
+ 6821  docker run -it josu3e/orbis-training-docker:0.2.0 ls ./
+ 6822  docker run -it josu3e/orbis-training-docker:0.2.0 ls -la ./
+ 6823  docker run josu3e/orbis-training-docker:0.2.0 ls -la ./
+ 6824  docker run josu3e/orbis-training-docker:0.2.0 ls -la ./ bash
+ 6825  docker run -it josu3e/orbis-training-docker:0.2.0 ls -la ./ bash
+ 6826  docker run -it josu3e/orbis-training-docker:0.2.0 ls -la ./
+ 6827  docker run josu3e/orbis-training-docker:0.2.0 ls -la ./
+ 6828  docker run josu3e/orbis-training-docker:0.2.0 bash
+ 6829  docker run -it josu3e/orbis-training-docker:0.2.0 bash
+ 6830  docker run josu3e/orbis-training-docker:0.2.0 bash
+ 6831  docker ps
+ 6832  docker stop cd81d88d1862
+ 6833  docker ps
+ 6834  docker ps -a
+ 6835  docker ps
+ 6836  docker ps -a
+ 6837  docker build -t josue/orbis-training-docker:0.3.0 .
+ 6838  docker run -it josu3e/orbis-training-docker:0.3.0 bash
+ 6839  ls -la
+ 6840  docker run -it josu3e/orbis-training-docker:0.3.0 bash
+ 6841  docker ps -a
+ 6842  history
+ 6843  docker images
+ 6844  docker build -t $DOCKER_ID_USER/orbis-training-docker:0.3.0 .
+ 6845  docker run -it josu3e/orbis-training-docker:0.3.0 bash
+ 6846  docker build -t $DOCKER_ID_USER/orbis-training-docker:0.3.1 .
+ 6847  docker run -it josu3e/orbis-training-docker:0.3.1 bash
+ 6848  docker run -it josu3e/orbis-training-docker:0.3.0 bash
+ 6849  docker images
+ 6850  docker rmi josue/orbis-training-docker:0.3.0
+ 6851  docker rmi josue/orbis-training-docker:0.1.0
+ 6852  docker rmi 6f53e985929f
+ 6853  docker images
+ 6854  docker build -t $DOCKER_ID_USER/orbis-training-docker:0.3.0 .
+ 6855  docker run -it $DOCKER_ID_USER/orbis-training-docker:0.3.0
+ 6856  docker run -it $DOCKER_ID_USER/orbis-training-docker:0.3.0 bash
+ 6857  git commit -am "fix(dockerfile): copy README.md to conteiner"
+ 6858  git push
+ 6859  gitk
+ 6860  docker build -t $DOCKER_ID_USER/orbis-training-docker:0.4.0 .
+ 6861  docker ps
+ 6862  docker images
+ 6863  docker rmi josu3e/orbis-training-docker
+ 6864  docker build -t $DOCKER_ID_USER/orbis-training-docker:0.4.0 .
+ 6865  docker rmi josu3e/orbis-training-docker
+ 6866  docker build -t $DOCKER_ID_USER/orbis-training-docker:0.4.0 .
+ 6867  history
+ 6868  git checkout docker
+ 6869  git commit -am "doc(README.md) Add fixures"
+ 6870  git checkout docker
+ 6871  ls
+ 6872  git checkout master
+ 6873  git commit -am "fix(dockerfile): add RUN ls and cat"
+ 6874  git tag -a v1.3.0
+ 6875  git push tags
+ 6876  gitk
+ 6877  git tag v1.3.0
+ 6878  git tag
+ 6879  git push --tags
+ 6880  cd /web
+ 6881  cd /home/josue/Orbis/urbania-web
+ 6882  cat Makefile
+ 6883  docker build -t $DOCKER_ID_USER/orbis-training-docker:1.0.0 .
+ 6884  docker run --name $DOCKER_ID_USER/orbis-training-docker:1.0.0 -P -d nginxtest2
+ 6885  docker run --name $DOCKER_ID_USER/orbis-training-docker -P -d $DOCKER_ID_USER/orbis-training-docker:1.0.0
+ 6886  docker run --name $DOCKER_ID_USER/orbis-training-docker:1.0.0 -P -d $DOCKER_ID_USER/orbis-training-docker:1.0.0
+ 6887  docker run --name orbis-training-docker -P -d $DOCKER_ID_USER/orbis-training-docker:1.0.0
+ 6888  docker ps
+ 6889  docker build -t $DOCKER_ID_USER/orbis-training-docker:1.0.1 .
+ 6890  docker run josu3e/orbis-training-docker:1.0.1
+ 6891  docker run josu3e/orbis-training-docker:1.0.1 -p 1080:80
+ 6892  docker run -p 1080:80 josu3e/orbis-training-docker:1.0.1
+ 6893  docker run -p josu3e/orbis-training-docker:1.0.1
+ 6894  docker run josu3e/orbis-training-docker:1.0.1
+ 6895  docker run -p 1000:1080 josu3e/orbis-training-docker:1.0.1
+ 6896  docker run -p 1080:1000 josu3e/orbis-training-docker:1.0.1
+ 6897  docker ps
+ 6898  docker build -t $DOCKER_ID_USER/orbis-training-docker:1.0.2 .
+ 6899  docker build -t $DOCKER_ID_USER/orbis-training-docker:1.0.3 .
+ 6900  docker build -t josu3e/orbis-training-docker:1.0.3 .
+ 6901  docker run -p 1000:1080 josu3e/orbis-training-docker:1.0.3
+ 6902  docker run -p 1000:3000 josu3e/orbis-training-docker:1.0.3
+ 6903  docker ps
+ 6904  docker stop 
+ 6905  docker stop fb26a4df7117
+ 6906  docker ps
+ 6907  docker build -t josu3e/orbis-training-docker:1.0.4 .
+ 6908  docker run -p 3000:80 josu3e/orbis-training-docker:1.0.3
+ 6909  docker build -t josu3e/orbis-training-docker:1.0.5 .
+ 6910  docker run -it josu3e/orbis-training-docker:1.0.3 bash
+ 6911  docker run -it josu3e/orbis-training-docker:1.0.5 bash
+ 6912  docker build -t josu3e/orbis-training-docker:1.0.6 .
+ 6913  docker run -p 3000:80 josu3e/orbis-training-docker:1.0.3
+ 6914  docker run -p 3000:80 josu3e/orbis-training-docker:1.0.6
+ 6915  docker run -it josu3e/orbis-training-docker:1.0.6 bash
+ 6916  docker exec -it josu3e/orbis-training-docker:1.0.6 bash
+ 6917  docker run -p 3000:80 -d josu3e/orbis-training-docker:1.0.6
+ 6918  docker ps
+ 6919  docker exec -it 8e094da69ded bash
+ 6920  docker run -it josu3e/orbis-training-docker:1.0.6 bash
+ 6921  docker run -it josu3e/orbis-training-docker:1.0.6 ls -la /app
+ 6922  docker run -it josu3e/orbis-training-docker:1.0.6 /bin/sh
+ 6923  git commit -am "fix(dockerfile): add NGINX"
+ 6924  git tag -a v1.4.0
+ 6925  git tag
+ 6926  git  --tag -a v1.4.0 
+ 6927  git tag -a v1.4.0 
+ 6928  git tag -a v1.4.0 -m "se añadio nginX"
+ 6929  git tag
+ 6930  git push --tags
+ 6931  cat /etc/hosts
+ 6932  wine /home/josue/Downloads/SC1.16/Chaoslauncher/Chaoslauncher.exe
+ 6933  cd Orbis/urbania-docker
+ 6934  make up
+ 6935  cd ../urbania-micro-service-announcement
+ 6936  make up
+ 6937  ll
+ 6938  cd ..
+ 6939  ll
+ 6940  cd ../urbania-microservice-publisher
+ 6941  make up
+ 6942  cd ../urbania-microservice-publisher-authorization
+ 6943  make up
+ 6944  cd ../urbania-solr
+ 6945  make up
+ 6946  cd ../urbania-microservice-search
+ 6947  make up
+ 6948  cd ../urbania-micro-service-package
+ 6949  make up
+ 6950  cd ../urbania-microservice-consume-package
+ 6951  make up
+ 6952  make pull
+ 6953  make up
+ 6954  cd ../urbania-micro-service-user
+ 6955  make up
+ 6956  cd ../urbania3-api
+ 6957  make up
+ 6958  cd ../urbania-microservice-geolocation
+ 6959  make up
+ 6960  cd ..
+ 6961  cd unt-micro-service-configserver
+ 6962  cd ../urbania-docker
+ 6963  make up_lb
+ 6964  docker ps
+ 6965  cd ../urbania-project-microservice
+ 6966  make up
+ 6967  docker ps
+ 6968  cd urbania-project-microservice
+ 6969  make down
+ 6970  make up
+ 6971  make upcd ../sol
+ 6972  cd ../urbania-solr
+ 6973  make compile
+ 6974  cd ../urbania-web
+ 6975  make up
+ 6976  make log
+ 6977  docker ps
+ 6978  make log
+ 6979  make pull
+ 6980  make down
+ 6981  make up
+ 6982  docker ps
+ 6983  make up
+ 6984  docker ps
+ 6985  make down
+ 6986  cd ../urbania-web
+ 6987  cd ../urbania-docker
+ 6988  make down_lb
+ 6989  make up_
+ 6990  make up_lb
+ 6991  gb
+ 6992  gst
+ 6993  gco storeHistory
+ 6994  docker ps
+ 6995  cd ../unt-micro-service-configserver
+ 6996  make up
+ 6997  docker ps
+ 6998  gitk
+ 6999  gst
+ 7000  git stash
+ 7001  ggpull
+ 7002  git stash pop
+ 7003  gst
+ 7004  gikt
+ 7005  gitk
+ 7006  make log
+ 7007  wine /home/josue/Downloads/SC1.16/Chaoslauncher/Chaoslauncher.exe
+ 7008  gst
+ 7009  cd ../urbania-micro-service-graphql
+ 7010  make up
+ 7011  make pull
+ 7012  cd ../urbania-micro-service-announcement
+ 7013  make pull
+ 7014  make up
+ 7015  cd ../urbania-micro-service-graphql
+ 7016  gst
+ 7017  make pull
+ 7018  make up
+ 7019  cd ../urbania-web
+ 7020  gst
+ 7021  git stash
+ 7022  gst
+ 7023  ggpull
+ 7024  gst
+ 7025  ggpull
+ 7026  git stash pop
+ 7027  fd
+ 7028  gst
+ 7029  git stash
+ 7030  gst
+ 7031  gco .
+ 7032  gst
+ 7033  git rm src/module/Store/src/Store/Service/
+ 7034  gst
+ 7035  rm src/module/Store/src/Store/Service/
+ 7036  gst
+ 7037  rm -Rf src/module/Store/src/Store/Service/
+ 7038  gst
+ 7039  wine /home/josue/Downloads/SC1.16/Chaoslauncher/Chaoslauncher.exe
+ 7040  echo 'flush_all' | nc localhost 11211
+ 7041  cd ../urbania-project-microservice
+ 7042  make up
+ 7043  docker ps
+ 7044  gst
+ 7045  gitk
+ 7046  git stash clear
+ 7047  git stash
+ 7048  gst
+ 7049  gb
+ 7050  gb -D dev
+ 7051  gfo dev:dev; gco dev
+ 7052  gco -b UT3-1721
+ 7053  git stash pop
+ 7054  gitk
+ 7055  git add .
+ 7056  git commit -am "fix(title): Titulo en el modelo fix"
+ 7057  git rebase -i dev
+ 7058  ggpush
+ 7059  cd ../urbania-project-microservice
+ 7060  make log
+ 7061  cd ../urbania-micro-service-user
+ 7062  make log
+ 7063  make up
+ 7064  make log
+ 7065  gst
+ 7066  echo 'flush_all' | nc localhost 11211
+ 7067  make log
+ 7068  cd ../urbania-microservice-search
+ 7069  make log
+ 7070  gst
+ 7071  gitk
+ 7072  git stash
+ 7073  ggpull
+ 7074  gitk
+ 7075  gb
+ 7076  gst
+ 7077  gco pre
+ 7078  gb -D dev
+ 7079  gfo dev:dev; gco dev
+ 7080  gitk
+ 7081  git stash pop
+ 7082  gst
+ 7083  gitk
+ 7084  git add .
+ 7085  gco -b UT3-1715
+ 7086  gst
+ 7087  git add .
+ 7088  git commit -am "fix(project): Project logo fixed on create/update project from Ms-Search"
+ 7089  git rebase -i dev
+ 7090  ggpush
+ 7091  gitk
+ 7092  gst
+ 7093  gco dev
+ 7094  gst
+ 7095  git stash
+ 7096  gst
+ 7097  gb -D dev
+ 7098  gfo dev:dev; gco dev
+ 7099  gitk
+ 7100  gb -D UT3-1715
+ 7101  gco -b UT3-1715
+ 7102  git stash
+ 7103  git stash pop
+ 7104  gitk
+ 7105  git mergetool
+ 7106  gst
+ 7107  git add .
+ 7108  git commit -am "fix(project): Project logo fixed on create/update project from Ms-Search/Solr"
+ 7109  git rebase -i dev
+ 7110  ggpush -f
+ 7111  git add .
+ 7112  git commit -am "fix(project): Project logo fixed on create/update project from Ms-Search Logo"
+ 7113  ggpush -f
+ 7114  make log
+ 7115  make down
+ 7116  gitk
+ 7117  gst
+ 7118  make up
+ 7119  wine /home/josue/Downloads/SC1.16/Chaoslauncher/Chaoslauncher.exe
+ 7120  cd ../urbania-web
+ 7121  gb -D dev
+ 7122  gfo dev:dev; gco dev
+ 7123  gb
+ 7124  gst
+ 7125  git stash
+ 7126  gb -D dev
+ 7127  gfo dev:dev; gco dev
+ 7128  gco dev
+ 7129  gb
+ 7130  gb -D UT3-1721
+ 7131  gco -b UT3-1721
+ 7132  git stash pop
+ 7133  gitk
+ 7134  git add .
+ 7135  git commit -am "fix(model): Title, propertySusbType"
+ 7136  git rebase -i dev
+ 7137  ggpush
+ 7138  gb
+ 7139  gb -D dev
+ 7140  gb -D pre
+ 7141  gco dev
+ 7142  git rebase -i pre
+ 7143  gco UT3-1721
+ 7144  gb -D dev
+ 7145  gfo dev:dev; gco dev
+ 7146  gfo pre:pre
+ 7147  git rebase -i pre
+ 7148  gco pre
+ 7149  git merge dev
+ 7150  gitk
+ 7151  ggpush
+ 7152  gco dev
+ 7153  gb
+ 7154  gb -D UT3-1721
+ 7155  gco -b UT3-1721
+ 7156  git add .
+ 7157  git commit -am "fix(model): Title, propertySusbType"
+ 7158  git rebase -i dev
+ 7159  gco dev
+ 7160  ggpull
+ 7161  gitk
+ 7162  gb
+ 7163  git merge UT3-1721
+ 7164  gitk
+ 7165  gnb
+ 7166  gco UT3-1721
+ 7167  gb -D dev
+ 7168  gfo dev:dev; gco dev
+ 7169  gco UT3-1721
+ 7170  git rebase -i dev
+ 7171  gco dev
+ 7172  git merge UT3-1721
+ 7173  gitk
+ 7174  ggpush
+ 7175  gb -D pre
+ 7176  gfo pre:pre
+ 7177  git rebase -i pre
+ 7178  gco pre
+ 7179  git merge dev
+ 7180  gitk
+ 7181  ggpush
+ 7182  gb
+ 7183  MAKE PULL
+ 7184  gb
+ 7185  gst
+ 7186  gb -D storeHistory
+ 7187  gfo storeHistory:storeHistory
+ 7188  gitk
+ 7189  gb
+ 7190  gb -D prod
+ 7191  gfo prod:prod; gco prod
+ 7192  gitk
+ 7193  gb
+ 7194  gco storeHistory
+ 7195  gb
+ 7196  gitk
+ 7197  gst
+ 7198  git add .
+ 7199  git commit -am "feat(store): Class Servies"
+ 7200  gst
+ 7201  wine /home/josue/Downloads/SC1.16/Chaoslauncher/Chaoslauncher.exe
+ 7202  gst
+ 7203  gitk
+ 7204  gco .
+ 7205  gst
+ 7206  gb -D dev
+ 7207  gfo dev:dev; gco dev
+ 7208  gco -b fix_logo
+ 7209  gst
+ 7210  git add .
+ 7211  git commit -am "fix(logo): Resultado de proyectos"
+ 7212  git rebase -i dev
+ 7213  gco dev
+ 7214  git merge fix_logo
+ 7215  gitk
+ 7216  gco fix_logo
+ 7217  gb -D dev
+ 7218  gfo dev:dev; gco dev
+ 7219  gitk
+ 7220  git merge fix_logo
+ 7221  gitk
+ 7222  ggpush
+ 7223  gitk
+ 7224  cd Orbis/urbania-docker
+ 7225  make up
+ 7226  cd ../urbania-web
+ 7227  make up
+ 7228  cd ../unt-micro-service-configserver
+ 7229  make up
+ 7230  cd ../urbania-solr
+ 7231  make up
+ 7232  cd ../urbania-micro-service-graphql
+ 7233  make upl
+ 7234  make up
+ 7235  cd ..
+ 7236  ll
+ 7237  cd urbania-microservice-publisher
+ 7238  cd ../urbania-micro-service-user
+ 7239  make up
+ 7240  cd ..
+ 7241  ll
+ 7242  cd urbania-microservice-geolocation
+ 7243  make up
+ 7244  cd ../urbania-microservice-search
+ 7245  make up
+ 7246  cd ..
+ 7247  ll
+ 7248  cd ../sol
+ 7249  cd urbania-solr
+ 7250  make up
+ 7251  cd ..
+ 7252  ll
+ 7253  cd urbania-microservice-consume-package
+ 7254  make up
+ 7255  cd ../urbania-micro-service-package
+ 7256  make up
+ 7257  cd ../urbania-docker
+ 7258  make up_lb
+ 7259  cd ../urbania-microservice-search
+ 7260  gst
+ 7261  gitk
+ 7262  gst
+ 7263  gb
+ 7264  gco dev
+ 7265  ggpull
+ 7266  gitk
+ 7267  ll
+ 7268  cd app/vendor/orbisunt/urbania-core/
+ 7269  gst
+ 7270  gitk
+ 7271  gb
+ 7272  gco UT3-1715
+ 7273  gitk
+ 7274  cd ../urbania-web
+ 7275  gitk
+ 7276  ggpull
+ 7277  gb
+ 7278  gco pre
+ 7279  gb -d dev
+ 7280  gb -D dev
+ 7281  gfo dev:dev; gco dev
+ 7282  gitk
+ 7283  gst
+ 7284  gb
+ 7285  gco storeHistory
+ 7286  git stash pop
+ 7287  cd ../urbania3-api
+ 7288  make up
+ 7289  cd ../urbania-docker
+ 7290  docke rps
+ 7291  docker ps
+ 7292  gst
+ 7293  cd ../urbania-docker
+ 7294  make down
+ 7295  docke rps
+ 7296  docker ps
+ 7297  make up
+ 7298  cd ../urbania-solr
+ 7299  make up
+ 7300  cd ../urbania-microservice-geolocation
+ 7301  make up
+ 7302  cd ../unt-micro-service-configserver
+ 7303  make up
+ 7304  cd ../
+ 7305  ll
+ 7306  cd urbania-microservice-publisher
+ 7307  make up
+ 7308  cd ..
+ 7309  ll
+ 7310  cd urbania-micro-service-announcement
+ 7311  make up
+ 7312  cd ../urbania3-api
+ 7313  make up
+ 7314  cd ..
+ 7315  ll
+ 7316  cd ../urbania-docker
+ 7317  make up_lb
+ 7318  cd ../
+ 7319  ll
+ 7320  docker ps
+ 7321  cd ../urbania-project-microservice
+ 7322  make down
+ 7323  make up
+ 7324  cd urbania-micro-service-package
+ 7325  make up
+ 7326  cd ../urbania-microservice-consume-package
+ 7327  make up
+ 7328  cd ../urbania-web
+ 7329  make up
+ 7330  cd ../urbania-solr
+ 7331  make up
+ 7332  docker ps
+ 7333  cd ../urbania-micro-service-graphql
+ 7334  make up
+ 7335  f
+ 7336  gb
+ 7337  make log
+ 7338  make pull
+ 7339  make composer
+ 7340  make log
+ 7341  cd urbania-microservice-search
+ 7342  gst
+ 7343  gitk
+ 7344  gb
+ 7345  gb -D dev
+ 7346  gfo dev:dev; gco dev
+ 7347  cd app/vendor/orbisunt/urbania-core
+ 7348  gst
+ 7349  ggpull
+ 7350  make log
+ 7351  ..
+ 7352  git clone git@bitbucket.org:orbisunt/urbania-microservice-gateway.git
+ 7353  cd urbania-microservice-gateway
+ 7354  make pull
+ 7355  make build
+ 7356  cat /etc/hosts
+ 7357  make build
+ 7358  make pull
+ 7359  gb
+ 7360  gfo dev:dev; gco dev
+ 7361  make pull
+ 7362  make build
+ 7363  sudo vim /etc/hosts
+ 7364  make pull
+ 7365  cat /lib/systemd/system/docker.service
+ 7366  cat /etc/default/docker
+ 7367  cd ../urbania-docker
+ 7368  ggpull
+ 7369  gst
+ 7370  gitk
+ 7371  git stash
+ 7372  ggpull
+ 7373  gitk
+ 7374  make add_local_registry_host IP=172.18.60.209
+ 7375  sudo vim /etc/host
+ 7376  sudo vim /etc/hosts
+ 7377  gst
+ 7378  make pul
+ 7379  make pull
+ 7380  cat /lib/systemd/system/docker.service
+ 7381  sudo vim /lib/systemd/system/docker.service
+ 7382  sudo chmod 777 /var/run/docker.sock
+ 7383  sudo systemctl daemon-reload
+ 7384  sudo service docker restart
+ 7385  docke rps
+ 7386  docker ps
+ 7387  docker stop ade12c183bac
+ 7388  docker ps
+ 7389  docker ps
+ 7390  make up
+ 7391  make pull
+ 7392  make down
+ 7393  make up
+ 7394  cd ../urbania-solr
+ 7395  make up
+ 7396  cd ../urbania-microservice-gateway
+ 7397  make pull
+ 7398  make add_local_registry_host IP=172.18.60.216
+ 7399  cat /etc/hosts
+ 7400  make pull
+ 7401  make up
+ 7402  make build
+ 7403  make build
+ 7404  make pull
+ 7405  make up
+ 7406  docker build -f docker/cli/Dockerfile -t urbania-dev-gateway:cli
+ 7407  docker build -f docker/cli/Dockerfile -t urbania-dev-gateway:cli docker/cli
+ 7408  make up
+ 7409  tf
+ 7410  make build
+ 7411  docker ps
+ 7412  cd ../urbania-project-microservice
+ 7413  make down
+ 7414  gst
+ 7415  docker ps
+ 7416  cd ../urbania-docker
+ 7417  make up
+ 7418  make up_lb
+ 7419  cd ~
+ 7420  ll
+ 7421  cd Te
+ 7422  cd Test
+ 7423  ll
+ 7424  cd orbis-training-project
+ 7425  ll
+ 7426  git remote show origin
+ 7427  cd ..
+ 7428  cd ../Testing
+ 7429  ll
+ 7430  cd ../Test/orbis-training-project
+ 7431  ll
+ 7432  gb
+ 7433  ll
+ 7434  cat Dockerfile
+ 7435  ll
+ 7436  docker images 
+ 7437  docker build josu3e/orbis-training-docker:2.0.0
+ 7438  docker build josu3e/orbis-training-docker:2.0.0 .
+ 7439  docker build -t josu3e/orbis-training-docker:2.0.0 .
+ 7440  docker images
+ 7441  docker push josu3e/orbis-training-docker:2.0.0
+ 7442  mkdir resources
+ 7443  ll
+ 7444  cp intro.md preguntas.md ./resources
+ 7445  ll
+ 7446  cd resources
+ 7447  ll
+ 7448  ..
+ 7449  ll
+ 7450  docker run josu3e/orbis-training-docker:2.0.0 ls ./
+ 7451  docker run --entrypoint=/bin/ls josu3e/orbis-training-docker:2.0.0 -l /usr
+ 7452  docker run --entrypoint=/bin/ls josu3e/orbis-training-docker:2.0.0 -l ./
+ 7453  docker run josu3e/orbis-training-docker:2.0.0 hostname 
+ 7454  docker run --entrypoint hostname josu3e/orbis-training-docker:2.0.0
+ 7455  docker run --entrypoint=hostname josu3e/orbis-training-docker:2.0.0
+ 7456  docker run --entrypoint=hostname josu3e/orbis-training-docker:2.0.0 ls -l ./
+ 7457  docker run --entrypoint=ls josu3e/orbis-training-docker:2.0.0 -l ./
+ 7458  docker run --entrypoint=ls josu3e/orbis-training-docker:2.0.0 -l
+ 7459  wine /home/josue/Downloads/SC1.16/Chaoslauncher/Chaoslauncher.exe
+ 7460  docker run --entrypoint=ls josu3e/orbis-training-docker:2.0.0 -l
+ 7461  docker run --entrypoint=npm josu3e/orbis-training-docker:2.0.0 install
+ 7462  docker run --entrypoint=npm josu3e/orbis-training-docker:2.0.0 install ./
+ 7463  docker run --entrypoint=npm josu3e/orbis-training-docker:2.0.0 install ./package.json
+ 7464  docker run -v $PWD/:/app josu3e/orbis-training-docker:2.0.0 npm install
+ 7465  docker ps
+ 7466  docker stop cfaced68ffb7
+ 7467  docker stop e3f6713db996 01b1bd11fe61 ba6497a0138c4b43cc66eb1e cd81d88d1862
+ 7468  docker ps
+ 7469  docker stop ba6497a0138c 4b43cc66eb1e
+ 7470  docker ps
+ 7471  ll
+ 7472  docker run -v $PWD/:/app josu3e/orbis-training-docker:2.0.0 npm install
+ 7473  docker run -w /app -v $PWD/:/app josu3e/orbis-training-docker:2.0.0 npm install
+ 7474  docker run -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 npm install
+ 7475  cd /home/josue/Test/orbis-training-project
+ 7476  ll
+ 7477  cat
+ 7478  ll -la
+ 7479  gst
+ 7480  ll
+ 7481  gst
+ 7482  git add .
+ 7483  gst
+ 7484  docker run -d -p "3030:35729" josu3e/orbis-training-docker:2.0.0 npm start
+ 7485  docker run -d -p "3030:3000" josu3e/orbis-training-docker:2.0.0 npm start
+ 7486  docker ps
+ 7487  docker run -d -p 3000:3030 josu3e/orbis-training-docker:2.0.0 npm start
+ 7488  docker ps
+ 7489  docker run -d -p 3030 josu3e/orbis-training-docker:2.0.0 npm start
+ 7490  docker run -d -p 3030:8000 josu3e/orbis-training-docker:2.0.0 npm start --port 8000
+ 7491  docker ps
+ 7492  docker run --entrypoint=ls josu3e/orbis-training-docker:2.0.0 -l 7app
+ 7493  docker run --entrypoint=ls josu3e/orbis-training-docker:2.0.0 -l /app
+ 7494  docker run -d -p 3030:8000 josu3e/orbis-training-docker:2.0.0 npm start --port 8000
+ 7495  docker run -d -p 3030:3030 -p 35729:35729 josu3e/orbis-training-docker:2.0.0 npm start
+ 7496  docker ps
+ 7497  docker ps -a
+ 7498  history
+ 7499  docker run -p 3030:3030 -p 35729:35729 josu3e/orbis-training-docker:2.0.0 npm start
+ 7500  docker run -p 3030:3030 -p 35729:35729 -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 npm start
+ 7501  docker run -p 3030:1042 -p 35729:35729 -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 npm start 
+ 7502  docker run -p 3030:1042 -p 35729:35729 -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 npm start --port 1042
+ 7503  docker ps
+ 7504  docker run -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 npm update
+ 7505  docker run -p 3030:1042 -p 35729:35729 -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 npm start --port 1042
+ 7506  docker run -p 3030:1042 -p 35729:35729 -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 npm start
+ 7507  docker run -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 npm install
+ 7508  docker run -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 npm uninstall
+ 7509  docker run -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 npm install
+ 7510  docker run -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 npm uninstall
+ 7511  docker run -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 npm install
+ 7512  docker run -p 3030:1042 -p 35729:35729 -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 npm start
+ 7513  docker run josu3e/orbis-training-docker:2.0.0 npm run release
+ 7514  docker run -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 npm run release
+ 7515  gst
+ 7516  git add .
+ 7517  git commit -am "feat(node): Testing node, build and compile html,js files"
+ 7518  ggpush
+ 7519  docker-compose up
+ 7520  docker-compose up -d
+ 7521  docker-compose up
+ 7522  git status
+ 7523  git add.
+ 7524  git add .
+ 7525  git commit -m "fead(docker-compose):add compose"
+ 7526  git push
+ 7527  docker network ls
+ 7528  docker inspect 99d36e8f23a6
+ 7529  docker ps
+ 7530  docker run -it --net=orbis-training-project_default node:10.10.0-slim curl http://orbis-training-project_web/
+ 7531  docker run -it --net=orbis-training-project_default node:10.10.0-slim curl http://orbis-training-project_web/ -p 3030
+ 7532  docker run -it --net=orbis-training-project_default node:10.10.0-slim curl http://orbis-training-project_web:3030
+ 7533  docker run -it --net=orbis-training-project_default node:10.10.0-slim curl -h http://orbis-training-project_web -p 3030
+ 7534  docker run -it --net=orbis-training-project_default node:10.10.0-slim curl --url http://orbis-training-project_web -p 3030
+ 7535  docker network ls
+ 7536  docker run -it --net=orbis-training-project_default node:10.10.0-slim curl http://localhost:3030
+ 7537  docker images
+ 7538  docker run -it --net=orbis-training-project_default -v $PWD:/app node:10.10.0-slim curl http://localhost:3030
+ 7539  docker run -it --net=orbis-training-project_default -v $PWD:/app -w /app node:10.10.0-slim curl http://localhost:3030
+ 7540  docker network
+ 7541  docker network ls
+ 7542  docker-compose up
+ 7543  docker ps
+ 7544  docker run -it --net=orbis-training-project_default -v $PWD:/app -w /app node:10.10.0-slim curl http://orbis-training-project_web:3030
+ 7545  docker run -it --net=orbis-training-project_default -v $PWD:/app -w /app node:10.10.0-slim curl orbis-training-project_web:3030
+ 7546  docker run -it --net=orbis-training-project_default -v $PWD:/app -w /app node:10.10.0-slim curl http://orbis-training-project_web:3030
+ 7547  docker run -it --net=orbis-training-project_default -v $PWD:/app -w /app node:10.10.0-slim curl http://orbis-training-project_web_1:3030
+ 7548  docker run -it --net=orbis-training-project_default -v $PWD:/app -w /app node:10.10.0-slim curl http://orbis-training-project_web_1 -p 3030
+ 7549  docker ps
+ 7550  docker run -it --net=orbis-training-project_default -v $PWD:/app -w /app node:10.10.0-slim curl http://orbis-training-project_web_1:3030
+ 7551  docker run --net=orbis-training-project_default -v $PWD:/app -w /app node:10.10.0-slim curl http://orbis-training-project_web_1:3030
+ 7552  docker run --net=orbis-training-project_default -v $PWD:/app -w /app node:10.10.0-slim curl http://orbis-training-project_web:3030
+ 7553  docker run --net=orbis-training-project_default -v $PWD:/app -w /app node:10.10.0-slim curl http://orbis-training-project_web_1:3030
+ 7554  docker run --net=orbis-training-project_default -v $PWD:/app -w /app node:10.10.0-slim curl http://orbis-training-project:3030
+ 7555  docker run --net=orbis-training-project_default -v $PWD:/app -w /app node:10.10.0-slim curl http://orbis-training-project_web_1:1042
+ 7556  cd ..
+ 7557  mkdir test
+ 7558  cd test
+ 7559  git init
+ 7560  docker images
+ 7561  cd ..
+ 7562  ls
+ 7563  orbis-training-project
+ 7564  vim example.sh
+ 7565  cd resources
+ 7566  vim example.sh
+ 7567  ls
+ 7568  vim example.sh
+ 7569  sh example.sh
+ 7570  cd ..
+ 7571  history
+ 7572  docker ps
+ 7573  docker run --entrypoint=/bin/bash -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 sh example.sh 
+ 7574  docker run --entrypoint=/bin/bash -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 sh ./example.sh
+ 7575  docker run --entrypoint=/bin/bash -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 echo "hola"
+ 7576  docker run --entrypoint=/bin/bash/ -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 echo "hola"
+ 7577  docker exec --entrypoint=/bin/bash -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 sh example.sh
+ 7578  docker run --entrypoint=/bin/bash -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 sh example.sh
+ 7579  ll
+ 7580  cd resources
+ 7581  ll
+ 7582  ..
+ 7583  docker run --entrypoint=/bin/bash -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 sh resources/example.sh
+ 7584  docker run --entrypoint=bash -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 sh resources/example.sh
+ 7585  docker run --entrypoint=/bin/bash -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 sh resources/example.sh
+ 7586  docker run -it -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 bash sh resources/example.sh
+ 7587  docker run -it -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 sh resources/example.sh
+ 7588  docker run -it -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 bash resources/example.sh
+ 7589  docker run --entrypoint=/bin/bash -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 resources/example.sh
+ 7590  docker run --entrypoint=/bin/bash -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 resources/example.sh jdjdjjdj
+ 7591  docker run --entrypoint=/bin/bash -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 resources/example.sh -nombre jdjdjjdj
+ 7592  docker run --entrypoint=/bin/bash -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 resources/example.sh "sdf"
+ 7593  docker run --entrypoint=/bin/bash -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 nombre
+ 7594  docker run --entrypoint=echo -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 resources/example.sh
+ 7595  docker run --entrypoint=echo -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 "asdasdsa"
+ 7596  ll
+ 7597  sh resources/example.sh
+ 7598  sh resources/example.sh josue
+ 7599  sh resources/example.sh
+ 7600  sh resources/example.sh josue
+ 7601  sh resources/example.sh jajajaja
+ 7602  sh resources/example.sh -nombre jajajaja
+ 7603  sh resources/example.sh jajajaja
+ 7604  sh resources/example.sh nombre=jajajaja
+ 7605  sh resources/example.sh -nombre=jajajaja
+ 7606  sh resources/example.sh lalallala
+ 7607  sh resources/example.sh lelele
+ 7608  docker network ls
+ 7609  docker ps
+ 7610  sh resources/example.sh lelele
+ 7611  docker run --entrypoint=echo -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 "asdasdsa"
+ 7612  sh resources/example.sh lelele
+ 7613  docker run --entrypoint=echo -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 "asdasdsa"
+ 7614  docker run --entrypoint=echo -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 resources/example.sh josue
+ 7615  history
+ 7616  docker run --entrypoint=/bin/bash -v $PWD:/app -w /app josu3e/orbis-training-docker:2.0.0 resources/example.sh josue
+ 7617  docker run -v $PWD:/app -w /app --entrypoint echo josu3e/orbis-training-docker:2.0.0 "Ejecutando contenedor...."
+ 7618  docker network ls
+ 7619  docker iamges
+ 7620  docker images
+ 7621  docker network ls
+ 7622  docker ps
+ 7623  git add .
+ 7624  git commit -m "fead(docker-compose):add compose"
+ 7625  ggpush
+ 7626  cd Orbis/urbania-docker
+ 7627  make up
+ 7628  cd ../urbania-solr
+ 7629  make up
+ 7630  cd ../urbania-microservice-search
+ 7631  make up
+ 7632  cd ../urbania-micro-service-announcement
+ 7633  make up
+ 7634  cd ../unt-micro-service-configserver
+ 7635  make up
+ 7636  cd ../urbania-web
+ 7637  make up
+ 7638  cd ../urbania-microservice-consume-package
+ 7639  make up
+ 7640  cd ../urbania-micro-service-package
+ 7641  make up
+ 7642  cd ../urbania-microservice-publisher-authorization
+ 7643  make up
+ 7644  cd ../urbania3-api
+ 7645  make up
+ 7646  cd ../urbania-microservice-publisher
+ 7647  make up
+ 7648  cd ../urbania-docker
+ 7649  make up_lb
+ 7650  cd ../urbania-micro-service-graphql
+ 7651  gb
+ 7652  gst
+ 7653  gfo dev:dev; gco dev
+ 7654  cd ..
+ 7655  gb
+ 7656  ll
+ 7657  sudo rm -Rf urbania-micro-service-graphql
+ 7658  cd urbania-microservice-gateway
+ 7659  ll
+ 7660  gst
+ 7661  git stash
+ 7662  gst
+ 7663  gb
+ 7664  gco prod
+ 7665  gb -D dev
+ 7666  gfo dev:dev; gco dev
+ 7667  docker images
+ 7668  docker rmi urbania_graphql:cli
+ 7669  docker rmi urbania_graphql:latest 
+ 7670  docker rmi urbania_graphql:latest
+ 7671  docker rmi -f urbania_graphql:latest
+ 7672  docker rmi urbania-dev-gateway:cli
+ 7673  docker rmi urbania-dev-gateway:dev
+ 7674  docker images
+ 7675  make build
+ 7676  make up
+ 7677  docker images
+ 7678  sudo vim /etc/hosts
+ 7679  make pull
+ 7680  cd Orbis/urbania-docker
+ 7681  make up
+ 7682  cd ../urbania-microservice-gateway
+ 7683* docker images
+ 7684  make up
+ 7685  docker-compose -p urbania-dev-gateway up -d backend
+ 7686  make up
+ 7687  docker-compose -p urbania-dev-gateway:dev up -d backend
+ 7688  make up
+ 7689  docker ps
+ 7690  make composer
+ 7691* cd ../urbania-solr
+ 7692* make up
+ 7693* cd ../sera
+ 7694* cd ../urbania-microservice-search
+ 7695* make up
+ 7696* gst
+ 7697* cd ..
+ 7698* cd urbania-docker
+ 7699* make up_lb
+ 7700* docker ps
+ 7701  make push
+ 7702* cat /etc/hosts
+ 7703  docker ps
+ 7704  cd ../unt-micro-service-configserver
+ 7705  make up
+ 7706  cd ../urbania3-api
+ 7707  make up
+ 7708* cd ../urbania-microservice-consume-package
+ 7709* make up
+ 7710  cd ../urbania-micro-service-package
+ 7711  make up
+ 7712  cd ../urbania-microservice-gateway
+ 7713  make log
+ 7714* cd ../urbania-web
+ 7715* make up
+ 7716* cd ../urbania-microservice-gateway
+ 7717  make ssh
+ 7718  wine /home/josue/Downloads/SC1.16/Chaoslauncher/Chaoslauncher.exe
+ 7719  make down
+ 7720  make up
+ 7721  cd ../urbania-solr
+ 7722  gst
+ 7723  ggpull
+ 7724  gst
+ 7725  make down
+ 7726  make complie
+ 7727  make compile
+ 7728  make up
+ 7729  make compile
+ 7730  make compile_jar
+ 7731  make down
+ 7732  docker iamges
+ 7733  docker images
+ 7734  make build
+ 7735  wine /home/josue/Downloads/SC1.16/Chaoslauncher/Chaoslauncher.exe
+ 7736  make build
+ 7737  make up
+ 7738  make compile
+ 7739  docker ps
+ 7740  cd ../urbania3-api
+ 7741  make up
+ 7742  cd ../urbania-solr
+ 7743  gst
+ 7744  gb
+ 7745  gco -b solr75
+ 7746  git add .
+ 7747  git commit -am "feat(version): Update solr version"
+ 7748  ggpush
+ 7749  gb
+ 7750  gb -D dev
+ 7751  make down
+ 7752  gb
+ 7753  gfo dev:dev; gco dev
+ 7754  docker images
+ 7755  make up
+ 7756  docker ps
+ 7757  make compile
+ 7758  cd ../urbania-web
+ 7759  make down
+ 7760  make up
+ 7761  gst
+ 7762  git stash
+ 7763  gb
+ 7764  gb -D dev
+ 7765  gfo dev:dev; gco dev
+ 7766  cd ../urbania-microservice-search
+ 7767  make ssh
+ 7768  cd app/vendor/orbisunt
+ 7769  ll
+ 7770  cd urbania-core
+ 7771  ll
+ 7772  ..
+ 7773  sudo chown josue:josue -Rf urbania-core
+ 7774  cd /home/josue/Orbis/urbania-microservice-gateway/app/vendor_old/orbisunt/urbania-core/src/Domain/Implement
+ 7775  ll
+ 7776  ..
+ 7777  ll
+ 7778  pwd
+ 7779  cd /home/josue/Orbis/urbania-microservice-search/app/vendor/orbisunt/urbania-core/src/Infrastructure/InfrastructureAdapter/
+ 7780  ll
+ 7781  cd /home/josue/Orbis/urbania-web
+ 7782  make log
+ 7783  docker ps
+ 7784  make down
+ 7785  make upo
+ 7786  make up
+ 7787* wine /home/josue/Downloads/SC1.16/Chaoslauncher/Chaoslauncher.exe
+ 7788* docker ps
+ 7789* docker stop web_backend
+ 7790  docker stop solr_solr63
+ 7791* docker stop urbania-dev-gateway_backend
+ 7792  service docker restart
+ 7793  docker ps
+ 7794  cd /home/josue/Test/orbis-training-project
+ 7795  ll
+ 7796  sudo rm -Rf build
+ 7797  ll
+ 7798  make release
+ 7799  docker images
+ 7800  make release
+ 7801  gst
+ 7802  history
+ 7803  history > ./ultimos_comandos.txt
+ 7804  ll
+ 7805  vat ultimos_comandos.txt
+ 7806  cat ultimos_comandos.txt
+ 7807  history >> ./ultimos_comandos.txt
+ 7808  cat ultimos_comandos.txt
+ 7809  grep < ./ultimos_comandos.txt "rm"
+ 7810  grep < ./ "mk"
+ 7811  pwd
+ 7812  ll
