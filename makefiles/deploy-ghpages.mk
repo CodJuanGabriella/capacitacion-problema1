@@ -3,7 +3,7 @@
 DEPLOY_DIR = deploy
 BUILD_DIR = build
 GIT_BRANCH = gh-pages
-GIT_PERSONAL_TOKEN = dbd87ee83bf5284f3b7a0f1aed51bc90817649dc
+GIT_PERSONAL_TOKEN = 6f37756d4c0fb8e376d24dd10ef85051c52cb53e
 GIT_BRANCH_DIR = $(PWD)/$(DEPLOY_DIR)/$(GIT_BRANCH)
 
 define mkdir_deploy_dir
