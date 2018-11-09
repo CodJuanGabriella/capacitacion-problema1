@@ -159,3 +159,22 @@ pata que solo muestre la respuesta
 para crear una carpeta
 Explicar lo que hace la función mkdir_deploy_dir
 se crea una condición si ni existe la carpeta entonces lo crea
+
+#### Parte 11 1
+Clave del jenkins 2835309f79774a54b9dc71ceaba98ddc
+##### Preguntas 
+- ¿Que sucede si no volumeo el docker.sock?
+    No fuync
+- ¿Para que sirve el volumen var/jenkins_home?
+- ¿Puedo cambiar de puerto?
+- ¿Que pasa si no utlizo el usuario root?
+- ¿Còmo instalo make en una imagen?
+
+##### Preguntas 
+¿Se puede crear un volúmen desde otro volúmen en docker? ¿Porqué?
+¿Para que sirve el comando docker create -v <dir> --name <container> <image>?
+¿Qué hace el comando docker cp ./ <container>:<dir>?
+¿Cómo creo una network usando docker run?
+¿Cómo conecto una network a un container? usando docker run
+¿Qué hace docker run -it --rm --volumes-from <container> -w <dir> <image> <command>?
+    
